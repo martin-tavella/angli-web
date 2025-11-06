@@ -14,19 +14,19 @@ const Hero = () => {
           <img
             src={angli.src}
             alt="Angli Estudio"
-            className="w-full h-auto max-w-2xl"
+            className="w-full h-auto max-w-xl"
           />
         </div>
-        <div className="flex justify-center items-end gap-10 px-5 lg:px-0 flex-nowrap"> 
+        <div className="flex justify-center items-end gap-5 px-5 lg:px-0 flex-nowrap"> 
           <img
             src={draw1.src}
             alt="TV Caricatura"
-            className="w-full max-w-[120px]"
+            className="w-full max-w-[110px]"
           />
           <img
             src={draw2.src}
             alt="Camara y Reel Caricatura"
-            className="w-full max-w-[220px]" 
+            className="w-full max-w-[200px]" 
           />
           <img
             src={draw3.src}
