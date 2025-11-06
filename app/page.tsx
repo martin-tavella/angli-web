@@ -1,9 +1,10 @@
-import { vintageRotter } from '@/utils/fonts/fonts';
+import Hero from "@/components/Hero";
+
 export default function Home() {
   return (
     <div>
       <main>
-        <p className={`${vintageRotter.className}`}>hola</p>
+        <Hero />
       </main>
     </div>
   );

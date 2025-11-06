@@ -14,7 +14,7 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <nav className="relative bg-[url('@/public/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover">
+    <nav className="fixed left-0 right-0 top-0 z-50 hhzbg-[url('@/public/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover">
       <div className="mx-10 py-6 px-10 pt-8">
         <div className="flex justify-between items-center h-20">
           <Image src={logo.src} alt="Angli logo" width={89} height={76} />
