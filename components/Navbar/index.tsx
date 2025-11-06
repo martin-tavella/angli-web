@@ -14,10 +14,10 @@ const navItems = [
 
 const Navbar = () => {
   return (
-    <nav className="relative">
-      <div className="container mx-auto py-3 px-5 pt-8">
+    <nav className="relative bg-[url('@/public/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover">
+      <div className="mx-10 py-6 px-10 pt-8">
         <div className="flex justify-between items-center h-20">
-          <Image src={logo.src} alt="Angli logo" width={88} height={75} />
+          <Image src={logo.src} alt="Angli logo" width={89} height={76} />
 
           <div className="hidden lg:flex items-center gap-8">
             <ul className={`flex gap-14 ${manrope.className}`}>
@@ -25,10 +25,10 @@ const Navbar = () => {
                 <li key={index}>
                   <Link
                     href={item.route}
-                    className="text-[#333333] font-extralight text-[1.7rem] hover:text-[#d95255] transition-all duration-300 relative group py-4"
+                    className="text-[#333333] font-extralight text-[1.6rem] hover:text-[#d95255] transition-all duration-300 relative group py-4"
                   >
                     {item.label}
-                    <span className="group-hover:w-full transition-all duration-300 border-r-[#4C80BF] border-r-2 py-3 pr-12" />
+                    <span className={`group-hover:w-full transition-all duration-300 ${item.label !== "Hablemos" && "border-r-[#4C80BF] border-r-2 py-3 pr-12"}`} />
                   </Link>
                 </li>
               ))}
