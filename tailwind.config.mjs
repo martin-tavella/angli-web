@@ -8,10 +8,8 @@ const config = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        // Usa el nombre de la variable CSS que definiste
-        'vintageRotter': ["var(--font-vintage-rotter)", "serif"],
-         'manrope': ['var(--font-manrope)', 'sans-serif'],
+      screens: {
+        'xl2': "1440px", // ¡CRUCIAL: Asegúrate de que haya una COMA aquí!
       },
     },
   },
