@@ -18,7 +18,7 @@ const About = () => {
   };
 
   return (
-    <div className="bg-[url('/backgrounds/FONDO_BLANCO.png')]">
+    <div className="bg-[url('/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover">
     <section
       className={`h-[765px] bg-[url('/about/FONDO.png')] bg-no-repeat bg-cover bg-center ${manrope.className}`}
     >

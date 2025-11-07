@@ -1,5 +1,29 @@
 @media (min-width: 1440px) {
-    .xl2 {
+    .letter {
         width: 14% !important;
+    }
+    .about-container {
+        max-width: 1320px !important;
+    }
+}
+
+@media (min-width: 1720px) {
+
+    .about-container {
+        max-width: 1520px !important;
+    }
+}
+
+@media (min-width: 2000px) {
+    
+    .about-container {
+        max-width: 1720px !important;
+    }
+}
+
+@media (min-width: 2200px) {
+    
+    .about-container {
+        max-width: 1920px !important;
     }
 }

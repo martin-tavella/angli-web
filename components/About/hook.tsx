@@ -16,10 +16,10 @@ const Hook = ({ toggleHook, showHook }) => {
    <div
       className={`
         ${manrope.className} 
-        bg-[url('/backgrounds/FONDO_BLANCO.png')] 
         flex justify-center items-center flex-col gap-8 
         py-0 px-5 max-w-[1920px] mx-auto 
-        
+
+        about-container
         transition-all duration-700 ease-in-out overflow-hidden
         
         ${showHook ? "max-h-[3000px] pt-10 pb-10" : "max-h-0"} 
@@ -88,17 +88,17 @@ const Hook = ({ toggleHook, showHook }) => {
             <img 
               src={brendaLetter.src} 
               alt="Cartel Brenda" 
-              className="absolute z-20 top-[26%] right-[21%] w-[16%]" 
+              className="absolute z-20 top-[26%] right-[21%] w-[16%] letter" 
             />
 
             <img 
               src={leanLetter.src} 
               alt="Cartel Leandro" 
-              className="absolute z-20 bottom-[30%] left-[18%] w-[16%]"
+              className="absolute z-20 bottom-[30%] left-[18%] w-[16%] letter"
             />
 
             {/* Botón de cierre: llama a toggleHook */}
-            <button onClick={toggleHook} className="absolute z-30 bottom-[20%] right-[1%] cursor-pointer">
+            <button onClick={toggleHook} className="absolute z-30 bottom-[20%] hover:scale-110 right-[1%] cursor-pointer transition-all duration-300">
               <img 
                 src={reduceBtn.src} 
                 alt="Reducir" 
