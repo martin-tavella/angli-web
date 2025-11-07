@@ -11,7 +11,13 @@ import "./breakpoint.css";
 const h4Styles = `${vintageRotter.className} text-[65px] text-[#d85254] font-semibold my-3`;
 const spanStyles = "text-[#EE6226]";
 
-const Hook = ({ toggleHook, showHook }) => {
+interface HookProps {
+  toggleHook: () => void;
+  showHook: boolean;
+}
+
+
+const Hook = ({ toggleHook, showHook }: HookProps) => {
   return (
    <div
       className={`
