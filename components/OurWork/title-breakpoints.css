@@ -1,5 +1,27 @@
-/* @media (max-width: 1750px) {
+@media (min-width: 1550px) {
     .title {
-        width: 60% !important;
+        width: 25% !important;
+        left: 38%;
     }
-} */
+}
+
+@media (min-width: 1920px) {
+    .title {
+        width: 22% !important;
+        left: 39%;
+    }
+}
+
+@media (min-width: 2150px) {
+    .title {
+        width: 20% !important;
+        left: 41%;
+    }
+}
+
+@media (min-width: 2500px) {
+    .title {
+        width: 18% !important;
+        left: 41%;
+    }
+}
