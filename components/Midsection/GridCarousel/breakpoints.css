@@ -67,3 +67,9 @@
     height: 750px; 
   }
 }
+
+@media (min-width: 2336px) { 
+  .img-grid{
+    margin: 0px auto !important; 
+  }
+}

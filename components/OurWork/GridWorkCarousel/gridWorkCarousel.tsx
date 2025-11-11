@@ -32,7 +32,7 @@ return (
     <div 
       // CLAVE 1: Usar una altura fija/responsiva que se ajuste bien a la proporción (ej: h-[600px] en móvil, xl:h-[950px] en desktop)
       // CLAVE 2: Asegúrate de que el contenedor no tenga un aspect-ratio que lo fuerce
-      className="embla__viewport w-full h-[600px] xl:h-[950px] grid-cont overflow-hidden bg-[#d85554]" 
+      className="embla__viewport w-full h-[600px] xl:h-[950px] overflow-hidden bg-[#d85554] before:absolute before:top-0 before:left-0 before:w-full before:h-15 before:bg-gradient-to-b before:from-black/40 before:to-transparent before:z-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-15 after:bg-gradient-to-t after:from-black/40 after:to-transparent after:z-10" 
       ref={emblaRef}
     >
       {/* Contenedor interno de Embla que se desplaza */}

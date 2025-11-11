@@ -49,7 +49,7 @@ const GridCarouselEmbla = () => {
       <div className="relative block w-full overflow-hidden">
         <div
           // CLAVE: Convertimos el viewport en RELATIVE para posicionar el botón.
-          className="embla__viewport w-full overflow-hidden bg-[#4d80be] relative before:absolute before:top-0 before:left-0 before:w-full before:h-20 before:bg-gradient-to-b before:from-black/40 before:to-transparent before:z-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-20 after:bg-gradient-to-t after:from-black/40 after:to-transparent after:z-10"
+          className="embla__viewport w-full overflow-hidden bg-[#4d80be] relative before:absolute before:top-0 before:left-0 before:w-full before:h-15 before:bg-gradient-to-b before:from-black/40 before:to-transparent before:z-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-15 after:bg-gradient-to-t after:from-black/40 after:to-transparent after:z-10"
           ref={emblaRef}
         >
           <div className="embla__container flex h-full">
