@@ -21,7 +21,7 @@ const Hero = () => {
           <img
             src={draw1.src}
             alt="TV Caricatura"
-            className="w-full max-w-[110px]"
+            className="w-full max-w-[120px]"
           />
           <img
             src={draw2.src}
