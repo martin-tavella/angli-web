@@ -25,31 +25,34 @@ const GridWorkCarouselEmbla = () => {
     duration: 100 // 500ms para el slide rápido
   }, [Autoplay(autoplayOptions)]);
 
-  return (
-    <div className="relative w-full overflow-hidden">
-      {/* Contenedor de Embla que actúa como viewport */}
-      <div className="embla__viewport w-full h-[950px] carousel-container overflow-hidden" ref={emblaRef}>
-        {/* Contenedor interno de Embla que se desplaza */}
-        <div className="embla__container flex h-full">
-          {gridImages.map((imageSrc, index) => (
-            // Cada imagen es un slide__slide
-            <div className="embla__slide shrink-0 w-full h-full" key={index}>
-              <img
-                src={imageSrc}
-                alt={`Grilla de Trabajos ${index + 1}`}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          ))}
-        </div>
+  // En el componente GridCarouselEmbla
+return (
+  <div className="relative w-full overflow-hidden">
+    {/* Contenedor de Embla que actúa como viewport */}
+    <div 
+      // CLAVE 1: Usar una altura fija/responsiva que se ajuste bien a la proporción (ej: h-[600px] en móvil, xl:h-[950px] en desktop)
+      // CLAVE 2: Asegúrate de que el contenedor no tenga un aspect-ratio que lo fuerce
+      className="embla__viewport w-full h-[600px] xl:h-[950px] grid-cont overflow-hidden bg-[#d85554]" 
+      ref={emblaRef}
+    >
+      {/* Contenedor interno de Embla que se desplaza */}
+      <div className="embla__container flex h-full">
+        {gridImages.map((imageSrc, index) => (
+          // Cada imagen es un slide__slide
+          <div className="embla__slide shrink-0 w-full h-full" key={index}>
+            <img
+              src={imageSrc}
+              alt={`Grilla de Trabajos ${index + 1}`}
+              // CLAVE 4: object-contain para no recortar la imagen
+              className="w-full h-full object-contain" 
+            />
+          </div>
+        ))}
       </div>
-      
-      {/* Botón "Ver Más" - se mantiene con position absolute fuera del carrusel */}
-      <button className="absolute bottom-10 right-10 z-20 cursor-pointer">
-        <img src={boton1.src} alt="Ver Más" className="w-40"/>
-      </button>
     </div>
-  );
+
+  </div>
+);
 };
 
 export default GridWorkCarouselEmbla;

@@ -1,17 +1,17 @@
 @media (max-width: 1370px) {
-    .carousel-container {
+    .grid-cont {
         height: 700px !important;
     }
 }
 
 @media (max-width: 1800px) {
-    .carousel-container {
+    .grid-cont {
         height: 830px !important;
     }
 }
 
 @media (max-width: 2400px) {
-    .carousel-container {
+    .grid-cont {
         height: 860px !important;
     }
 }

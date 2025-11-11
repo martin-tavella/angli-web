@@ -19,7 +19,7 @@ const Ticker = ({ color }: TickerProps) => {
 
   return (
     <div
-      className={`h-16 text-[#F7ECD5] flex items-center ${
+      className={`xl:h-16 h-14 text-[#F7ECD5] flex items-center ${
         color === "blue"
           ? "bg-[url('/backgrounds/FONDO_AZUL.png')]"
           : "bg-[url('/backgrounds/FONDO_ROJO.png')]"

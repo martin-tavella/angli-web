@@ -1,5 +1,0 @@
-@media (min-width: 1536px) { /* Corresponde al breakpoint 2xl de Tailwind */
-  .grid-cont{
-    height: 900px; /* Aumenta la altura en pantallas muy grandes */
-  }
-}

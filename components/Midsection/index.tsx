@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Ticker from "@/utils/ticker";
-import GridCarouselEmbla from "./GridWorkCarousel/gridCarousel";
+import GridCarouselEmbla from "./GridCarousel/gridCarousel";
 
 const Midsection = () => {
     return (
