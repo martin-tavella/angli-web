@@ -55,7 +55,7 @@ const GridCarouselEmbla = () => {
           <div className="embla__container flex h-full">
             {gridImages.map((imageSrc, index) => (
               <div
-                className="relative shrink-0 w-full h-full"
+                className="relative shrink-0 w-full h-full max-w-[1777px]"
                 key={`desktop-${index}`}
               >
                 <img

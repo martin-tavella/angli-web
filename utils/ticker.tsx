@@ -19,7 +19,7 @@ const Ticker = ({ color }: TickerProps) => {
 
   return (
     <div
-      className={`xl:h-16 h-14 text-[#F7ECD5] flex items-center ${
+      className={`xl:h-16 sm:h-12  h-10 text-[#F7ECD5] flex items-center ${
         color === "blue"
           ? "bg-[url('/backgrounds/FONDO_AZUL.png')]"
           : "bg-[url('/backgrounds/FONDO_ROJO.png')]"
@@ -33,8 +33,8 @@ const Ticker = ({ color }: TickerProps) => {
                             ${baseClasses} 
                             ${
                               phrase.style === "emphasized"
-                                ? "font-extralight text-3xl"
-                                : "font-extralight text-xl mt-2"
+                                ? "font-extralight text-xl sm:text-2xl xl:text-3xl"
+                                : "font-extralight text-[16px] xl:text-xl mt-2"
                             }
                         `}
           >
