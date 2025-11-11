@@ -5,7 +5,7 @@ import ClientGrids from "./ClientGrids";
 const ClientShowcase = () => {
   return (
     <section
-      className={`relative bg-[url('/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover min-h-[80dvh] ${manrope.className}`}
+      className={`relative bg-[url('/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover min-h  min-h-[80dvh] ${manrope.className}`}
     >
       <p className="absolute top-10 right-12 font-extralight text-[20px] text-[#D85455]">
         _Clientes
@@ -14,7 +14,7 @@ const ClientShowcase = () => {
         <img
           src={clientTitle.src}
           alt="Clientes"
-          className="w-[40%] mt-5 mx-auto"
+          className="w-[80%] sm:w-[65%] md:w-[57%] lg:w-[47%]  xl:w-[40%] mt-5 mx-auto"
         />
         <ClientGrids />
       </div>

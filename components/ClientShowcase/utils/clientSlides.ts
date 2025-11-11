@@ -14,13 +14,13 @@ const EMPTY_SPACE_PLACEHOLDER = {
 // Función para dividir los clientes en grupos de 10 (las "diapositivas" de la grilla 2x5)
 // La función debe asegurar que el último chunk tenga 10 elementos
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const chunkAndPadClients = (arr: any[], size = 15) => {
+const chunkAndPadClients = (size: number) => {
     const chunks = [];
     let i = 0;
     
     // 1. Chunking normal
-    while (i < arr.length) {
-        chunks.push(arr.slice(i, i + size));
+    while (i < allClients.default.length) {
+        chunks.push(allClients.default.slice(i, i + size));
         i += size;
     }
 
@@ -37,4 +37,6 @@ const chunkAndPadClients = (arr: any[], size = 15) => {
 };
 
 // Genera las diapositivas de la grilla, cada una con un máximo de 10 logos
-export const clientSlides = chunkAndPadClients(allClients.default);
+// export const clientSlides = chunkAndPadClients(allClients.default);
+
+export default chunkAndPadClients;
