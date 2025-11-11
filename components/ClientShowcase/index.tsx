@@ -2,6 +2,7 @@ import { manrope } from "@/utils/fonts/fonts";
 import clientTitle from "@/public/clientShowcase/TITULO.png";
 import ClientGrids from "./ClientGrids";
 
+
 const ClientShowcase = () => {
   return (
     <section
