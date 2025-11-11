@@ -37,7 +37,7 @@ const ClientGrids = () => {
                                         {/* LÓGICA DE RENDERING CONDICIONAL */}
                                         {client.isPlaceholder ? (
                                             // Renderiza el círculo azul con borde
-                                            <div className="w-[140px] h-[140px] border border-blue-500 rounded-full">
+                                            <div className="w-[140px] h-[140px]">
                                                 {/* Este div representa el círculo azul que viste en la imagen */}
                                             </div>
                                         ) : (

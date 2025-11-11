@@ -1,0 +1,17 @@
+@media (max-width: 1370px) {
+    .carousel-container {
+        height: 700px !important;
+    }
+}
+
+@media (max-width: 1800px) {
+    .carousel-container {
+        height: 830px !important;
+    }
+}
+
+@media (max-width: 2400px) {
+    .carousel-container {
+        height: 860px !important;
+    }
+}

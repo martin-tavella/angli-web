@@ -1,13 +1,13 @@
 import Image from "next/image";
-import Ticker from "./ticker";
-import PhotoMarquee from "./GridCarousel/gridCarousel";
+import Ticker from "@/utils/ticker";
+import GridCarouselEmbla from "./GridWorkCarousel/gridCarousel";
 
 const Midsection = () => {
     return (
-        <>
-        <Ticker />
-        <PhotoMarquee />
-        </>
+        <div>
+        <Ticker color="blue"/>
+        <GridCarouselEmbla />
+        </div>
     )
 };
 export default Midsection;
