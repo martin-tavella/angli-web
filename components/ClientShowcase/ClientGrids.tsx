@@ -10,7 +10,8 @@ import { Client } from './utils/client.type';
 import useWindowWidth from '@/hooks/useWindowWidth';
 
 const ClientGrids = () => {
-    const [clientSlides, setClientSlides] = useState<Client[] | []>([])
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const [clientSlides, setClientSlides] = useState<any[]>([])
     const windowWidth = useWindowWidth()
 
     useEffect(()=> {
@@ -40,7 +41,7 @@ const ClientGrids = () => {
                 <div className="embla overflow-hidden" ref={emblaRef}>
                     <div className="embla__container flex">
                         
-                        {clientSlides.map((slideClients, slideIndex: number) => (
+                        {clientSlides.map((slideClients: Client[], slideIndex: number) => (
                             <div key={slideIndex} className="embla__slide shrink-0 w-full min-w-0">
                                 <div 
                                     // CLAVE: Definición Responsiva de la Grilla (3 columnas en móvil, 5 en desktop)
@@ -48,7 +49,7 @@ const ClientGrids = () => {
                                                gap-y-6 gap-x-2 sm:gap-x-4 lg:gap-y-12 lg:gap-x-6 
                                                justify-items-center items-center h-[490px]"
                                 >
-                                    {slideClients.map((client, logoIndex: number) => (
+                                    {slideClients.map((client: Client, logoIndex: number) => (
                                         // CLAVE: max-w se ajusta para no forzar el tamaño de la grilla
                                         <div key={logoIndex} className="w-full max-w-[120px] sm:max-w-[140px] flex justify-center items-center px-2">
                                             
