@@ -1,5 +1,5 @@
 export interface Client {
     name: string;
-    logo: string;
+    logo: string | null;
     isPlaceholder?: boolean;
 }

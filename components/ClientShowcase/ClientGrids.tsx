@@ -59,7 +59,7 @@ const ClientGrids = () => {
                                                 </div>
                                             ) : (
                                                 <img
-                                                    src={client.logo}
+                                                    src={client.logo!}
                                                     alt={client.name}
                                                     // Max-height también debe ser responsivo o simplemente max-h-full
                                                     className="w-full h-auto object-contain max-h-[100px] sm:max-h-[120px] transition-transform duration-300 hover:scale-105"

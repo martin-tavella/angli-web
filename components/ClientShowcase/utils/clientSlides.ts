@@ -1,7 +1,9 @@
-import * as allClients from "./clients.json"
 import { Client } from "./client.type";
+import * as data from "./clients.json"
 
-for (const client of allClients.default) {
+const allClients: Client[] = data as unknown as Client[]
+
+for (const client of allClients) {
     client.logo = `/clientShowcase${client.logo}`;
 }
 
@@ -19,8 +21,8 @@ const chunkAndPadClients = (size: number) => {
     let i = 0;
     
     // 1. Chunking normal
-    while (i < allClients.default.length) {
-        chunks.push(allClients.default.slice(i, i + size));
+    while (i < allClients.length) {
+        chunks.push(allClients.slice(i, i + size));
         i += size;
     }
 
