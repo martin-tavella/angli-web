@@ -1,9 +1,25 @@
+@media (min-width: 410px ) and (max-width: 500px) {
+    .btn-hook {
+        right: -35%;
+    }
+}
+
+@media (min-width: 500px ) and (max-width: 639px) {
+    .btn-hook {
+        right: -25%;
+    }
+}
+
+
 @media (min-width: 1440px) {
     .letter {
         width: 14% !important;
     }
     .about-container {
         max-width: 1320px !important;
+    }
+    .btn-hook {
+        width: 24% !important;
     }
 }
 
