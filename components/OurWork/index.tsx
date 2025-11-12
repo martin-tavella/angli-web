@@ -7,7 +7,7 @@ import "./title-breakpoints.css";
 
 const OurWork = () => {
     return (
-        <section className="relative">
+        <section id="trabajos" className="relative">
             <Ticker color="red" />
             <img src={titulo.src} alt="Nuestros trabajos" className="absolute sm:-top-10 md:w-[42%] md:left-[31%] lg:w-[30%] lg:left-[36%]       -top-5 left-[27%] w-[50%] z-40 title"/>
             <GridWorkCarouselEmbla />

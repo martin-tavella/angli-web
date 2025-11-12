@@ -12,7 +12,7 @@ import "./custom.css";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer id="hablemos">
       {/* Contenedor Principal (Azul) */}
       <div
         className={`relative bg-[url('/backgrounds/FONDO_AZUL.png')] bg-cover bg-center w-full 

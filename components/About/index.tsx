@@ -18,8 +18,8 @@ const About = () => {
   };
 
   return (
-    <div className="bg-[url('/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover">
-   <section
+    <div  className="bg-[url('/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover">
+   <section id="nosotros"
       // CLAVE: Remover altura fija y dejar que el padding/contenido definan la altura
       className={`bg-[url('/about/FONDO.png')] bg-no-repeat bg-cover bg-center ${manrope.className} py-20 sm:py-24 md:py-32`}
     >

@@ -5,7 +5,7 @@ import ClientGrids from "./ClientGrids";
 
 const ClientShowcase = () => {
   return (
-    <section
+    <section id="clientes"
       className={`relative bg-[url('/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover min-h  min-h-[80dvh] ${manrope.className}`}
     >
       <p className="absolute top-10 right-12 font-extralight text-[20px] text-[#D85455]">

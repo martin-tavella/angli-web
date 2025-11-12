@@ -138,3 +138,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  /* Propiedad CSS para habilitar el desplazamiento suave */
+  scroll-behavior: smooth;
+}
+
+#nosotros, #servicios, #clientes, #hablemos {
+  scroll-margin-top: 85px; 
+}
+
+#trabajos {
+  scroll-margin-top: 150px;
+}

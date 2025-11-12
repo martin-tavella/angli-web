@@ -9,11 +9,11 @@ import { useState } from "react";
 import MobileNav from "./mobileNav";
 
 const navItems = [
-  { route: "", label: "Nosotros" },
-  { route: "", label: "Servicios" },
-  { route: "", label: "Trabajos" },
-  { route: "", label: "Clientes" },
-  { route: "", label: "Hablemos" },
+  { route: "#nosotros", label: "Nosotros" },
+  { route: "#servicios", label: "Servicios" },
+  { route: "#trabajos", label: "Trabajos" },
+  { route: "#clientes", label: "Clientes" },
+  { route: "#hablemos", label: "Hablemos" },
 ];
 
 const Navbar = () => {
