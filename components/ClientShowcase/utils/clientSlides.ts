@@ -1,7 +1,13 @@
 import { Client } from "./client.type";
-import * as data from "./clients.json"
+import data from "./clients.json";
 
-const allClients: Client[] = data as unknown as Client[]
+// `data` can be the array itself or a module with a `default` property depending on
+// how the bundler resolves JSON imports. Normalize to an array to avoid runtime
+// "is not iterable" errors during server-side prerendering.
+const rawData: unknown = data;
+const allClients: Client[] = Array.isArray(rawData)
+    ? (rawData as Client[])
+    : ((rawData as { default?: Client[] }).default ?? []) as Client[];
 
 for (const client of allClients) {
     client.logo = `/clientShowcase${client.logo}`;
@@ -15,7 +21,6 @@ const EMPTY_SPACE_PLACEHOLDER = {
 
 // Función para dividir los clientes en grupos de 10 (las "diapositivas" de la grilla 2x5)
 // La función debe asegurar que el último chunk tenga 10 elementos
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const chunkAndPadClients = (size: number) => {
     const chunks = [];
     let i = 0;
