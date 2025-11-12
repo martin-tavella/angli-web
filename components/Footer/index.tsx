@@ -57,13 +57,13 @@ const Footer = () => {
           {/* SEGUNDA FILA: Conocenos + Donde Encontrarnos */}
           <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-20 mt-10 md:mt-0">
             {/* 1. Conocenos */}
-            <div className="w-full md:w-1/2">
+            <div className="w-2/3 md:w-1/2">
               <h4
                 className={`${vintageRotter.className} text-[50px] sm:text-[70px] mb-4`}
               >
                 Conocenos
               </h4>
-              <ul className="flex flex-col gap-1  text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]">
+              <ul className="flex flex-col gap-1 text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]">
                 {/* Se ajusta el tamaño de los iconos y el texto */}
                 <li>
                   <a
@@ -90,7 +90,7 @@ const Footer = () => {
                       alt="Logo Behance"
                       className="w-6 h-6"
                     />{" "}
-                    https://www.behance.net/angliestudio
+                    www.behance.net/angliestudio
                   </a>
                 </li>
                 <li>

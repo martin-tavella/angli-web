@@ -16,7 +16,10 @@ const ClientGrids = () => {
     useEffect(()=> {
         if (windowWidth > 1023) {
             setClientSlides(chunkAndPadClients(15))
-        } else {
+        } else if (windowWidth < 640){
+            setClientSlides(chunkAndPadClients(9))
+        } 
+        else {
             setClientSlides(chunkAndPadClients(12))
         }
     },[windowWidth, chunkAndPadClients])
@@ -47,7 +50,7 @@ const ClientGrids = () => {
                                 >
                                     {slideClients.map((client, logoIndex: number) => (
                                         // CLAVE: max-w se ajusta para no forzar el tamaño de la grilla
-                                        <div key={logoIndex} className="w-full max-w-[120px] sm:max-w-[140px] flex justify-center items-center">
+                                        <div key={logoIndex} className="w-full max-w-[120px] sm:max-w-[140px] flex justify-center items-center px-2">
                                             
                                             {client.isPlaceholder ? (
                                                 <div className="w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rounded-full">

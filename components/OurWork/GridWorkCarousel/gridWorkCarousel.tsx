@@ -1,11 +1,10 @@
 "use client";
-import collage1 from "@/public/OurWork/COLLAGE_1.png";
-import collage2 from "@/public/OurWork/COLLAGE_2.png";
-import collage3 from "@/public/OurWork/COLLAGE_3.png";
-import collage4 from "@/public/OurWork/COLLAGE_4.png";
+import collage1 from "@/public/ourWork/COLLAGE_1.png";
+import collage2 from "@/public/ourWork/COLLAGE_2.png";
+import collage3 from "@/public/ourWork/COLLAGE_3.png";
+import collage4 from "@/public/ourWork/COLLAGE_4.png";
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
-import boton1 from "@/public/midsection/BOTON_1.png";
 import "./breakpoints.css";
 
 // Asegúrate de que las rutas de tus imágenes sean correctas
