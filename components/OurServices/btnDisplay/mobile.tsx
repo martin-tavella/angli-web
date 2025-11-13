@@ -1,14 +1,7 @@
-const ServiceGridMobile = ({setPopupVisible}: {
-  setPopupVisible: (
-    popup:
-      | "audiovisual"
-      | "consultorias"
-      | "direccion"
-      | "diseno"
-      | "gestion"
-      | "paid"
-      | null
-  ) => void;
+const ServiceGridMobile = ({
+  setPopupVisible,
+}: {
+  setPopupVisible: (popup: string | null) => void;
 }) => {
   // Asumo que tienes un array con las rutas de tus 6 imágenes de servicio COMPLETAS
   const servicesImages = [
@@ -20,11 +13,11 @@ const ServiceGridMobile = ({setPopupVisible}: {
     "/ourServices/btnMobile/CONSULTORIAS.png", // Imagen 6 (Completa)
   ];
 
-const popups = [
+  const popups = [
     "audiovisual",
     "direccion",
     "diseno",
-    "gestion",
+    "redes",
     "paid",
     "consultorias",
   ];
@@ -42,7 +35,7 @@ const popups = [
           {servicesImages.map((imageSrc, index) => (
             <div
               key={index}
-               onClick={() => {
+              onClick={() => {
                 setPopupVisible(popups[index]);
               }}
               // Las imágenes son 854x1201 (rectangulares verticales)

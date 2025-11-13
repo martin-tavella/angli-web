@@ -1,16 +1,7 @@
 const ServiceGridDesktop = ({
   setPopupVisible,
 }: {
-  setPopupVisible: (
-    popup:
-      | "audiovisual"
-      | "consultorias"
-      | "direccion"
-      | "diseno"
-      | "gestion"
-      | "paid"
-      | null
-  ) => void;
+  setPopupVisible: (popup: string | null) => void;
 }) => {
   // Asumo que tienes un array con las 6 rutas de tus imágenes de servicio COMPLETAS (397x999)
   const servicesImages = [
@@ -26,7 +17,7 @@ const ServiceGridDesktop = ({
     "audiovisual",
     "direccion",
     "diseno",
-    "gestion",
+    "redes",
     "paid",
     "consultorias",
   ];

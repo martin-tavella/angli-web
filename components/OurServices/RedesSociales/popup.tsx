@@ -1,13 +1,13 @@
 import Image from "next/image";
-import imgPopup from "@/public/ourServices/DISENO/BARRA_POPUP.png";
-import titulo from "@/public/ourServices/DISENO/TITULO.png";
+import imgPopup from "@/public/ourServices/REDES/BARRA_POPUP.png";
+import titulo from "@/public/ourServices/REDES/TITULO_POPUP.png";
 import miscelanious from "@/public/ourServices/AUDIOVISUAL/MISCELANEA.png";
 import btnContact from "@/public/ourServices/AUDIOVISUAL/BOTON_CONTACTO.png";
 import btnHook from "@/public/ourServices/AUDIOVISUAL/BOTON_AMPLIAR.png";
 
-const DisenoGraficoPopup = () => {
+const RedesSocialesPopup = () => {
   return (
-    <article className="bg-[#ee6226] flex flex-row items-center rounded-3xl xl:rounded-4xl text-[#f7ecd5] max-w-[365px] mx-auto sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] xl:max-w-[1270px]">
+    <article className="bg-[#4c80bf] flex flex-row items-center rounded-3xl xl:rounded-4xl text-[#f7ecd5] max-w-[365px] mx-auto sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] xl:max-w-[1270px]">
       <Image
         src={imgPopup}
         width={533}
@@ -24,10 +24,13 @@ const DisenoGraficoPopup = () => {
           className="w-[34%] sm:w-[36%] md:w-[40%] lg:w-[42%] xl:w-[38%] mx-auto"
         />
         <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[25px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
-          El diseño gráfico es el lenguaje visual que define cómo tu marca se presenta al mundo. Desde tipografías, presentaciones corporativas, infografías, logos hasta paletas de colores, cada elemento transmite identidad y genera conexión con tu audiencia.
+          No se trata solo de publicar, sino de construir una presencia
+          coherente, atractiva y constante que conecte con tu audiencia.
+          Potenciamos tu presencia digital con diferentes servicios para redes,
+          desde diseño de feeds hasta una gestión integral de redes.
         </p>
         <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] xl:text-[20px] uppercase max-w-[80%]  sm:max-w-[73%] md:max-w-[75%] xl:max-w-[80%] text-center mx-auto font-extralight sm:mb-1 md:mb-3 lg:mb-2 xl:mb-0">
-          Entendemos que no se trata solo de estética, sino de comunicar con claridad y coherencia. Creamos piezas gráficas que potencian tu marca y logran que cada detalle hable por vos.
+          Transformamos tus perfiles en un espacio coherente y profesional que hace crecer tu marca.
         </p>
         <Image
           src={miscelanious.src}
@@ -58,6 +61,6 @@ const DisenoGraficoPopup = () => {
     </article>
   );
 };
-export default DisenoGraficoPopup;
+export default RedesSocialesPopup;
 
 //

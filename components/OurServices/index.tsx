@@ -10,15 +10,7 @@ import ModalWrapper from "./modalWrapper";
 import { useState } from "react";
 
 const OurServices = () => {
-  const [popupVisible, setPopupVisible] = useState<
-    | "audiovisual"
-    | "consultorias"
-    | "direccion"
-    | "diseno"
-    | "gestion"
-    | "paid"
-    | null
-  >(null);
+  const [popupVisible, setPopupVisible] = useState<string | null>(null);
   const handleOnClose = () => {
     setPopupVisible(null);
   };
@@ -37,12 +29,9 @@ const OurServices = () => {
           _Servicios
         </p>
         <ServiceGridMobile setPopupVisible={setPopupVisible} />
-        <ServiceGridDesktop setPopupVisible={setPopupVisible}/>
+        <ServiceGridDesktop setPopupVisible={setPopupVisible} />
       </div>
-      <ModalWrapper
-        popupVisible={popupVisible}
-        onClose={handleOnClose}
-      />
+      <ModalWrapper popupVisible={popupVisible} onClose={handleOnClose} />
     </section>
   );
 };

@@ -1,16 +1,12 @@
 import { useEffect } from "react";
 import AudiovisualPopup from "./Audiovisual/popup";
 import DireccionPopup from "./DireccionDeArte/popup";
-import DisenoGraficoPopup from "./DIsenoGrafico/popup";
+import DisenoGraficoPopup from "./DisenoGrafico/popup";
+import RedesSocialesPopup from "./RedesSociales/popup";
 
 interface ModalWrapperProps {
   popupVisible:
-    | "audiovisual"
-    | "consultorias"
-    | "direccion"
-    | "diseno"
-    | "gestion"
-    | "paid"
+    string
     | null;
   onClose: () => void;
 }
@@ -40,6 +36,8 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
         return <DireccionPopup />;
       case "diseno":
         return <DisenoGraficoPopup />;
+      case "redes":
+        return <RedesSocialesPopup />;
       default:
         break;
     }
