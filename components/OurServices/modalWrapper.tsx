@@ -4,11 +4,10 @@ import DireccionPopup from "./DireccionDeArte/popup";
 import DisenoGraficoPopup from "./DisenoGrafico/popup";
 import RedesSocialesPopup from "./RedesSociales/popup";
 import PaidPopup from "./PaidMedia/popup";
+import ConsultoriasPopup from "./Consultorias/popup";
 
 interface ModalWrapperProps {
-  popupVisible:
-    string
-    | null;
+  popupVisible: string | null;
   onClose: () => void;
 }
 
@@ -41,6 +40,8 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
         return <RedesSocialesPopup />;
       case "paid":
         return <PaidPopup />;
+      case "consultorias":
+        return <ConsultoriasPopup />;
       default:
         break;
     }
