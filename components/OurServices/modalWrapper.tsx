@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AudiovisualPopup from "./Audiovisual/popup";
 
 interface ModalWrapperProps {
@@ -13,6 +14,22 @@ interface ModalWrapperProps {
 }
 
 const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
+
+     useEffect(() => {
+    if (popupVisible) {
+      // Bloquea el scroll de la página cuando el popup está visible
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Restaura el scroll cuando el popup está cerrado
+      document.body.style.overflow = 'unset'; // 'unset' es más seguro que 'auto'
+    }
+
+    // Cleanup function: Asegura que el scroll se restablezca si el componente se desmonta
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [popupVisible]);
+
   if (popupVisible === null) return null;
   const getPopup = () => {
     switch (popupVisible) {
