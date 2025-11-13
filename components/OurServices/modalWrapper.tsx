@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import AudiovisualPopup from "./Audiovisual/popup";
+import DireccionPopup from "./DireccionDeArte/popup";
+import DisenoGraficoPopup from "./DIsenoGrafico/popup";
 
 interface ModalWrapperProps {
   popupVisible:
@@ -14,19 +16,18 @@ interface ModalWrapperProps {
 }
 
 const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
-
-     useEffect(() => {
+  useEffect(() => {
     if (popupVisible) {
       // Bloquea el scroll de la página cuando el popup está visible
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
       // Restaura el scroll cuando el popup está cerrado
-      document.body.style.overflow = 'unset'; // 'unset' es más seguro que 'auto'
+      document.body.style.overflow = "unset"; // 'unset' es más seguro que 'auto'
     }
 
     // Cleanup function: Asegura que el scroll se restablezca si el componente se desmonta
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [popupVisible]);
 
@@ -35,6 +36,10 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
     switch (popupVisible) {
       case "audiovisual":
         return <AudiovisualPopup />;
+      case "direccion":
+        return <DireccionPopup />;
+      case "diseno":
+        return <DisenoGraficoPopup />;
       default:
         break;
     }
@@ -53,7 +58,9 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
       {/* Contenido del Popup (tu componente AudiovisualPopup) 
           Añadimos z-20 para asegurar que esté encima del overlay
       */}
-      <div className="max-w-[365px] sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] xl:max-w-[1270px] z-20">{getPopup()}</div>
+      <div className="max-w-[365px] sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] xl:max-w-[1270px] z-20">
+        {getPopup()}
+      </div>
     </div>
   );
 };
