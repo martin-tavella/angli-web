@@ -4,7 +4,6 @@ import Image from "next/image";
 import title from "@/public/ourServices/IMAGEN_TITULO.png";
 import ServiceGridMobile from "./btnDisplay/mobile";
 import ServiceGridDesktop from "./btnDisplay/desktop";
-import AudiovisualPopup from "./Audiovisual/popup";
 import { manrope } from "@/utils/fonts/fonts";
 import ModalWrapper from "./modalWrapper";
 import { useState } from "react";

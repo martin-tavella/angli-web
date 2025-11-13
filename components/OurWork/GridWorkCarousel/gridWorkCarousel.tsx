@@ -3,6 +3,8 @@ import collage1 from "@/public/ourWork/COLLAGE_1.png";
 import collage2 from "@/public/ourWork/COLLAGE_2.png";
 import collage3 from "@/public/ourWork/COLLAGE_3.png";
 import collage4 from "@/public/ourWork/COLLAGE_4.png";
+import collage5 from "@/public/ourWork/COLLAGE_5.png";
+
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import "./breakpoints.css";
@@ -10,7 +12,7 @@ import "./breakpoints.css";
 // Asegúrate de que las rutas de tus imágenes sean correctas
 // const workImages = [...]
 
-const gridImages = [collage1.src, collage2.src, collage3.src, collage4.src];
+const gridImages = [collage1.src, collage2.src, collage3.src, collage4.src, collage5.src ];
 
 
 
