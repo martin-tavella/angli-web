@@ -1,0 +1,15 @@
+@keyframes slideInFromLeft {
+    from {
+        /* Inicia fuera del borde izquierdo */
+        transform: translateX(-115%);
+    }
+    to {
+        /* Termina en su posición normal */
+        transform: translateX(0);
+    }
+}
+
+/* Clase para aplicar la animación */
+.animate-slide-in {
+    animation: slideInFromLeft 1s ease-out forwards; /* 0.8s de duración, se mantiene al final (forwards) */
+}

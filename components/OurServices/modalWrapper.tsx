@@ -5,6 +5,7 @@ import DisenoGraficoPopup from "./DisenoGrafico/popup";
 import RedesSocialesPopup from "./RedesSociales/popup";
 import PaidPopup from "./PaidMedia/popup";
 import ConsultoriasPopup from "./Consultorias/popup";
+import "./slideIn.css"
 
 interface ModalWrapperProps {
   popupVisible: string | null;
