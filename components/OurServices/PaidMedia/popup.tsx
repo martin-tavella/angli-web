@@ -1,11 +1,11 @@
 import Image from "next/image";
-import imgPopup from "@/public/ourServices/DIRECCION/BARRA_POPUP.png";
-import titulo from "@/public/ourServices/DIRECCION/TITULO.png";
+import imgPopup from "@/public/ourServices/PAID/BARRA_POPUP.png";
+import titulo from "@/public/ourServices/PAID/TITULO.png";
 import miscelanious from "@/public/ourServices/AUDIOVISUAL/MISCELANEA.png";
 import btnContact from "@/public/ourServices/AUDIOVISUAL/BOTON_CONTACTO.png";
 import btnHook from "@/public/ourServices/AUDIOVISUAL/BOTON_AMPLIAR.png";
 
-const DireccionPopup = () => {
+const PaidPopup = () => {
   return (
     <article className="bg-[#d85254] flex flex-row items-center rounded-3xl xl:rounded-4xl text-[#f7ecd5] max-w-[365px] mx-auto sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] xl:max-w-[1270px]">
       <Image
@@ -15,23 +15,19 @@ const DireccionPopup = () => {
         alt="Imagen Audiovisual"
         className="w-[18%] h-auto"
       />
-      <div className="relative flex justify-center flex-col gap-1 mb-3 sm:gap-3 sm:mb-7 md:gap-2 lg:gap-5 xl:gap-7">
+      <div className="relative flex justify-center flex-col gap-1 sm:gap-1 mb-5 sm:mb-10 md:mb-12 md:gap-2 lg:gap-3 lg:mb-13 xl:gap-3 xl:mb-17">
         <Image
           src={titulo.src}
           width={1328}
           height={319}
           alt="Audiovisual"
-          className="w-[43%] sm:w-[45%] lg:w-[42%] xl:w-[43%] mx-auto"
+          className="w-[34%] sm:w-[33%] mx-auto"
         />
-        <p className="text-[8px] sm:text-[13px] md:text-[16px] lg:text-[20px] xl:text-[25px] max-w-[86%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
-          La dirección de arte es la que aporta coherencia estética, selecciona
-          materiales, colores y texturas para construir escenarios con concepto,
-          y le da a cada producción una atmósfera única que potencia la esencia
-          de la marca.
+        <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] xl:text-[23px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
+          La pauta publicitaria es la forma más directa de llegar a nuevas audiencias y acelerar el crecimiento de tu marca. A través de anuncios en Meta y Google Ads, logramos mayor alcance, visibilidad y conversiones.
         </p>
-        <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] xl:text-[20px] uppercase max-w-[55%] sm:max-w-[53%] md:max-w-[56%] lg:max-w-[60%] text-center mx-auto font-extralight sm:mb-1 md:mb-3 xl:mb-0">
-          En nuestra agencia no hacemos solo contenido: creamos impacto visual
-          donde los detalles marcan la diferencia.
+        <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] xl:text-[18px] uppercase max-w-[80%]  sm:max-w-[73%] md:max-w-[75%] xl:max-w-[75%] text-center mx-auto font-extralight sm:mb-1 md:mb-3 lg:mb-2 xl:mb-0">
+          En nuestra agencia entendemos la pauta como el complemento ideal del contenido: solo la ofrecemos junto a nuestro plan mensual de redes para potenciar cada marca.
         </p>
         <Image
           src={miscelanious.src}
@@ -62,6 +58,6 @@ const DireccionPopup = () => {
     </article>
   );
 };
-export default DireccionPopup;
+export default PaidPopup;
 
 //
