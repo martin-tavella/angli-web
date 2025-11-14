@@ -61,5 +61,5 @@ const DisenoGraficoPopup = () => {
   );
 };
 
-//hola
+//chau
 export default DisenoGraficoPopup;

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AudiovisualPopup from "./Audiovisual/popup";
 import DireccionPopup from "./DireccionDeArte/popup";
-import DisenoGraficoPopup from "./DisenoGrafico/popup";
+import DisenoGraficoPopup from "./DIsenoGrafico/popup";
 import RedesSocialesPopup from "./RedesSociales/popup";
 import PaidPopup from "./PaidMedia/popup";
 import ConsultoriasPopup from "./Consultorias/popup";
