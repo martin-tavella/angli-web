@@ -3,13 +3,13 @@ import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png"
 import Image from "next/image";
 
-interface AudiovisualHookProps {
+interface DireccionHookProps {
   showHook: boolean;
   btnContact: {src: string}
   handleOnClick: () => void;
 }
 
-const DireccionHook = ({ showHook, handleOnClick, btnContact }: AudiovisualHookProps) => {
+const DireccionHook = ({ showHook, handleOnClick, btnContact }: DireccionHookProps) => {
   return (
     <article className={`
       lg:max-w-[1010px] mx-auto rounded-b-3xl
