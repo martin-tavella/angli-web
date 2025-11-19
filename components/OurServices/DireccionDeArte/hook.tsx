@@ -1,5 +1,6 @@
 import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
 
+import fondoRojo from "@/public/backgrounds/FONDO_ROJO.png";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png"
 import Image from "next/image";
 
@@ -12,12 +13,18 @@ interface DireccionHookProps {
 const DireccionHook = ({ showHook, handleOnClick, btnContact }: DireccionHookProps) => {
   return (
     <article className={`
-      lg:max-w-[1010px] mx-auto rounded-b-3xl
+      relative lg:max-w-[1010px] mx-auto rounded-b-3xl
       transition-all duration-800 ease-in-out overflow-hidden
-      border-x-[5px] border-[#d85254]
-      ${showHook ? "max-h-[320px]" : "max-h-0 border-b-0 border-x-0"}
+      ${showHook ? "max-h-[320px] border-x-[5px] border-[#d85254]" : "max-h-0 border-b-0 border-x-0"}
     `}>
-      <div className="bg-[#b63436] py-3 border-b-2 border-[#d85254]">
+      <Image
+        src={fondoRojo}
+        alt="Fondo"
+        layout="fill"
+        objectFit="cover"
+        className="-z-10"
+      />
+      <div className=" py-3 border-b-2 border-[#d85254]">
         <Image
         src={star.src}
         alt="Listado de Servicios"
