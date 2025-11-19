@@ -1,11 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 import disabledContact from "@/public/about/BOTON_CONTACTO2.png";
-import bg from "@/public/about/FONDO_2.png";
 import brendaLean from "@/public/about/BRENDA_LEAN.png";
 import brendaLetter from "@/public/about/BRENDA_LETTER.png";
 import leanLetter from "@/public/about/LEAN_LETTER.png";
 import reduceBtn from "@/public/about/BOTON_REDUCIR.png";
 import { manrope, vintageRotter } from "@/utils/fonts/fonts";
+import Image from "next/image";
 import "./breakpoint.css";
 
 const h4Styles = `${vintageRotter.className} 
@@ -85,30 +84,37 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
       </div>
 
       {/* Contenedor de las imágenes (Contactanos) - Se mantiene igual */}
-      <section className="w-full flex items-end justify-center max-w-[1240px] mx-auto">
-        {/* ... (código de imágenes con posicionamiento absoluto) ... */}
-        <div className="relative w-full flex items-end justify-center bg-[url('/about/FONDO_2.png')] bg-no-repeat bg-cover bg-center">
+      <section className="w-full flex items-end justify-center xl:max-w-[1240px] mx-auto">
+        <div className="relative w-full flex items-end justify-center">
+          <Image
+            src="/about/FONDO_2.png"
+            alt="Fondo decorativo"
+            fill
+            style={{ objectFit: "cover", objectPosition: "center" }}
+            className="-z-10"
+            quality={75}
+          />
           <div className="flex justify-center items-end w-full">
-            <img
-              src={brendaLean.src}
+            <Image
+              src={brendaLean}
               alt="Brenda y Leandro"
               className={"w-[50%] h-auto z-10 mt-[34px] mr-0 sm:mr-15"}
             />
 
-            <img
-              src={disabledContact.src}
+            <Image
+              src={disabledContact}
               alt="Contactanos"
               className="absolute z-20 -top-4 left-1/2 -translate-x-1/2 w-30 sm:w-[200px] sm:-top-7 xl:w-[300px] xl:-top-12"
             />
 
-            <img
-              src={brendaLetter.src}
+            <Image
+              src={brendaLetter}
               alt="Cartel Brenda"
               className="absolute z-20 top-[26%] right-[21%] w-[16%] letter"
             />
 
-            <img
-              src={leanLetter.src}
+            <Image
+              src={leanLetter}
               alt="Cartel Leandro"
               className="absolute z-20 bottom-[30%] left-[18%] w-[16%] letter"
             />
@@ -118,12 +124,12 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
                 toggleHook()
                 window.location.href = "#nosotros"
               }}
-              className="btn-hook absolute z-30 bottom-[20%] hover:scale-110 -right-[43%] sm:-right-[11%] md:-right-[6%] cursor-pointer transition-all duration-300"
+              className="btn-hook absolute z-30 bottom-[20%] hover:scale-110 -right-[12%] sm:right-[2%] md:right-[6%] cursor-pointer transition-all duration-300"
             >
-              <img
-                src={reduceBtn.src}
+              <Image
+                src={reduceBtn}
                 alt="Reducir"
-                className="w-[16%] sm:w-[21%] md:w-[32%] h-auto"
+                className="w-[40%] sm:w-[60%] md:w-[65%] lg:w-[90%]  h-auto"
               />
             </button>
           </div>

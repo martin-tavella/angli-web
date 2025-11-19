@@ -24,7 +24,16 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 bg-[url('/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover shadow-md">
+    <nav className="fixed left-0 right-0 top-0 z-50 shadow-md">
+      <Image
+        src="/backgrounds/FONDO_BLANCO.png"
+        alt="fondo de la barra de navegación"
+        fill
+        style={{ objectFit: "cover" }}
+        className="-z-10"
+        quality={80}
+        priority
+      />
       {/* Contenedor Interior: Limita el ancho y centra el contenido */}
       {/* Usamos max-w-screen-xl para un ancho grande y centrado */}
       <div className="max-w-screen-xl nav-cont  mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -36,6 +45,7 @@ const Navbar = () => {
             alt="Angli logo"
             width={89}
             height={76}
+            priority
             className="w-17 lg:w-20"
           />
 
