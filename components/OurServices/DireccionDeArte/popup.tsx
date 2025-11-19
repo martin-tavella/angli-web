@@ -16,7 +16,9 @@ const DireccionPopup = () => {
   };
 
   return (
-    <div className={`transition-all duration-500 ease-in-out`}>
+    <div className={`transition-all duration-500 ease-in-out
+    
+    `}>
       <article
         className={`flex flex-row items-center  text-[#f7ecd5] max-w-[365px] mx-auto sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] overflow-hidden 
       ${showHook ? "rounded-t-3xl" : "rounded-3xl"}

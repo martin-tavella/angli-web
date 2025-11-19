@@ -41,28 +41,30 @@ const AudiovisualHook = ({ showHook, handleOnClick, btnContact }: AudiovisualHoo
         className="w-[90%] mx-auto py-10"
         
         />
-        <div className="flex relative">
-        <div className="w-[60%] sm:w-[40%] md:w-[45%] lg:py-6"/>
-        <button>
-             <Image
-                src={btnContact.src}
-                alt="Contacto"
-                width={392}
-                height={113} 
-                className="w-[60%] sm:w-[60%] md:w-[60%] lg:w-[18%] hover:scale-105 transition-transform duration-300 cursor-pointer
-                lg:absolute lg:bottom-0 lg:right-[40%]
+        <div className="flex relative pt-3 pb-10">
+          <button className="cursor-pointer">
+            <Image
+              src={btnContact.src}
+              alt="Contacto"
+              width={392}
+              height={113}
+              className="z-50  w-[24%] md:w-[22%] lg:w-[19%] hover:scale-105 transition-transform duration-300 
+
+                absolute bottom-3 right-[39%] lg:right-[40%]
+
                 "
-                />
-        </button>
-        <button onClick={handleOnClick} className="">
-               <Image
-                src={reducir.src}
-                alt="Contacto"
-                width={211}
-                height={193} 
-                className="w-[60%] sm:w-[60%] md:w-[60%] lg:w-[10%] mx-auto hover:scale-105 transition-transform duration-300 cursor-pointer lg:absolute lg:bottom-0 lg:right-5"
-                />
-        </button>
+            />
+          </button>
+
+          <button onClick={handleOnClick} className="cursor-pointer">
+            <Image
+              src={reducir.src}
+              alt="Contacto"
+              width={211}
+              height={193}
+              className=" z-50 w-[13%] md:w-[11%] lg:w-[8%] mx-auto absolute bottom-0 right-5 hover:scale-105 transition-transform duration-300"
+            />
+          </button>
         </div>
       </div>
     </article>
