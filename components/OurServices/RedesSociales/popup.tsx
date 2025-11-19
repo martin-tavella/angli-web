@@ -31,7 +31,7 @@ const RedesSocialesPopup = () => {
           width={533}
           height={1363}
           alt="Imagen Audiovisual"
-          className="w-[18%] h-auto z-200 bg-[#4c80bf]"
+          className="h-[165px] w-auto sm:h-[284px] md:h-[344px] lg:h-[456px] z-200 bg-[#4c80bf]"
         />
         <div className="bg-[#4c80bf] h-[165px] sm:h-[284px] md:h-[344px] lg:h-[456px] pt-3 sm:pt-2 md:pt-3 lg:pt-5 animate-slide-in -ml-1">
           <div className="relative flex justify-center flex-col gap-1 sm:gap-3 mb-5 sm:mb-10 md:mb-10 md:gap-2 lg:gap-3 lg:mb-13">
