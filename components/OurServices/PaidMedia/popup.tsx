@@ -63,7 +63,6 @@ const PaidPopup = () => {
             <button className={`absolute -bottom-5 -right-5 sm:-bottom-10 sm:right-29 md:right-42 md:-bottom-11 lg:-bottom-13 lg:right-[35%] cursor-pointer hover:scale-105 transition-transform duration-300
               ${showHook ? "hidden" : ""}
               `}
-              onClick={handleOnClick}
               >
               <Image
                 src={btnContact.src}
