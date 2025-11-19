@@ -124,12 +124,12 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
                 toggleHook()
                 window.location.href = "#nosotros"
               }}
-              className="btn-hook absolute z-30 bottom-[20%] hover:scale-110 -right-[12%] sm:right-[2%] md:right-[6%] cursor-pointer transition-all duration-300"
+              className="btn-hook absolute z-30 bottom-[20%] hover:scale-110 -right-[42%] sm:-right-[10%] md:-right-[4%] lg:right-[2%] cursor-pointer transition-all duration-300"
             >
               <Image
                 src={reduceBtn}
                 alt="Reducir"
-                className="w-[40%] sm:w-[60%] md:w-[65%] lg:w-[90%]  h-auto"
+                className="w-[25%] sm:w-[35%] md:w-[38%] lg:w-[50%]  h-auto"
               />
             </button>
           </div>
