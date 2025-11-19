@@ -40,7 +40,7 @@ const DisenoHook = ({
           className="w-[14%] sm:w-[15%] md:w-[13%] mx-auto pt-3"
         />
         <ul className="text-center uppercase text-[#4d4d4d] font-extralight flex flex-col text-[10px] sm:text-[100%] gap-1 max-w-[70%]
-         sm:gap-2 md:gap-5 lg:max-w-[50%] mx-auto pt-4 pb-7">
+         sm:gap-2 md:gap-5 lg:max-w-[50%] mx-auto pt-4 pb-13 sm:pb-23">
           <li>
             <h5 className={h5Styles}>-MARCA-</h5>
             <p>
@@ -77,25 +77,29 @@ const DisenoHook = ({
           </li>
         </ul>
         <div className="flex relative">
-          <div className="w-[60%] sm:w-[40%] md:w-[45%] py-6" />
-          <button>
+           <button className="cursor-pointer"
+          
+          onClick={()=> window.open("https://wa.link/bw0sqj")}>
             <Image
               src={btnContact.src}
               alt="Contacto"
               width={392}
               height={113}
-              className="w-[18%] sm:w-[15%] md:w-[13%] lg:w-[13%] hover:scale-105 transition-transform duration-300 cursor-pointer
-                absolute bottom-3 right-[44%]
+              className="w-[24%] md:w-[22%] lg:w-[19%] hover:scale-105 transition-transform duration-300 
+
+                absolute bottom-3 right-[39%] lg:right-[40%]
+
                 "
             />
           </button>
-          <button onClick={handleOnClick} className="">
+
+          <button onClick={handleOnClick} className="cursor-pointer">
             <Image
               src={reducir.src}
               alt="Contacto"
               width={211}
               height={193}
-              className="w-[14%] sm:w-[10%] md:w-[8%] lg:w-[8%] mx-auto hover:scale-105 transition-transform duration-300 cursor-pointer absolute bottom-0 right-5"
+              className="w-[13%] md:w-[11%] lg:w-[8%] mx-auto hover:scale-105 transition-transform duration-300  absolute bottom-0 right-5"
             />
           </button>
         </div>

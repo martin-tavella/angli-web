@@ -46,7 +46,11 @@ const GridCarouselEmbla = () => {
                   sizes="100vw"
                   quality={75}
                 />
-                <button className="btn-grid absolute bottom-[3%] right-[5%] h-20 sm:h-30 xl:h-30 z-20 cursor-pointer hover:scale-105 transition-transform duration-300">
+                <button className="btn-grid absolute bottom-[3%] right-[5%] h-20 sm:h-30 xl:h-30 z-20 cursor-pointer hover:scale-105 transition-transform duration-300"
+                onClick={()=>{
+                  window.location.href = "/#trabajos"
+                }}
+                >
                   <Image src={boton1} alt="Ver Más" className="w-25 md:w-35 lg:w-40" />
             </button>
               </div>

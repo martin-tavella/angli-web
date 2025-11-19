@@ -42,7 +42,9 @@ const AudiovisualHook = ({ showHook, handleOnClick, btnContact }: AudiovisualHoo
         
         />
         <div className="flex relative pt-3 pb-10">
-          <button className="cursor-pointer">
+          <button className="cursor-pointer"
+          onClick={()=> window.open("https://wa.link/bw0sqj")}
+          >
             <Image
               src={btnContact.src}
               alt="Contacto"
