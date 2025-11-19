@@ -1,10 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { manrope } from "@/utils/fonts/fonts";
 import { vintageRotter } from "@/utils/fonts/fonts";
 import letterName from "@/public/about/CARTEL_NOMBRE.png";
 import miscelanous from "@/public/about/MISCELANEA.png";
 import contactButton from "@/public/about/BOTON_CONTACTO.png";
+import Image from "next/image";
 import { useState } from "react";
 import Hook from "./hook";
 
@@ -18,12 +18,28 @@ const About = () => {
   };
 
   return (
-    <div className="bg-[url('/backgrounds/FONDO_BLANCO.png')] bg-no-repeat bg-cover">
+    <div className="relative">
+      <Image
+        src="/backgrounds/FONDO_BLANCO.png"
+        alt="Fondo blanco"
+        fill
+        style={{ objectFit: "cover" }}
+        className="-z-20"
+        quality={75}
+      />
       <section
         id="nosotros"
         // CLAVE: Remover altura fija y dejar que el padding/contenido definan la altura
-        className={`bg-[url('/about/FONDO.png')] bg-no-repeat bg-cover bg-center ${manrope.className} py-20 sm:py-24 md:py-32`}
+        className={`relative bg-no-repeat bg-cover bg-center ${manrope.className} py-20 sm:py-24 md:py-32`}
       >
+        <Image
+          src="/about/FONDO.png"
+          alt="Fondo sección nosotros"
+          fill
+          style={{ objectFit: "cover", objectPosition: "center" }}
+          className="-z-10"
+          quality={80}
+        />
         {/* Contenedor principal con posicionamiento y altura completa para centrar */}
         <div className="relative flex flex-col items-center justify-center h-full">
           {/* Etiqueta _Nosotros (Mantener absoluta) */}
@@ -35,9 +51,10 @@ const About = () => {
           <div className="relative flex flex-col items-center max-w-sm sm:max-w-md lg:max-w-xl mx-auto px-4">
             {/* Logo */}
             <div className="mb-8">
-              <img
-                src={letterName.src}
+              <Image
+                src={letterName}
                 alt="Angli Estudio since 2018"
+                priority
                 // CLAVE: W-full y max-w para que se ajuste sin romper la línea
                 className="w-full h-auto max-w-[200px] sm:max-w-[250px] lg:max-w-[300px]"
               />
@@ -46,12 +63,13 @@ const About = () => {
             {/* Contenedor del Texto y el Borde (miscelanous) */}
             <div className="relative text-center flex flex-col items-center justify-center w-full">
               {/* El Borde (miscelanous.src) - Ajustado para no desbordar en móvil */}
-              <img
-                src={miscelanous.src}
+              <Image
+                src={miscelanous}
                 alt="Borde decorativo"
+                fill
                 // CLAVE: Usar porcentajes de ancho/alto y ajustes de posición fluidos
                 className="absolute w-[110%] h-[150%] sm:h-[140%] object-contain 
-                         -top-[20%] left-1/2 transform -translate-x-1/2"
+                         -top-[20%] left-1/2 transform translate-y-3 sm:translate-0"
                 // Eliminé scale-130 y w-500 para controlarlo solo con W/H y porcentajes
               />
 
@@ -73,11 +91,11 @@ const About = () => {
                     }}
                     className="cursor-pointer hover:scale-105 transition-transform duration-300"
                   >
-                    <img
-                      src={contactButton.src}
+                    <Image
+                      src={contactButton}
                       alt="Contactanos"
                       // CLAVE: Reducir el tamaño de la imagen del botón en móvil
-                      className="h-10 sm:h-12 lg:h-16"
+                      className="h-10 sm:h-12 lg:h-16 w-auto"
                     />
                   </button>
                 ) : (

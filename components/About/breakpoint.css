@@ -1,17 +1,17 @@
 @media (min-width: 410px ) and (max-width: 500px) {
     .btn-hook {
-        right: -35%;
+        right: -10%;
     }
 }
 
 @media (min-width: 500px ) and (max-width: 639px) {
     .btn-hook {
-        right: -25%;
+        right: -5%;
     }
 }
 
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
     .letter {
         width: 14% !important;
     }
@@ -42,4 +42,4 @@
     .about-container {
         max-width: 1920px !important;
     }
-}
+} */
