@@ -32,6 +32,7 @@ const PaidPopup = () => {
           height={1363}
           alt="Imagen Audiovisual"
           className="h-[165px] sm:h-[286px] md:h-[345px] lg:h-[458px] w-auto bg-[#d85254] z-200"
+          priority
         />
         <div className=" bg-[#d85254] h-[165px] sm:h-[286px] md:h-[345px] lg:h-[458px] pt-1 lg:pt-5 animate-slide-in">
           <div className="relative flex justify-center flex-col gap-1 sm:gap-1 mb-5 sm:mb-10 md:mb-12 md:gap-2 lg:gap-3 lg:mb-13">
@@ -41,6 +42,7 @@ const PaidPopup = () => {
               height={319}
               alt="Audiovisual"
               className="w-[34%] sm:w-[33%] mx-auto "
+              priority
             />
             <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
               La pauta publicitaria es la forma más directa de llegar a nuevas

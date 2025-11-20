@@ -31,6 +31,7 @@ const ConsultoriasPopup = () => {
           height={1363}
           alt="Imagen Audiovisual"
           className="w-auto h-[166px] sm:h-[285px] md:h-[345px] lg:h-[457px] bg-[#ee6226] z-200"
+          priority
         />
         <div className="bg-[#ee6226] h-[166px] -ml-1 sm:mb-0 sm:h-[285px] md:h-[345px] lg:h-[457px] pt-5 sm:pt-8 lg:pt-8 animate-slide-in">
           <div className="relative flex justify-center flex-col gap-2 sm:gap-3 mb-2 sm:mb-10 md:mb-10 md:gap-8 lg:gap-10 lg:mb-13">
@@ -40,6 +41,7 @@ const ConsultoriasPopup = () => {
               height={319}
               alt="Audiovisual"
               className="w-[58%] lg:w-[55%] mx-auto"
+              priority
             />
             <p className="text-[8px] sm:text-[14px] md:text-[17px] lg:text-[22px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] mb-5 md:mb-6 lg:mb-8 text-[#f7ecd5] mx-auto text-center font-extralight">
               Servicio integral pensado para empresas, marcas personales y

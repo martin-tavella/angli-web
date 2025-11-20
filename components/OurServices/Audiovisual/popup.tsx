@@ -34,6 +34,7 @@ const AudiovisualPopup = () => {
           height={1363}
           alt="Imagen Audiovisual"
           className="h-[165px] w-auto sm:h-[284px] md:h-[343px] lg:h-[455px] z-200 bg-[#4c80c0]"
+          priority
         />
         <div className="bg-[#4c80c0] h-[165px] sm:h-[284px] md:h-[343px] lg:h-[455px] pt-3 sm:pt-5 md:pt-7 lg:pt-10 animate-slide-in">
           <div className="relative flex justify-center flex-col gap-1 mb-2 sm:gap-4 sm:mb-4 lg:gap-5 z-150">
@@ -43,6 +44,7 @@ const AudiovisualPopup = () => {
               height={319}
               alt="Audiovisual"
               className="w-[50%] sm:w-[53%] mx-auto"
+              priority
             />
             <p className="text-[10px] sm:text-[14px] md:text-[18px] lg:text-[23px] max-w-[80%] mx-auto text-center font-extralight">
               Nos especializamos en crear contenido audiovisual de alta calidad

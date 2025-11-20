@@ -39,6 +39,7 @@ const DireccionPopup = () => {
               height={319}
               alt="Audiovisual"
               className="w-[43%] sm:w-[45%] lg:w-[42%] mx-auto"
+              priority
             />
             <p className="text-[8px] sm:text-[13px] md:text-[16px] lg:text-[20px] max-w-[86%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
               La dirección de arte es la que aporta coherencia estética,
@@ -56,6 +57,7 @@ const DireccionPopup = () => {
               height={395}
               alt="miscelanio"
               className="w-[90%] sm:w-[95%] absolute -bottom-4 sm:-bottom-7 lg:-bottom-9 right-3"
+              priority
             />
             <button
               className={`absolute -bottom-5 -right-5 sm:-bottom-10 sm:right-29 md:right-42 md:-bottom-11 lg:-bottom-13 lg:right-[35%] cursor-pointer hover:scale-105 transition-transform duration-300
