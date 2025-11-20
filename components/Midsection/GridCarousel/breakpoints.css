@@ -40,7 +40,7 @@
     right: 20% !important;
   }
 }
-/* 
+
 @media (min-width: 1935px) { 
   .btn-grid{
     right: 23% !important;
@@ -53,13 +53,11 @@
   }
 }
 
-@media (min-width: 2328px) { 
+@media (min-width: 2528px) { 
   .btn-grid{
-    right: 28% !important;
+    right: 30% !important;
   }
 }
- */
-
 
 
 @media (min-width: 1836px) { 

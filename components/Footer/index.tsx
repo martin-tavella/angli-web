@@ -35,7 +35,7 @@ const Footer = () => {
             />
 
             {/* Texto Comillas */}
-            <div className="pl-10 sm:pl-30 max-w-[600px] flex text-[18px] sm:text-[20px] md:[22px] leading-7 gap-3 font-extralight mt-4 md:mt-0">
+            <div className="md:pl-10 hidden md:flex max-w-[600px] text-[18px] sm:text-[20px] md:[22px] leading-7 gap-3 font-extralight md:mt-0">
               <img
                 src={comillas.src}
                 alt="Comilla"
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
 
           {/* SEGUNDA FILA: Conocenos + Donde Encontrarnos */}
-          <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-20 mt-10 md:mt-0">
+          <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-20 mt-0">
             {/* 1. Conocenos */}
             <div className="w-2/3 md:w-1/2">
               <h4

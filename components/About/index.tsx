@@ -17,6 +17,7 @@ const About = () => {
     setShowHook(!showHook);
   };
 
+
   return (
     <div className="relative">
       <Image

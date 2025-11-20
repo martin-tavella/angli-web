@@ -5,7 +5,6 @@ import leanLetter from "@/public/about/LEAN_LETTER.png";
 import reduceBtn from "@/public/about/BOTON_REDUCIR.png";
 import { manrope, vintageRotter } from "@/utils/fonts/fonts";
 import Image from "next/image";
-import "./breakpoint.css";
 
 const h4Styles = `${vintageRotter.className} 
 text-[#d85254]
@@ -20,7 +19,8 @@ interface HookProps {
 
 const Hook = ({ toggleHook, showHook }: HookProps) => {
   return (
-    <div id="hook"
+    <div
+      id="hook"
       className={`
         ${manrope.className} 
         flex justify-center items-center flex-col gap-8 
@@ -35,7 +35,7 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
       `}
     >
       {/* Contenedor del Texto */}
-      <div  className="mx-4 sm:mx-10 lg:mx-[15%] text-base sm:text-xl lg:text-[28px] xl:max-w-[800px] font-light my-8">
+      <div className="mx-4 sm:mx-10 lg:mx-[15%] text-base sm:text-xl lg:text-[28px] xl:max-w-[800px] font-light my-8">
         {" "}
         {/* CLAVE: Reducir tamaño y margen */}
         {/* Párrafos principales (Texto del Hook) */}
@@ -85,7 +85,7 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
 
       {/* Contenedor de las imágenes (Contactanos) - Se mantiene igual */}
       <section className="w-full flex items-end justify-center xl:max-w-[1240px] mx-auto">
-        <div className="relative w-full flex items-end justify-center">
+        <div className="relative w-full flex items-end justify-center ">
           <Image
             src="/about/FONDO_2.png"
             alt="Fondo decorativo"
@@ -98,14 +98,20 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
             <Image
               src={brendaLean}
               alt="Brenda y Leandro"
-              className={"w-[50%] h-auto z-10 mt-[34px] mr-0 sm:mr-15"}
+              className={"w-[50%] h-auto z-10 mt-[34px] mr-0 sm:mr-15 "}
             />
-
-            <Image
-              src={disabledContact}
-              alt="Contactanos"
-              className="absolute z-20 -top-4 left-1/2 -translate-x-1/2 w-30 sm:w-[200px] sm:-top-7 xl:w-[300px] xl:-top-12"
-            />
+            <button
+            onClick={()=>{
+              window.open("https://wa.link/bw0sqj")
+            }}
+            className="cursor-pointer"
+            >
+              <Image
+                src={disabledContact}
+                alt="Contactanos"
+                className="absolute z-20 -top-4 left-1/2 -translate-x-1/2 w-30 sm:w-[200px] sm:-top-7 xl:w-[300px] xl:-top-12"
+              />
+            </button>
 
             <Image
               src={brendaLetter}
@@ -121,15 +127,16 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
 
             <button
               onClick={() => {
-                toggleHook()
-                window.location.href = "#nosotros"
+                toggleHook();
+                window.location.href = "#nosotros";
               }}
-              className="btn-hook absolute z-30 bottom-[20%] hover:scale-110 -right-[12%] sm:right-[2%] md:right-[6%] cursor-pointer transition-all duration-300"
+              className="btn-hook right-3 absolute z-30 bottom-[20%] hover:scale-110 sm:right-[5%] md:right-[8%] lg:right-[10%] xl:right-20 cursor-pointer transition-all duration-300"
             >
               <Image
                 src={reduceBtn}
                 alt="Reducir"
-                className="w-[40%] sm:w-[60%] md:w-[65%] lg:w-[90%]  h-auto"
+                // CLAVE: Usar un ancho fijo para evitar que se estire con el contenedor.
+                className="w-16 h-auto sm:w-20 lg:w-24"
               />
             </button>
           </div>

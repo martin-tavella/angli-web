@@ -119,7 +119,9 @@ const RedesHook = ({ showHook, handleOnClick, btnContact }: RedesHookProps) => {
         <div className="flex relative">
           <div className="w-[60%] sm:w-[40%] md:w-[45%] py-6" />
 
-          <button className="cursor-pointer">
+          <button className="cursor-pointer"
+          
+          onClick={()=> window.open("https://wa.link/bw0sqj")}>
             <Image
               src={btnContact.src}
               alt="Contacto"
