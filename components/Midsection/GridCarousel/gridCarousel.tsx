@@ -28,7 +28,7 @@ const GridCarouselEmbla = () => {
       <div className="relative block w-full overflow-hidden">
         <div
           // CLAVE: Convertimos el viewport en RELATIVE para posicionar el botón.
-          className="embla__viewport w-full overflow-hidden bg-[#4d80be] relative before:absolute before:top-0 before:left-0 before:w-full before:h-15 before:bg-gradient-to-b before:from-black/40 before:to-transparent before:z-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-15 after:bg-gradient-to-t after:from-black/40 after:to-transparent after:z-10"
+          className="embla__viewport w-full overflow-hidden bg-[#4d80be] relative before:absolute before:top-0 before:left-0 before:w-full before:h-15 before:bg-gradient-to-b before:from-black/40 before:to-transparent before:z-10 after:absolute after:bottom-0 after:left-0 after:w-full after:h-10 after:bg-gradient-to-t after:from-black/40 after:to-transparent after:z-10"
           ref={emblaRef}
         >
           <div className="embla__container flex h-full">
@@ -46,9 +46,10 @@ const GridCarouselEmbla = () => {
                   sizes="100vw"
                   quality={75}
                 />
-                <button className="btn-grid absolute bottom-[3%] right-[5%] h-20 sm:h-30 xl:h-30 z-20 cursor-pointer hover:scale-105 transition-transform duration-300"
+                <button className="btn-grid absolute bottom-[3%] right-[5%] h-20 sm:h-30 xl:h-30 z-500 cursor-pointer hover:scale-105 transition-transform duration-300"
                 onClick={()=>{
                   window.location.href = "/#trabajos"
+                  console.log("Redirigiendo a Trabajos...")
                 }}
                 >
                   <Image src={boton1} alt="Ver Más" className="w-25 md:w-35 lg:w-40" />

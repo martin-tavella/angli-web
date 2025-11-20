@@ -25,7 +25,7 @@ const ClientGrids = () => {
         }
     },[windowWidth, chunkAndPadClients])
     // Configuración para que el carrusel tenga paginación con flechas (si las quieres agregar)
-    const autoplayOptions = { delay: 6000, stopOnInteraction: false }; 
+    const autoplayOptions = { delay: 5000, stopOnInteraction: false }; 
       
       // Inicializa Embla con el plugin de Autoplay
       const [emblaRef] = useEmblaCarousel({ 
@@ -71,14 +71,6 @@ const ClientGrids = () => {
                             </div>
                         ))}
                     </div>
-                </div>
-
-                {/* Botón "Ver Más" fuera del carrusel */}
-                <div className="text-center mt-12 flex justify-end">
-                    {/* El contenedor principal debe ser relative o flex-col */}
-                    <button className="cursor-pointer hover:scale-108 transition-transform duration-300">
-                        <img src="/midsection/BOTON_1.png" alt="Ver Más" className="w-30 sm:w-45"/>
-                    </button>
                 </div>
             </div>
         </section>

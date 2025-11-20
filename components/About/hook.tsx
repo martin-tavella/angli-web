@@ -5,7 +5,6 @@ import leanLetter from "@/public/about/LEAN_LETTER.png";
 import reduceBtn from "@/public/about/BOTON_REDUCIR.png";
 import { manrope, vintageRotter } from "@/utils/fonts/fonts";
 import Image from "next/image";
-import "./breakpoint.css";
 
 const h4Styles = `${vintageRotter.className} 
 text-[#d85254]
@@ -124,12 +123,12 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
                 toggleHook()
                 window.location.href = "#nosotros"
               }}
-              className="btn-hook absolute z-30 bottom-[20%] hover:scale-110 -right-[42%] sm:-right-[10%] md:-right-[4%] lg:right-[2%] cursor-pointer transition-all duration-300"
+              className="btn-hook -right-8 absolute z-30 bottom-[20%] hover:scale-110 sm:right-[5%] md:right-[8%] lg:right-[10%] xl:right-20 cursor-pointer transition-all duration-300"
             >
               <Image
                 src={reduceBtn}
                 alt="Reducir"
-                className="w-[25%] sm:w-[35%] md:w-[38%] lg:w-[50%]  h-auto"
+                className="w-[50%] sm:w-[75%] md:w-[90%] xl:w-full  h-auto"
               />
             </button>
           </div>
