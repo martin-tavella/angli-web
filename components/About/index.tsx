@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useState } from "react";
 import Hook from "./hook";
 
-const spansStyles = `${vintageRotter.className} text-[32px] sm:text-4xl lg:text-5xl`;
+const spansStyles = `${vintageRotter.className} text-[32px] sm:text-4xl mx-1 lg:text-5xl`;
 
 const About = () => {
   const [showHook, setShowHook] = useState<boolean>(false);
@@ -76,9 +76,9 @@ const About = () => {
 
               {/* Texto h3 */}
               <h3 className="text-[#f7ecd5] text-xl sm:text-2xl font-extralight relative z-10 p-5">
-                En <span className={spansStyles}>Angli Estudio</span> somos tu
-                aliado <br /> estratégico en{" "}
-                <span className={spansStyles}>comunicación</span> <br /> y{" "}
+                En <span className={spansStyles}>Angli Estudio</span>  somos tu
+                aliado estratégico <br className="sm:hidden"/> en{" "}
+                <span className={spansStyles}>comunicación</span> <br className="sm:hidden"/> y{" "}
                 <span className={spansStyles}>contenido audiovisual.</span>
               </h3>
 
