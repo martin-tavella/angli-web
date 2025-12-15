@@ -16,7 +16,7 @@ const AudiovisualMobilePopup = () =>{
       };
   return (
     <div>
-    <article className="bg-[#4c80c0] p-5 rounded-xl pb-20 md:pb-27 max-w-full sm:max-w-[80%] mx-auto">
+    <article className={`bg-[#4c80c0] p-5 ${showMobileHook ? "rounded-t-xl" : "rounded-xl"} pb-20 md:pb-27 max-w-full md:max-w-[80%] mx-auto`}>
       <Image
         src={titulo.src}
         width={1328}
@@ -33,7 +33,7 @@ const AudiovisualMobilePopup = () =>{
         Trabajamos juntos * escuchamos tus necesidades y expectativas *
         desarrollamos soluciones a medida que impacten visualmente.
       </p>
-      <div className="relative">
+      <div className={`relative ${showMobileHook ? "hidden" : ""}`}>
          <Image
               src={miscelanious.src}
               width={2112}
