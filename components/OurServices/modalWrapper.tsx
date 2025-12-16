@@ -8,6 +8,7 @@ import ConsultoriasPopup from "./Consultorias/popup";
 import useWindowWidth from "@/hooks/useWindowWidth";
 import "./slideIn.css"
 import AudiovisualMobilePopup from "./Audiovisual/mobilePopup";
+import DireccionMobilePopup from "./DireccionDeArte/mobilePopup";
 
 interface ModalWrapperProps {
   popupVisible: string | null;
@@ -39,7 +40,8 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
         if (width <= 1023) return <AudiovisualMobilePopup />
         else return <AudiovisualPopup />;
       case "direccion":
-        return <DireccionPopup />;
+         if (width <= 1023) return <DireccionMobilePopup />
+         else return <DireccionPopup />;
       case "diseno":
         return <DisenoGraficoPopup />;
       case "redes":
