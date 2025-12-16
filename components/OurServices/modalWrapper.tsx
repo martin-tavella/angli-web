@@ -5,7 +5,9 @@ import DisenoGraficoPopup from "./DIsenoGrafico/popup";
 import RedesSocialesPopup from "./RedesSociales/popup";
 import PaidPopup from "./PaidMedia/popup";
 import ConsultoriasPopup from "./Consultorias/popup";
+import useWindowWidth from "@/hooks/useWindowWidth";
 import "./slideIn.css"
+import AudiovisualMobilePopup from "./Audiovisual/mobilePopup";
 
 interface ModalWrapperProps {
   popupVisible: string | null;
@@ -28,11 +30,14 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
     };
   }, [popupVisible]);
 
+  const width = useWindowWidth()
+
   if (popupVisible === null) return null;
   const getPopup = () => {
     switch (popupVisible) {
       case "audiovisual":
-        return <AudiovisualPopup />;
+        if (width <= 1023) return <AudiovisualMobilePopup />
+        else return <AudiovisualPopup />;
       case "direccion":
         return <DireccionPopup />;
       case "diseno":
@@ -61,7 +66,7 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
       {/* Contenido del Popup (tu componente AudiovisualPopup) 
           Añadimos z-20 para asegurar que esté encima del overlay
       */}
-      <div className="max-w-[365px] sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] z-20">
+      <div className={`${width <= 1023 ? "": "max-w-[365px] sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] z-20"}`}>
         {getPopup()}
       </div>
     </div>

@@ -143,18 +143,18 @@ const Footer = () => {
 
       {/* CREDITOS: Footer Negro */}
       <div className=" bg-black py-3">
-        <p className="flex justify-center items-center text-[14px] sm:text-[18px] lg:text-[26px] font-extralight gap-2 sm:gap-5 text-[#f7ecd5] tracking-wide">
+        <p className="flex justify-center items-center text-[14px] sm:text-[18px] lg:text-[26px] font-extralight gap-2 sm:gap-2 text-[#f7ecd5] tracking-wide">
           <img
             src={angliBlanco.src}
             alt="Logo Angli Blanco"
             className="w-auto h-6 sm:h-10 mr-1 sm:mr-3"
           />
-          DESARROLLADO POR ANGLI ESTUDIO
           <img
             src={copy.src}
             alt="Copyright"
-            className="w-auto h-6 sm:h-10 mr-1 sm:mr-3"
+            className="w-auto h-6 sm:h-5"
           />
+          ANGLI ESTUDIO 2025 - TODOS LOS DERECHOS RESERVADOS
         </p>
       </div>
     </footer>
