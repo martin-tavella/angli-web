@@ -1,0 +1,101 @@
+import Image from "next/image";
+import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
+import fondoRojo from "@/public/backgrounds/FONDO_ROJO.png";
+import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
+import personaje from "@/public/ourServices/DISENO/PERSONAJE.png";
+
+interface DisenoHookProps {
+  showMobileHook: boolean;
+  handleOnClick: () => void;
+}
+
+const h5Styles = "text-[#d85254] uppercase text-[140%] pb-2 font-light";
+
+const DisenoMobileHook = ({
+  showMobileHook,
+  handleOnClick,
+}: DisenoHookProps) => {
+
+  return (
+    <article
+      className={`
+      lg:max-w-[1010px] mx-auto rounded-b-3xl
+      transition-all duration-800 ease-in-out overflow-hidden
+      border-x-2 border-[#ee6226] md:max-w-[80%] relative -mt-1
+      ${
+        showMobileHook
+          ? "max-h-[680px] sm:max-h-[900px] md:max-h-[1000px]"
+          : "max-h-0 border-b-0 border-x-0"
+      }
+    `}
+    >
+    <div
+        className="
+      relative
+      bg-[url('/backgrounds/FONDO_BLANCO.png')]  bg-no-repeat bg-cover py-3 border-b-2 border-[#ee6226]
+      before:absolute before:top-0 before:left-0 before:w-full before:h-15 before:bg-gradient-to-b before:from-black/15 before:to-transparent before:z-10
+      transition-all duration-500 forward 
+      "
+      >
+        <Image
+          src={personaje.src}
+          alt="Listado de Servicios"
+          width={113}
+          height={119}
+          className="w-[18%] sm:w-[15%] md:w-[18%] mx-auto pt-3"
+        />
+        <ul className="text-center uppercase text-[#4d4d4d] font-light flex flex-col text-[10px] sm:text-[100%] gap-1 max-w-[70%]
+         sm:gap-2 md:gap-5 lg:max-w-[50%] mx-auto pt-4 pb-13 sm:pb-23">
+          <li>
+            <h5 className={h5Styles}>-MARCA-</h5>
+            <p>
+              Branding y Rebranding + Brandboard (Contamos con mini brand y full
+              brand).
+            </p>
+          </li>
+          <li>
+            <h5 className={h5Styles}>
+              -Diseño comercial corporativo- (y para emprendedores)
+            </h5>
+            <p>
+              Diseño de documentos (PDF’S)_ Infografías para explicar procesos o
+              productos_ Catálogos digitales e impresos (productos o
+              servicios)_Plantillas de presupuestos, cotizaciones y facturas con
+              diseño corporativo.
+            </p>
+          </li>
+          <li>
+            <h5 className={h5Styles}>-DISEÑO PUBLICITARIO DIGITAL-</h5>
+            <p>
+              Banners digitales para web _ Piezas para email marketing (headers, firmas, plantillas de newsletter)._ Flyers digitales para lanzamientos/promociones.
+            </p>
+          </li>
+          <li>
+            <h5 className={h5Styles}>-DISEÑO EDITORIAL Y CORPORATIVO-</h5>
+            <p>
+              Diseño de ebooks o guías _ Diseños para informes anuales o reportes de gestión.
+            </p>
+          </li>
+          <li>
+            <h5 className={h5Styles}>-DISEÑOs para eventos y productos-</h5>
+            <p>Merchandising (remeras, tazas, bolsas, stickers)_ Invitaciones corporativas digitales._ Stands y material POP (roll-ups, banners, cartelería).</p>
+          </li>
+        </ul>
+        <button
+          onClick={handleOnClick}
+          className="cursor-pointer mx-auto absolute bottom-1 -right-8 sm:-right-2 hover:scale-105 transition-transform duration-300"
+        >
+          <Image
+            src={reducir.src}
+            alt="Contacto"
+            width={211}
+            height={193}
+            className="z-50 w-[55%] sm:w-[80%]"
+          />
+        </button>
+      </div>
+    </article>
+  );
+};
+
+export default DisenoMobileHook;

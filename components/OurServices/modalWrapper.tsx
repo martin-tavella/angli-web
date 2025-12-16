@@ -1,14 +1,15 @@
 import { useEffect } from "react";
-import AudiovisualPopup from "./Audiovisual/popup";
-import DireccionPopup from "./DireccionDeArte/popup";
-import DisenoGraficoPopup from "./DIsenoGrafico/popup";
+import AudiovisualPopup from "./Audiovisual/desktop/popup";
+import DireccionPopup from "./DireccionDeArte/desktop/popup";
+import DisenoGraficoPopup from "./DIsenoGrafico/desktop/popup";
 import RedesSocialesPopup from "./RedesSociales/popup";
 import PaidPopup from "./PaidMedia/popup";
 import ConsultoriasPopup from "./Consultorias/popup";
 import useWindowWidth from "@/hooks/useWindowWidth";
 import "./slideIn.css"
-import AudiovisualMobilePopup from "./Audiovisual/mobilePopup";
-import DireccionMobilePopup from "./DireccionDeArte/mobilePopup";
+import AudiovisualMobilePopup from "./Audiovisual/mobile/mobilePopup";
+import DireccionMobilePopup from "./DireccionDeArte/mobile/mobilePopup";
+import DisenoMobilePopup from "./DIsenoGrafico/mobile/mobilePopup";
 
 interface ModalWrapperProps {
   popupVisible: string | null;
@@ -43,7 +44,8 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
          if (width <= 1023) return <DireccionMobilePopup />
          else return <DireccionPopup />;
       case "diseno":
-        return <DisenoGraficoPopup />;
+        if (width <= 1023) return <DisenoMobilePopup />
+         else return <DisenoGraficoPopup />;
       case "redes":
         return <RedesSocialesPopup />;
       case "paid":
