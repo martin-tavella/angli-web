@@ -3,7 +3,7 @@ import AudiovisualPopup from "./Audiovisual/desktop/popup";
 import DireccionPopup from "./DireccionDeArte/desktop/popup";
 import DisenoGraficoPopup from "./DIsenoGrafico/desktop/popup";
 import RedesSocialesPopup from "./RedesSociales/desktop/popup";
-import PaidPopup from "./PaidMedia/popup";
+import PaidPopup from "./PaidMedia/desktop/popup";
 import ConsultoriasPopup from "./Consultorias/popup";
 import useWindowWidth from "@/hooks/useWindowWidth";
 import "./slideIn.css"
@@ -11,6 +11,7 @@ import AudiovisualMobilePopup from "./Audiovisual/mobile/mobilePopup";
 import DireccionMobilePopup from "./DireccionDeArte/mobile/mobilePopup";
 import DisenoMobilePopup from "./DIsenoGrafico/mobile/mobilePopup";
 import RedesMobilePopup from "./RedesSociales/mobile/mobilePopup";
+import PaidMobilePopup from "./PaidMedia/mobile/mobilePopup";
 
 interface ModalWrapperProps {
   popupVisible: string | null;
@@ -51,7 +52,8 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
         if (width <= 1023) return <RedesMobilePopup />
         else return <RedesSocialesPopup />;
       case "paid":
-        return <PaidPopup />;
+        if (width <= 1023) return <PaidMobilePopup />
+        else return <PaidPopup />;
       case "consultorias":
         return <ConsultoriasPopup />;
       default:

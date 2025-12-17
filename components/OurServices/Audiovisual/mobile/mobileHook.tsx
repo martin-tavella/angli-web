@@ -1,18 +1,14 @@
 import Image from "next/image";
 import imgHook from "@/public/ourServices/AUDIOVISUAL/PLACA_COMPLETA.png";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png"
+import { MobileHookProps } from "../../hook.types";
 
-interface AudiovisualHookProps {
-  showMobileHook: boolean;
-  btnContact: { src: string };
-  handleOnClick: () => void;
-}
+
 
 const AudiovisualMobileHook = ({
   showMobileHook,
   handleOnClick,
-  btnContact,
-}: AudiovisualHookProps) => {
+}: MobileHookProps) => {
   return (
     <article
       className={`

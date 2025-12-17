@@ -9,6 +9,7 @@ import DisenoFeed from "../infoSliders/disenoFeed";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
 import "../animate-tutorial.css"
 import cursor from "@/public/ourServices/REDES/cursor.png"
+import { HookProps } from "../../hook.types";
 
 // --- DATOS DE CARICATURAS Y ESTADOS ---
 type ActiveSliderId = "planificacion" | "paquete" | "disenoFeed";
@@ -38,13 +39,7 @@ const CHARACTER_DATA = [
   },
 ];
 
-interface RedesHookProps {
-  showHook: boolean;
-  btnContact?: { src: string };
-  handleOnClick: () => void;
-}
-
-const RedesHook = ({ showHook, handleOnClick, btnContact }: RedesHookProps) => {
+const RedesHook = ({ showHook, handleOnClick, btnContact }: HookProps) => {
   // Estado para controlar qué sección de información se muestra
   const [activeSlider, setActiveSlider] =
     useState<ActiveSliderId>("planificacion");
@@ -154,7 +149,7 @@ const RedesHook = ({ showHook, handleOnClick, btnContact }: RedesHookProps) => {
               alt="Contacto"
               width={211}
               height={193}
-              className="w-[13%] md:w-[11%] lg:w-[8%] mx-auto hover:scale-105 transition-transform duration-300  absolute bottom-0 right-5"
+              className="w-[13%] md:w-[11%] lg:w-[8%] mx-auto hover:scale-105 transition-transform duration-300 absolute bottom-0 right-5"
             />
           </button>
         </div>

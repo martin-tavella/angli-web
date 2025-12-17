@@ -1,19 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-// Componentes de Info (asumimos que ya están preparados)
+import { useState } from "react";
 import Planificacion from "../infoSliders/planificacion";
 import Paquete from "../infoSliders/paquete";
 import DisenoFeed from "../infoSliders/disenoFeed";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
 import "../animate-tutorial.css"
 import cursor from "@/public/ourServices/REDES/cursor.png"
+import { MobileHookProps } from "../../hook.types";
 
-// --- DATOS DE CARICATURAS Y ESTADOS ---
 type ActiveSliderId = "planificacion" | "paquete" | "disenoFeed";
 
-// Mapeo de personajes a sus variantes de color y la sección de contenido
 const CHARACTER_DATA = [
   {
     id: "planificacion" as ActiveSliderId,
@@ -38,13 +36,7 @@ const CHARACTER_DATA = [
   },
 ];
 
-interface RedesHookProps {
-  showMobileHook: boolean;
-  btnContact?: { src: string };
-  handleOnClick: () => void;
-}
-
-const RedesHook = ({ showMobileHook, handleOnClick }: RedesHookProps) => {
+const RedesHook = ({ showMobileHook, handleOnClick }: MobileHookProps) => {
  const [activeSlider, setActiveSlider] = useState<ActiveSliderId>("planificacion");
   const [showGuide, setShowGuide] = useState(true);
 
@@ -130,7 +122,7 @@ const RedesHook = ({ showMobileHook, handleOnClick }: RedesHookProps) => {
               alt="Contacto"
               width={211}
               height={193}
-              className="w-[13%] md:w-[11%] lg:w-[8%] mx-auto hover:scale-105 transition-transform duration-300  absolute bottom-0 right-5"
+              className="w-[13%] md:w-[11%] lg:w-[8%] mx-auto hover:scale-105 transition-transform duration-300 absolute bottom-0 right-5"
             />
           </button>
         </div>
