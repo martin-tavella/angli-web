@@ -99,7 +99,7 @@ const RedesHook = ({ showMobileHook, handleOnClick }: MobileHookProps) => {
                 src={char.id === activeSlider ? char.orange : char.blue}
                 alt={char.alt}
                 className={`
-              w-16 md:w-20 lg:w-24 h-auto 
+              w-16 sm:w-20 lg:w-24 h-auto 
               ${
                 char.id === activeSlider
                   ? "scale-125 z-10"

@@ -14,12 +14,12 @@ const Planificacion = () => {
           alt="Nuestros Servicios"
           width={1751}
           height={274}
-          className="w-[85%] sm:w-[75%] mx-auto"
+          className="w-[100%] sm:w-[95%] mx-auto"
         />
         <span className="text-[#4d81c0] text-[16px] sm:text-2xl text-center font-extralight">
           -LEVEL UP-
         </span>
-        <p className="text-center text-[12px] sm:text-xl font-extralight">
+        <p className="text-center text-[13px] sm:text-xl font-extralight">
           Nuestro servicio de planificación mensual es la forma más completa y
           organizada de gestionar tu presencia digital. No se trata solo de
           publicar contenido: es un proceso pensado para que tu marca tenga
@@ -28,7 +28,7 @@ const Planificacion = () => {
       </div>
       <div className="pt-5">
         <h4
-          className={`${vintageRotter.className} text-[#4d81c0] text-2xl sm:text-4xl text-center font-extralight`}
+          className={`${vintageRotter.className} text-[#4d81c0] text-3xl sm:text-4xl text-center font-extralight`}
         >
           ¿Como funciona?
         </h4>
@@ -39,7 +39,7 @@ const Planificacion = () => {
               alt="1"
               width={201}
               height={201}
-              className="w-[30%] mx-auto"
+              className="w-[50%] mx-auto"
             />
             <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">Planificación estratégica
 y calendario de contenido</span>
@@ -50,7 +50,7 @@ y calendario de contenido</span>
               alt="2"
               width={201}
               height={201}
-              className="w-[30%] mx-auto"
+              className="w-[50%] mx-auto"
             />
             <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">Producción audiovisual en una jornada</span>
           </div>
@@ -60,7 +60,7 @@ y calendario de contenido</span>
               alt="3"
               width={201}
               height={201}
-              className="w-[30%] mx-auto"
+              className="w-[50%] mx-auto"
             />
             <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">Diseño gráfico e identidad visual
 </span>

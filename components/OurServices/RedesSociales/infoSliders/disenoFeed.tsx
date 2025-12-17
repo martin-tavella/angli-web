@@ -13,9 +13,9 @@ const DisenoFeed = () => {
           alt="Nuestros Servicios"
           width={1751}
           height={274}
-          className="w-[85%] sm:w-[63%] mx-auto"
+          className="w-[100%] sm:w-[95%] mx-auto"
         />
-        <p className="text-center text-[12px] sm:text-xl font-extralight">
+        <p className="text-center text-[13px] sm:text-xl font-extralight">
           En redes sociales, la primera impresión lo es todo. Un feed prolijo,
           atractivo y alineado con la identidad visual de tu marca transmite
           confianza, profesionalismo y hace que tu público quiera quedarse a
@@ -27,7 +27,7 @@ const DisenoFeed = () => {
       </div>
       <div className="pt-8">
         <h4
-          className={`${vintageRotter.className} text-[#4d81c0] text-2xl sm:text-4xl text-center font-extralight`}
+          className={`${vintageRotter.className} text-[#4d81c0] text-3xl sm:text-4xl text-center font-extralight`}
         >
           ¿Como funciona?
         </h4>
@@ -38,7 +38,7 @@ const DisenoFeed = () => {
               alt="1"
               width={201}
               height={201}
-              className="w-[30%] mx-auto"
+              className="w-[50%] mx-auto"
             />
             <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
               Placas diseñadas para el feed (6)
@@ -50,7 +50,7 @@ const DisenoFeed = () => {
               alt="2"
               width={201}
               height={201}
-              className="w-[30%] mx-auto"
+              className="w-[50%] mx-auto"
             />
             <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
               Intervención de fotos (6)
