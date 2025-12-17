@@ -1,6 +1,40 @@
+"use client";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const Hero = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const playCount = useRef(0);
+
+  // Define el momento exacto (en segundos) donde quieres que el video se detenga.
+  const PAUSE_TIME_IN_SECONDS = 3;
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handleTimeUpdate = () => {
+      // Comprueba si el video está cerca del final
+      if (video.duration - video.currentTime < 0.2) {
+        playCount.current++;
+        if (playCount.current < 3) {
+          video.currentTime = 0; // Reinicia el video
+          video.play();
+        } else {
+          video.currentTime = PAUSE_TIME_IN_SECONDS; // Va al frame específico
+          video.pause();
+          video.removeEventListener("timeupdate", handleTimeUpdate); // Limpia el listener
+        }
+      }
+    };
+
+    video.addEventListener("timeupdate", handleTimeUpdate);
+
+    return () => {
+      video.removeEventListener("timeupdate", handleTimeUpdate);
+    };
+  }, []);
+
   return (
     <section className="relative mx-auto h-full pt-24 sm:pt-28">
       <Image
@@ -13,8 +47,8 @@ const Hero = () => {
         priority
       />
       <video
+        ref={videoRef}
         autoPlay
-        loop
         muted
         playsInline // CRUCIAL para móviles
         className="relative inset-0 w-full h-full object-cover z-0 mx-auto min-w-screen min-h-[62vw] sm:max-w-[640px] lg:min-w-auto max-w-[375px] lg:max-w-5xl lg:min-h-[628px]"
