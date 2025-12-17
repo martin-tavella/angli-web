@@ -3,10 +3,12 @@
 import Image from "next/image";
 import { useState } from "react";
 // Componentes de Info (asumimos que ya están preparados)
-import Planificacion from "./infoSliders/planificacion";
-import Paquete from "./infoSliders/paquete";
-import DisenoFeed from "./infoSliders/disenoFeed";
+import Planificacion from "../infoSliders/planificacion";
+import Paquete from "../infoSliders/paquete";
+import DisenoFeed from "../infoSliders/disenoFeed";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
+import "../animate-tutorial.css"
+import cursor from "@/public/ourServices/REDES/cursor.png"
 
 // --- DATOS DE CARICATURAS Y ESTADOS ---
 type ActiveSliderId = "planificacion" | "paquete" | "disenoFeed";
@@ -38,7 +40,7 @@ const CHARACTER_DATA = [
 
 interface RedesHookProps {
   showHook: boolean;
-  btnContact: { src: string };
+  btnContact?: { src: string };
   handleOnClick: () => void;
 }
 
@@ -46,10 +48,11 @@ const RedesHook = ({ showHook, handleOnClick, btnContact }: RedesHookProps) => {
   // Estado para controlar qué sección de información se muestra
   const [activeSlider, setActiveSlider] =
     useState<ActiveSliderId>("planificacion");
+  const [showGuide, setShowGuide] = useState(true);
 
-  // Función para cambiar el slider activo (se llama al hacer clic en la caricatura)
   const handleSelect = (id: ActiveSliderId) => {
     setActiveSlider(id);
+    setShowGuide(false);
   };
 
   // Función para renderizar el componente de información actual
@@ -72,7 +75,11 @@ const RedesHook = ({ showHook, handleOnClick, btnContact }: RedesHookProps) => {
              lg:max-w-[1010px] mx-auto rounded-b-3xl
              transition-all duration-800 ease-in-out overflow-hidden
               border-[#4d81c0]
-             ${showHook ? "max-h-[1500px] border-[5px]" : "max-h-0 border-b-0 border-x-0"}
+             ${
+               showHook
+                 ? "max-h-[1500px] border-[5px]"
+                 : "max-h-0 border-b-0 border-x-0"
+             }
         `}
     >
       <div
@@ -86,27 +93,32 @@ const RedesHook = ({ showHook, handleOnClick, btnContact }: RedesHookProps) => {
       >
         {/* --- SECCIÓN DE SELECCIÓN DE CARICATURAS --- */}
         <div className="flex justify-center items-end gap-2 sm:gap-4 md:gap-8 mb-8 z-20 pt-10">
-          {CHARACTER_DATA.map((char) => (
+          {CHARACTER_DATA.map((char, index) => (
             <button
               key={char.id}
               onClick={() => handleSelect(char.id)}
-              className="transition-all duration-500 ease-in-out focus:outline-none cursor-pointer"
-              aria-label={`Seleccionar ${char.alt}`}
+              className="relative transition-all duration-500 focus:outline-none cursor-pointer"
             >
+              {/* LA MANITO: Solo en el muñeco del medio (índice 1) */}
+              {showGuide && index === 1 && (
+                <div className="absolute -bottom-3 -right-2 z-50 pointer-events-none animate-tap text-4xl">
+                  <img src={cursor.src} alt="Cursor" className="h-8" />
+                </div>
+              )}
+
               <Image
                 src={char.id === activeSlider ? char.orange : char.blue}
                 alt={char.alt}
-                // CLAVE: Lógica de centrado y color
                 className={`
-                                    w-16 md:w-20 lg:w-24 h-auto 
-                                    ${
-                                      char.id === activeSlider
-                                        ? "scale-125 z-10 opacity-100"
-                                        : "opacity-70 scale-90"
-                                    }
-                                    transition-all duration-300
-                                `}
-                width={100} // Ajusta el tamaño base de la imagen
+              w-16 md:w-20 lg:w-24 h-auto 
+              ${
+                char.id === activeSlider
+                  ? "scale-125 z-10"
+                  : "opacity-70 scale-90"
+              }
+              transition-all duration-300
+            `}
+                width={100}
                 height={100}
               />
             </button>
@@ -119,11 +131,12 @@ const RedesHook = ({ showHook, handleOnClick, btnContact }: RedesHookProps) => {
         <div className="flex relative">
           <div className="w-[60%] sm:w-[40%] md:w-[45%] py-6" />
 
-          <button className="cursor-pointer"
-          
-          onClick={()=> window.open("https://wa.link/bw0sqj")}>
+          <button
+            className="cursor-pointer"
+            onClick={() => window.open("https://wa.link/bw0sqj")}
+          >
             <Image
-              src={btnContact.src}
+              src={btnContact!.src}
               alt="Contacto"
               width={392}
               height={113}

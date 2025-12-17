@@ -1,18 +1,13 @@
 import personaje from "@/public/ourServices/DISENO/PERSONAJE.png";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
 import Image from "next/image";
-
-interface DireccionHookProps {
-  showHook: boolean;
-  btnContact: { src: string };
-  handleOnClick: () => void;
-}
+import { HookProps } from "../../hook.types";
 
 const DisenoHook = ({
   showHook,
   handleOnClick,
   btnContact,
-}: DireccionHookProps) => {
+}: HookProps) => {
   const h5Styles = "text-[#d85254] uppercase text-[120%] pb-2";
 
   return (

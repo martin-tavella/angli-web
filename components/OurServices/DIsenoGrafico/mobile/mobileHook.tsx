@@ -1,20 +1,14 @@
 import Image from "next/image";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
-import fondoRojo from "@/public/backgrounds/FONDO_ROJO.png";
-import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
 import personaje from "@/public/ourServices/DISENO/PERSONAJE.png";
-
-interface DisenoHookProps {
-  showMobileHook: boolean;
-  handleOnClick: () => void;
-}
+import { MobileHookProps } from "../../hook.types";
 
 const h5Styles = "text-[#d85254] uppercase text-[140%] pb-2 font-light";
 
 const DisenoMobileHook = ({
   showMobileHook,
   handleOnClick,
-}: DisenoHookProps) => {
+}: MobileHookProps) => {
 
   return (
     <article

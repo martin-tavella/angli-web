@@ -2,18 +2,14 @@ import Image from "next/image";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
 import fondoRojo from "@/public/backgrounds/FONDO_ROJO.png";
 import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
+import { MobileHookProps } from "../../hook.types";
 
-interface DireccionHookProps {
-  showMobileHook: boolean;
-  btnContact: { src: string };
-  handleOnClick: () => void;
-}
+
 
 const DireccionMobileHook = ({
   showMobileHook,
   handleOnClick,
-  btnContact,
-}: DireccionHookProps) => {
+}: MobileHookProps) => {
   return (
     <article
       className={`

@@ -1,11 +1,12 @@
 import Image from "next/image";
-import titulo from "@/public/ourServices/DIRECCION/TITULO.png";
+import titulo from "@/public/ourServices/REDES/TITULO_POPUP.png";
 import miscelanious from "@/public/ourServices/AUDIOVISUAL/MISCELANEA.png";
 import btnHook from "@/public/ourServices/AUDIOVISUAL/BOTON_AMPLIAR.png";
 import { useState } from "react";
-import DireccionMobileHook from "./mobileHook";
+import RedesMobileHook from "./mobileHook";
+// import DireccionMobileHook from "./mobileHook";
 
-const DireccionMobilePopup = () => {
+const RedesMobilePopup = () => {
   const [showMobileHook, setShowMobileHook] = useState(false);
 
   const handleOnClick = () => {
@@ -14,7 +15,7 @@ const DireccionMobilePopup = () => {
   return (
     <div>
       <article
-        className={`bg-[#d85254] p-5 ${
+        className={`bg-[#4d81c0] p-5 ${
           showMobileHook ? "rounded-t-xl" : "rounded-xl"
         } pb-20 md:pb-27 max-w-full md:max-w-[80%] mx-auto`}
       >
@@ -23,18 +24,18 @@ const DireccionMobilePopup = () => {
           width={1328}
           height={319}
           alt="Audiovisual"
-          className="w-[85%] sm:w-[70%] md:w-[75%] mx-auto"
+          className="w-[85%] sm:w-[63%] md:w-[70%] mx-auto"
           priority
         />{" "}
         <p className="text-[14px] sm:text-[17px] md:text-[23px] lg:text-[23px] max-w-[90%] mx-auto text-center font-normal text-white py-3 md:py-6 leading-4.5 md:leading-6">
-          La dirección de arte es la que aporta coherencia estética, selecciona
-          materiales, colores y texturas para construir escenarios con concepto,
-          y le da a cada producción una atmósfera única que potencia la esencia
-          de la marca.
+            No se trata solo de publicar, sino de construir una presencia
+              coherente, atractiva y constante que conecte con tu audiencia.
+              Potenciamos tu presencia digital con diferentes servicios para
+              redes, desde diseño de feeds hasta una gestión integral de redes.
         </p>
-        <p className="text-[13px] sm:text-[14px] md:text-[20px] lg:text-[16px] max-w-[93%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-white uppercase leading-4.5 md:leading-5">
-          En nuestra agencia no hacemos solo contenido: creamos impacto visual
-          donde los detalles marcan la diferencia.
+        <p className="text-[13px] sm:text-[14px] md:text-[20px] lg:text-[16px] max-w-[91%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-white uppercase leading-4.5 md:leading-5">
+          Transformamos tus perfiles en un espacio coherente y profesional
+              que hace crecer tu marca.
         </p>
         <div className={`relative ${showMobileHook ? "hidden" : ""}`}>
           <Image
@@ -59,7 +60,7 @@ const DireccionMobilePopup = () => {
           </button>
         </div>
       </article>
-      <DireccionMobileHook
+      <RedesMobileHook
         showMobileHook={showMobileHook}
         handleOnClick={handleOnClick}
       />
@@ -67,4 +68,4 @@ const DireccionMobilePopup = () => {
   );
 };
 
-export default DireccionMobilePopup;
+export default RedesMobilePopup;
