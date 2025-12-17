@@ -1,13 +1,18 @@
 import { useEffect } from "react";
-import AudiovisualPopup from "./Audiovisual/popup";
-import DireccionPopup from "./DireccionDeArte/popup";
-import DisenoGraficoPopup from "./DIsenoGrafico/popup";
-import RedesSocialesPopup from "./RedesSociales/popup";
-import PaidPopup from "./PaidMedia/popup";
-import ConsultoriasPopup from "./Consultorias/popup";
+import AudiovisualPopup from "./Audiovisual/desktop/popup";
+import DireccionPopup from "./DireccionDeArte/desktop/popup";
+import DisenoGraficoPopup from "./DIsenoGrafico/desktop/popup";
+import RedesSocialesPopup from "./RedesSociales/desktop/popup";
+import PaidPopup from "./PaidMedia/desktop/popup";
+import ConsultoriasPopup from "./Consultorias/desktop/popup";
 import useWindowWidth from "@/hooks/useWindowWidth";
 import "./slideIn.css"
-import AudiovisualMobilePopup from "./Audiovisual/mobilePopup";
+import AudiovisualMobilePopup from "./Audiovisual/mobile/mobilePopup";
+import DireccionMobilePopup from "./DireccionDeArte/mobile/mobilePopup";
+import DisenoMobilePopup from "./DIsenoGrafico/mobile/mobilePopup";
+import RedesMobilePopup from "./RedesSociales/mobile/mobilePopup";
+import PaidMobilePopup from "./PaidMedia/mobile/mobilePopup";
+import ConsultoriasMobilePopup from "./Consultorias/mobile/mobilePopup";
 
 interface ModalWrapperProps {
   popupVisible: string | null;
@@ -36,18 +41,23 @@ const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
   const getPopup = () => {
     switch (popupVisible) {
       case "audiovisual":
-        if (width <= 1023) return <AudiovisualMobilePopup />
+        if (width <= 1023) return <AudiovisualMobilePopup onClose={onClose} />
         else return <AudiovisualPopup />;
       case "direccion":
-        return <DireccionPopup />;
+         if (width <= 1023) return <DireccionMobilePopup onClose={onClose} />
+         else return <DireccionPopup />;
       case "diseno":
-        return <DisenoGraficoPopup />;
+        if (width <= 1023) return <DisenoMobilePopup onClose={onClose} />
+         else return <DisenoGraficoPopup />;
       case "redes":
-        return <RedesSocialesPopup />;
+        if (width <= 1023) return <RedesMobilePopup onClose={onClose} />
+        else return <RedesSocialesPopup />;
       case "paid":
-        return <PaidPopup />;
+        if (width <= 1023) return <PaidMobilePopup onClose={onClose} />
+        else return <PaidPopup />;
       case "consultorias":
-        return <ConsultoriasPopup />;
+        if (width <= 1023) return <ConsultoriasMobilePopup onClose={onClose} />
+       else return <ConsultoriasPopup />;
       default:
         break;
     }

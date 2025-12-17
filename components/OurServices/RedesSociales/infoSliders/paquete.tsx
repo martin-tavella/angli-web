@@ -15,12 +15,12 @@ const Paquete = () => {
           alt="Nuestros Servicios"
           width={1751}
           height={274}
-          className="w-[85%] sm:w-[75%] mx-auto"
+          className="w-[100%] sm:w-[95%] mx-auto"
         />
         <span className="text-[#4d81c0] text-[16px] sm:text-2xl text-center font-extralight">
           -POP UP-
         </span>
-        <p className="text-center text-[12px] sm:text-xl font-extralight">
+        <p className="text-center text-[13px] sm:text-xl font-extralight">
           Los Reels se convirtieron en una de las herramientas más poderosas
           para ganar visibilidad, alcance y conexión con la audiencia en redes
           sociales. Por eso creamos un servicio especialmente diseñado para que
@@ -29,11 +29,11 @@ const Paquete = () => {
       </div>
       <div className="pt-5">
         <h4
-          className={`${vintageRotter.className} text-[#4d81c0] text-2xl sm:text-4xl text-center font-extralight`}
+          className={`${vintageRotter.className} text-[#4d81c0] text-3xl sm:text-4xl text-center font-extralight`}
         >
           ¿Como funciona?
         </h4>
-        <div className="flex flex-wrap justify-center sm:flex-nowrap max-w-[90%] mx-auto gap-5 pt-5">
+        <div className="flex flex-wrap justify-center  max-w-[90%] mx-auto gap-5 pt-5">
           <div className="w-[40%] flex flex-col gap-3">
             <Image
               src={item1.src}

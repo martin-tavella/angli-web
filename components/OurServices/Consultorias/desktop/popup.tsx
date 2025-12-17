@@ -29,7 +29,7 @@ const ConsultoriasPopup = () => {
           src={imgPopup}
           width={533}
           height={1363}
-          alt="Imagen Audiovisual"
+          alt="Imagen Consultorias"
           className="w-auto h-[166px] sm:h-[285px] md:h-[345px] lg:h-[457px] bg-[#ee6226] z-200"
           priority
         />
@@ -39,7 +39,7 @@ const ConsultoriasPopup = () => {
               src={titulo.src}
               width={1328}
               height={319}
-              alt="Audiovisual"
+              alt="Consultorias"
               className="w-[58%] lg:w-[55%] mx-auto"
               priority
             />
