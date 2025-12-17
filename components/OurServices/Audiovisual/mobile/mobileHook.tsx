@@ -1,9 +1,7 @@
 import Image from "next/image";
 import imgHook from "@/public/ourServices/AUDIOVISUAL/PLACA_COMPLETA.png";
-import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png"
+import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
 import { MobileHookProps } from "../../hook.types";
-
-
 
 const AudiovisualMobileHook = ({
   showMobileHook,
@@ -15,7 +13,11 @@ const AudiovisualMobileHook = ({
       lg:max-w-[1010px] mx-auto rounded-b-3xl
       transition-all duration-800 ease-in-out overflow-hidden
       border-x-[2px] border-[#4d81c0] md:max-w-[80%]
-      ${showMobileHook ? "max-h-[900px] sm:max-h-[1100px]" : "max-h-0 border-b-0 border-x-0"}
+      ${
+        showMobileHook
+          ? "max-h-[900px] sm:max-h-[1100px]"
+          : "max-h-0 border-b-0 border-x-0"
+      }
     `}
     >
       <div
@@ -28,11 +30,13 @@ const AudiovisualMobileHook = ({
       `}
       >
         <div className="absolute mx-auto left-1/2 -translate-x-1/2 bottom-[43%]">
-            <p className="text-[#EA6026] text-[1.5rem] sm:text-[2.8rem] 
+          <p
+            className="text-[#EA6026] text-[1.5rem] sm:text-[2.8rem] 
             md:text-[2.4rem]
-            font-bold text-center leading-6 sm:leading-12 md:leading-10">
-                Equipo<br></br> Profesional
-            </p>
+            font-bold text-center leading-6 sm:leading-12 md:leading-10"
+          >
+            Equipo<br></br> Profesional
+          </p>
         </div>
         <Image
           src={imgHook.src}
@@ -43,34 +47,37 @@ const AudiovisualMobileHook = ({
         />
       </div>
       <div className="bg-[url('/about/FONDO.png')] py-3 border-b-2 border-[#4d81c0] pb-14 relative">
-            <ul className="text-white text-[10px] sm:text-[1rem] md:text-[1rem] font-bold text-center leading-6 sm:leading-8 px-4 py-2">
-                <li>FOTOGRAFÍA Y VIDEO INSTITUCIONAL</li>
-                <li>FOTOGRAFÍA Y VIDEO PARA PLANTAS DE PRODUCCIÓN</li>
-                <li>FOTOGRAFÍA Y VIDEO PARA LOCALES</li>
-                <li>FOTOGRAFÍA Y VIDEO AÉREO CON DRONE</li>
-                <li>FOTOGRAFÍA DE PRODUCTO Y GASTRONÓMICA PARA REDES</li>
-                <li>FOTOGRAFÍA Y VIDEO DE CAPACITACIONES EMPRESARIALES</li>
-                <li>FILMACIÓN DE CURSOS ONLINE Y COBERTURA DE CURSOS PRESENCIALES</li>
-                <li>FOTOGRAFÍA BEAUTY</li>
-                <li>COBERTURA DE APERTURA DE LOCALES</li>
-                <li>FOTOGRAFÍA Y VIDEO DE EVENTOS CORPORATIVOS</li>
-                <li>FOTOGRAFÍA Y VIDEO DE EXPOSICIONES CORPORATIVAS</li>
-                <li>REAL STATE</li> 
-                <li>FOTOGRAFÍA Y VIDEO DE ARQUITECTURA</li>
-                <li>VIDEOS DE RECETAS</li>
-                <li>FOTOGRAFÍA Y VIDEO PARA REDES SOCIALES</li>
-                <li>FOTOGRAFÍA Y VIDEO DE PROFESIONALES, CONSULTORIOS Y OFICINAS</li>
-                <li>FOTOGRAFÍA Y VIDEO DE PRODUCTOS EN ESCENA</li>
-            </ul>
-              <button onClick={handleOnClick} className="cursor-pointer mx-auto absolute bottom-1 -right-8 hover:scale-105 transition-transform duration-300">
-            <Image
-              src={reducir.src}
-              alt="Contacto"
-              width={211}
-              height={193}
-              className="z-50 w-[55%]" 
-            />
-          </button>
+        <ul className="text-white text-[10px] sm:text-[1rem] md:text-[1rem] font-bold text-center leading-6 sm:leading-8 px-4 py-2">
+          <li>FOTOGRAFÍA Y VIDEO INSTITUCIONAL</li>
+          <li>FOTOGRAFÍA Y VIDEO PARA PLANTAS DE PRODUCCIÓN</li>
+          <li>FOTOGRAFÍA Y VIDEO PARA LOCALES</li>
+          <li>FOTOGRAFÍA Y VIDEO AÉREO CON DRONE</li>
+          <li>FOTOGRAFÍA DE PRODUCTO Y GASTRONÓMICA PARA REDES</li>
+          <li>FOTOGRAFÍA Y VIDEO DE CAPACITACIONES EMPRESARIALES</li>
+          <li>FILMACIÓN DE CURSOS ONLINE Y COBERTURA DE CURSOS PRESENCIALES</li>
+          <li>FOTOGRAFÍA BEAUTY</li>
+          <li>COBERTURA DE APERTURA DE LOCALES</li>
+          <li>FOTOGRAFÍA Y VIDEO DE EVENTOS CORPORATIVOS</li>
+          <li>FOTOGRAFÍA Y VIDEO DE EXPOSICIONES CORPORATIVAS</li>
+          <li>REAL STATE</li>
+          <li>FOTOGRAFÍA Y VIDEO DE ARQUITECTURA</li>
+          <li>VIDEOS DE RECETAS</li>
+          <li>FOTOGRAFÍA Y VIDEO PARA REDES SOCIALES</li>
+          <li>FOTOGRAFÍA Y VIDEO DE PROFESIONALES, CONSULTORIOS Y OFICINAS</li>
+          <li>FOTOGRAFÍA Y VIDEO DE PRODUCTOS EN ESCENA</li>
+        </ul>
+        <button
+          onClick={handleOnClick}
+          className="z-50 cursor-pointer mx-auto absolute bottom-1 -right-8 sm:-right-4 hover:scale-105 transition-transform duration-300"
+        >
+          <Image
+            src={reducir.src}
+            alt="Contacto"
+            width={211}
+            height={193}
+            className="w-[55%] sm:w-[75%]"
+          />
+        </button>
       </div>
     </article>
   );

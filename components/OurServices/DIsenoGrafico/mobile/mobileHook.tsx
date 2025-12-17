@@ -9,7 +9,6 @@ const DisenoMobileHook = ({
   showMobileHook,
   handleOnClick,
 }: MobileHookProps) => {
-
   return (
     <article
       className={`
@@ -23,7 +22,7 @@ const DisenoMobileHook = ({
       }
     `}
     >
-    <div
+      <div
         className="
       relative
       bg-[url('/backgrounds/FONDO_BLANCO.png')]  bg-no-repeat bg-cover py-3 border-b-2 border-[#ee6226]
@@ -38,8 +37,10 @@ const DisenoMobileHook = ({
           height={119}
           className="w-[18%] sm:w-[15%] md:w-[18%] mx-auto pt-3"
         />
-        <ul className="text-center uppercase text-[#4d4d4d] font-light flex flex-col text-[10px] sm:text-[100%] gap-1 max-w-[70%]
-         sm:gap-2 md:gap-5 lg:max-w-[50%] mx-auto pt-4 pb-13 sm:pb-23">
+        <ul
+          className="text-center uppercase text-[#4d4d4d] font-light flex flex-col text-[10px] sm:text-[100%] gap-1 max-w-[70%]
+         sm:gap-2 md:gap-5 lg:max-w-[50%] mx-auto pt-4 pb-13 sm:pb-23"
+        >
           <li>
             <h5 className={h5Styles}>-MARCA-</h5>
             <p>
@@ -61,30 +62,37 @@ const DisenoMobileHook = ({
           <li>
             <h5 className={h5Styles}>-DISEÑO PUBLICITARIO DIGITAL-</h5>
             <p>
-              Banners digitales para web _ Piezas para email marketing (headers, firmas, plantillas de newsletter)._ Flyers digitales para lanzamientos/promociones.
+              Banners digitales para web _ Piezas para email marketing (headers,
+              firmas, plantillas de newsletter)._ Flyers digitales para
+              lanzamientos/promociones.
             </p>
           </li>
           <li>
             <h5 className={h5Styles}>-DISEÑO EDITORIAL Y CORPORATIVO-</h5>
             <p>
-              Diseño de ebooks o guías _ Diseños para informes anuales o reportes de gestión.
+              Diseño de ebooks o guías _ Diseños para informes anuales o
+              reportes de gestión.
             </p>
           </li>
           <li>
             <h5 className={h5Styles}>-DISEÑOs para eventos y productos-</h5>
-            <p>Merchandising (remeras, tazas, bolsas, stickers)_ Invitaciones corporativas digitales._ Stands y material POP (roll-ups, banners, cartelería).</p>
+            <p>
+              Merchandising (remeras, tazas, bolsas, stickers)_ Invitaciones
+              corporativas digitales._ Stands y material POP (roll-ups, banners,
+              cartelería).
+            </p>
           </li>
         </ul>
         <button
           onClick={handleOnClick}
-          className="cursor-pointer mx-auto absolute bottom-1 -right-8 sm:-right-2 hover:scale-105 transition-transform duration-300"
+          className="z-50 cursor-pointer mx-auto absolute bottom-1 -right-8 sm:-right-4 hover:scale-105 transition-transform duration-300"
         >
           <Image
             src={reducir.src}
             alt="Contacto"
             width={211}
             height={193}
-            className="z-50 w-[55%] sm:w-[80%]"
+            className="w-[55%] sm:w-[75%]"
           />
         </button>
       </div>

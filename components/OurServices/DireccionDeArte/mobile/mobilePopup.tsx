@@ -4,8 +4,9 @@ import miscelanious from "@/public/ourServices/AUDIOVISUAL/MISCELANEA.png";
 import btnHook from "@/public/ourServices/AUDIOVISUAL/BOTON_AMPLIAR.png";
 import { useState } from "react";
 import DireccionMobileHook from "./mobileHook";
+import x from "@/public/ourServices/x.png";
 
-const DireccionMobilePopup = () => {
+const DireccionMobilePopup = ({ onClose }: {onClose: () => void}) => {
   const [showMobileHook, setShowMobileHook] = useState(false);
 
   const handleOnClick = () => {
@@ -14,10 +15,15 @@ const DireccionMobilePopup = () => {
   return (
     <div>
       <article
-        className={`bg-[#d85254] p-5 ${
+        className={`bg-[#d85254] relative p-5 ${
           showMobileHook ? "rounded-t-xl" : "rounded-xl"
         } pb-20 md:pb-27 max-w-full md:max-w-[80%] mx-auto`}
       >
+        <button className="text-white font-light text-[3rem] absolute top-3 right-3 cursor-pointer"
+        onClick={onClose}
+        >
+          <img src={x.src} alt="X" className="h-10 w-auto sm:h-13"/>
+        </button>
         <Image
           src={titulo.src}
           width={1328}

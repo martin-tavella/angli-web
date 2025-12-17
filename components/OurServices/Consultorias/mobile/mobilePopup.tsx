@@ -1,49 +1,45 @@
 import Image from "next/image";
-import titulo from "@/public/ourServices/DISENO/TITULO.png";
+import titulo from "@/public/ourServices/CONSULTORIAS/TITULO.png";
 import miscelanious from "@/public/ourServices/AUDIOVISUAL/MISCELANEA.png";
 import btnHook from "@/public/ourServices/AUDIOVISUAL/BOTON_AMPLIAR.png";
 import { useState } from "react";
-import DisenoMobileHook from "./mobileHook";
 import x from "@/public/ourServices/x.png";
-// import DireccionMobileHook from "./mobileHook";
+import ConsultoriasMobileHook from "./mobileHook";
 
-const DisenoMobilePopup = ({onClose}: {onClose: () => void}) =>{
+const ConsultoriasMobilePopup = ({ onClose }: { onClose: () => void }) => {
   const [showMobileHook, setShowMobileHook] = useState(false);
 
   const handleOnClick = () => {
     setShowMobileHook(!showMobileHook);
   };
   return (
-    <div>
+    <div className={`${showMobileHook ? "mt-[80%]" : ""}`}>
       <article
-        className={`bg-[#ee6226] p-5 relative ${
+        className={`relative bg-[#ee6226] p-5 ${
           showMobileHook ? "rounded-t-xl" : "rounded-xl"
         } pb-20 md:pb-27 max-w-full md:max-w-[80%] mx-auto`}
       >
-        <button className="text-white font-light text-[3rem] absolute top-3 right-3 cursor-pointer"
-        onClick={onClose}
+        <button
+          className="text-white font-light text-[3rem] absolute top-3 right-3 cursor-pointer"
+          onClick={onClose}
         >
-          <img src={x.src} alt="X" className="h-10 w-auto sm:h-13"/>
+          <img src={x.src} alt="X" className="h-10 w-auto sm:h-13" />
         </button>
         <Image
           src={titulo.src}
           width={1328}
           height={319}
-          alt="Audiovisual"
-          className="w-[70%] sm:w-[50%] md:w-[75%] mx-auto"
+          alt="Consultorias"
+          className="w-[95%] sm:w-[85%] md:w-[80%] mx-auto pt-10 sm:pt-14"
           priority
         />{" "}
-        <p className="text-[14px] sm:text-[19px] md:text-[23px] lg:text-[23px] max-w-[85%] mx-auto text-center font-normal text-white py-3 md:py-6 leading-4.5 md:leading-6">
-          El diseño gráfico es el lenguaje visual que define cómo tu marca
-              se presenta al mundo. Desde tipografías, presentaciones
-              corporativas, infografías, logos hasta paletas de colores, cada
-              elemento transmite identidad y genera conexión con tu audiencia.
+        <p className="text-[16px] sm:text-[20px] md:text-[23px] lg:text-[23px] max-w-[90%] mx-auto text-center font-normal text-white py-3 md:py-6 leading-4.5 md:leading-6">
+          Servicio integral pensado para empresas, marcas personales y
+              emprendimientos que buscan ordenar, profesionalizar o
+              reestructurar su estrategia digital, sin necesidad de delegar
+              completamente la ejecución.
         </p>
-        <p className="text-[13px] sm:text-[16px] md:text-[20px] lg:text-[16px] max-w-[90%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-white uppercase leading-4.5 md:leading-5">
-          Entendemos que no se trata solo de estética, sino de comunicar con
-              claridad y coherencia. Creamos piezas gráficas que potencian tu
-              marca y logran que cada detalle hable por vos.
-        </p>
+
         <div className={`relative ${showMobileHook ? "hidden" : ""}`}>
           <Image
             src={miscelanious.src}
@@ -67,7 +63,7 @@ const DisenoMobilePopup = ({onClose}: {onClose: () => void}) =>{
           </button>
         </div>
       </article>
-      <DisenoMobileHook
+      <ConsultoriasMobileHook
         showMobileHook={showMobileHook}
         handleOnClick={handleOnClick}
       />
@@ -75,4 +71,4 @@ const DisenoMobilePopup = ({onClose}: {onClose: () => void}) =>{
   );
 };
 
-export default DisenoMobilePopup;
+export default ConsultoriasMobilePopup;

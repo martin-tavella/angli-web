@@ -7,7 +7,7 @@ import PaidMobileHook from "./mobileHook";
 import x from "@/public/ourServices/x.png";
 // import DireccionMobileHook from "./mobileHook";
 
-const PaidMobilePopup = () => {
+const PaidMobilePopup = ({ onClose }: { onClose: () => void }) => {
   const [showMobileHook, setShowMobileHook] = useState(false);
 
   const handleOnClick = () => {
@@ -20,8 +20,11 @@ const PaidMobilePopup = () => {
           showMobileHook ? "rounded-t-xl" : "rounded-xl"
         } pb-20 md:pb-27 max-w-full md:max-w-[80%] mx-auto`}
       >
-        <button className="text-white font-light text-[3rem] absolute top-3 right-7 cursor-pointer">
-          <img src={x.src} alt="X" />
+        <button
+          className="text-white font-light text-[3rem] absolute top-3 right-3 cursor-pointer"
+          onClick={onClose}
+        >
+          <img src={x.src} alt="X" className="h-10 w-auto sm:h-13" />
         </button>
         <Image
           src={titulo.src}

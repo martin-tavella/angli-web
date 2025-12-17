@@ -16,7 +16,7 @@ const PaidMobileHook = ({ showMobileHook, handleOnClick}: MobileHookProps) => {
       lg:max-w-[1010px] mx-auto rounded-b-3xl
       transition-all duration-800 ease-in-out overflow-hidden
       ] border-[#d85254] md:max-w-[80%]
-      ${showMobileHook ? "max-h-[700px] sm:max-h-[900px] md:max-h-[910px] border-[3px]" : "max-h-0 border-b-0 border-x-0"}
+      ${showMobileHook ? "max-h-[800px] sm:max-h-[900px] md:max-h-[910px] border-[3px]" : "max-h-0 border-b-0 border-x-0"}
     `}
     >
       <div
@@ -91,15 +91,18 @@ const PaidMobileHook = ({ showMobileHook, handleOnClick}: MobileHookProps) => {
           </p>
         </div>
         <div className="flex relative pt-3 pb-14 sm:pb-12 md:pb-14">
-           <button onClick={handleOnClick} className="cursor-pointer mx-auto absolute bottom-1 -right-8 hover:scale-105 transition-transform duration-300 z-50">
-            <Image
-              src={reducir.src}
-              alt="Contacto"
-              width={211}
-              height={193}
-              className="w-[55%]" 
-            />
-          </button>
+          <button
+          onClick={handleOnClick}
+          className="z-50 cursor-pointer mx-auto absolute bottom-1 -right-8 sm:-right-4 hover:scale-105 transition-transform duration-300"
+        >
+          <Image
+            src={reducir.src}
+            alt="Contacto"
+            width={211}
+            height={193}
+            className="w-[55%] sm:w-[75%]"
+          />
+        </button>
         </div>
       </div>
     </article>
