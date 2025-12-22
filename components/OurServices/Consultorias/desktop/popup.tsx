@@ -43,7 +43,7 @@ const ConsultoriasPopup = () => {
               className="w-[58%] lg:w-[55%] mx-auto"
               priority
             />
-            <p className="text-[8px] sm:text-[14px] md:text-[17px] lg:text-[22px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] mb-5 md:mb-6 lg:mb-8 text-[#f7ecd5] mx-auto text-center font-extralight">
+            <p className="text-[8px] sm:text-[14px] md:text-[17px] lg:text-[22px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] mb-5 md:mb-6 lg:mb-8 text-[#f7ecd5] mx-auto text-center font-medium">
               Servicio integral pensado para empresas, marcas personales y
               emprendimientos que buscan ordenar, profesionalizar o
               reestructurar su estrategia digital, sin necesidad de delegar

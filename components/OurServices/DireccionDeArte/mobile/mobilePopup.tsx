@@ -32,13 +32,13 @@ const DireccionMobilePopup = ({ onClose }: {onClose: () => void}) => {
           className="w-[85%] sm:w-[70%] md:w-[75%] mx-auto"
           priority
         />{" "}
-        <p className="text-[14px] sm:text-[17px] md:text-[23px] lg:text-[23px] max-w-[90%] mx-auto text-center font-normal text-white py-3 md:py-6 leading-4.5 md:leading-6">
+        <p className="text-[14px] sm:text-[17px] md:text-[23px] lg:text-[23px] max-w-[90%] mx-auto text-center font-medium text-white py-3 md:py-6 leading-4.5 md:leading-6">
           La dirección de arte es la que aporta coherencia estética, selecciona
           materiales, colores y texturas para construir escenarios con concepto,
           y le da a cada producción una atmósfera única que potencia la esencia
           de la marca.
         </p>
-        <p className="text-[13px] sm:text-[14px] md:text-[20px] lg:text-[16px] max-w-[93%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-white uppercase leading-4.5 md:leading-5">
+        <p className="text-[13px] sm:text-[14px] md:text-[20px] lg:text-[16px] max-w-[93%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-[#f7ecd5] uppercase leading-4.5 md:leading-5">
           En nuestra agencia no hacemos solo contenido: creamos impacto visual
           donde los detalles marcan la diferencia.
         </p>

@@ -30,7 +30,7 @@ const RedesSocialesPopup = () => {
           src={imgPopup}
           width={533}
           height={1363}
-          alt="Imagen Audiovisual"
+          alt="Imagen Redes Sociales"
           className="h-[165px] w-auto sm:h-[284px] md:h-[344px] lg:h-[456px] z-200 bg-[#4c80bf]"
           priority
         />
@@ -40,17 +40,17 @@ const RedesSocialesPopup = () => {
               src={titulo.src}
               width={1328}
               height={319}
-              alt="Audiovisual"
+              alt="Redes Sociales"
               className="w-[34%] sm:w-[36%] md:w-[40%] lg:w-[42%] mx-auto"
               priority
             />
-            <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
+            <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-medium">
               No se trata solo de publicar, sino de construir una presencia
               coherente, atractiva y constante que conecte con tu audiencia.
               Potenciamos tu presencia digital con diferentes servicios para
               redes, desde diseño de feeds hasta una gestión integral de redes.
             </p>
-            <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase max-w-[80%]  sm:max-w-[73%] md:max-w-[75%] text-center mx-auto font-extralight sm:mb-1 md:mb-3 lg:mb-2">
+            <p className="text-[7px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase max-w-[80%]  sm:max-w-[73%] md:max-w-[75%] text-center mx-auto font-medium sm:mb-1 md:mb-3 lg:mb-2">
               Transformamos tus perfiles en un espacio coherente y profesional
               que hace crecer tu marca.
             </p>

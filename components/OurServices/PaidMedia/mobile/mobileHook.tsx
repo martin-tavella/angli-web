@@ -31,7 +31,7 @@ const PaidMobileHook = ({ showMobileHook, handleOnClick}: MobileHookProps) => {
             height={274}
             className="w-[25%] sm:w-[20%] mx-auto py-2"
           />
-          <p className="text-center text-[14px] sm:text-xl font-extralight">
+          <p className="text-center text-[14px] sm:text-xl font-light">
             Tomamos el contenido estratégico y de calidad que realizamos para
             impulsarlo mediante campañas. Por eso ofrecemos nuestro servicio de
             Paid Media, pensado exclusivamente para quienes contratan nuestras

@@ -33,13 +33,13 @@ const DisenoMobilePopup = ({onClose}: {onClose: () => void}) =>{
           className="w-[70%] sm:w-[50%] md:w-[75%] mx-auto"
           priority
         />{" "}
-        <p className="text-[14px] sm:text-[19px] md:text-[23px] lg:text-[23px] max-w-[85%] mx-auto text-center font-normal text-white py-3 md:py-6 leading-4.5 md:leading-6">
+        <p className="text-[14px] sm:text-[19px] md:text-[23px] lg:text-[23px] max-w-[85%] mx-auto text-center font-medium text-white py-3 md:py-6 leading-4.5 md:leading-6">
           El diseño gráfico es el lenguaje visual que define cómo tu marca
               se presenta al mundo. Desde tipografías, presentaciones
               corporativas, infografías, logos hasta paletas de colores, cada
               elemento transmite identidad y genera conexión con tu audiencia.
         </p>
-        <p className="text-[13px] sm:text-[16px] md:text-[20px] lg:text-[16px] max-w-[90%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-white uppercase leading-4.5 md:leading-5">
+        <p className="text-[13px] sm:text-[16px] md:text-[20px] lg:text-[16px] max-w-[90%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-[#f7ecd5] uppercase leading-4.5 md:leading-5">
           Entendemos que no se trata solo de estética, sino de comunicar con
               claridad y coherencia. Creamos piezas gráficas que potencian tu
               marca y logran que cada detalle hable por vos.

@@ -30,7 +30,7 @@ const PaidPopup = () => {
           src={imgPopup}
           width={533}
           height={1363}
-          alt="Imagen Audiovisual"
+          alt="Imagen Paid Media"
           className="h-[165px] sm:h-[286px] md:h-[345px] lg:h-[458px] w-auto bg-[#d85254] z-200"
           priority
         />
@@ -40,17 +40,17 @@ const PaidPopup = () => {
               src={titulo.src}
               width={1328}
               height={319}
-              alt="Audiovisual"
+              alt="Paid Media"
               className="w-[34%] sm:w-[33%] mx-auto "
               priority
             />
-            <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
+            <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-medium">
               La pauta publicitaria es la forma más directa de llegar a nuevas
               audiencias y acelerar el crecimiento de tu marca. A través de
               anuncios en Meta y Google Ads, logramos mayor alcance, visibilidad
               y conversiones.
             </p>
-            <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase max-w-[80%]  sm:max-w-[73%] md:max-w-[75%] text-center mx-auto font-extralight sm:mb-1 md:mb-3 lg:mb-2">
+            <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase max-w-[80%] sm:max-w-[73%] md:max-w-[75%] text-center mx-auto font-medium sm:mb-1 md:mb-3 lg:mb-2">
               En nuestra agencia entendemos la pauta como el complemento ideal
               del contenido: solo la ofrecemos junto a nuestro plan mensual de
               redes para potenciar cada marca.

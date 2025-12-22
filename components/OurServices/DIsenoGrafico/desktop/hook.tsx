@@ -8,7 +8,7 @@ const DisenoHook = ({
   handleOnClick,
   btnContact,
 }: HookProps) => {
-  const h5Styles = "text-[#d85254] uppercase text-[120%] pb-2";
+  const h5Styles = "text-[#d85254] uppercase text-[120%] pb-2 font-semibold";
 
   return (
     <article
@@ -34,7 +34,7 @@ const DisenoHook = ({
           height={119}
           className="w-[14%] sm:w-[15%] md:w-[13%] mx-auto pt-3"
         />
-        <ul className="text-center uppercase text-[#4d4d4d] font-extralight flex flex-col text-[10px] sm:text-[100%] gap-1 max-w-[70%]
+        <ul className="text-center uppercase text-[#4d4d4d] font-medium flex flex-col text-[10px] sm:text-[100%] gap-1 max-w-[70%]
          sm:gap-2 md:gap-5 lg:max-w-[50%] mx-auto pt-4 pb-13 sm:pb-23">
           <li>
             <h5 className={h5Styles}>-MARCA-</h5>

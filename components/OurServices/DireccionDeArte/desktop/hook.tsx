@@ -33,7 +33,7 @@ const DireccionHook = ({ showHook, handleOnClick, btnContact }: DireccionHookPro
         className="w-[8%] sm:w-[6%] md:w-[4%] mx-auto pt-1"
         
         />
-        <ul className="text-center uppercase text-[#f7ecd5] font-extralight flex flex-col text-[10px] sm:text-[100%] gap-1 sm:gap-2 md:gap-3 max-w-[50%] mx-auto pt-4 pb-13 sm:pb-22">
+        <ul className="text-center uppercase text-[#f7ecd5] font-semibold flex flex-col text-[10px] sm:text-[100%] gap-1 sm:gap-2 md:gap-3 max-w-[50%] mx-auto pt-4 pb-13 sm:pb-22">
           <li>Encargada de que la escena tenga coherencia,
 sentido e impacto visual.</li>
           <li>Scouting de modelos</li>

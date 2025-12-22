@@ -26,7 +26,7 @@ const ConsultoriasHook = ({
       ] border-[#d85254]
       ${
         showHook
-          ? "max-h-[1100px] sm:max-h-[1150px] md:max-h-[1300px] lg:max-h-[1150px] border-[5px]"
+          ? "max-h-[1100px] sm:max-h-[1150px] md:max-h-[1300px] lg:max-h-[1200px] border-[5px]"
           : "max-h-0 border-b-0 border-x-0"
       }
     `}
@@ -45,10 +45,10 @@ const ConsultoriasHook = ({
                 height={205}
                 className="w-[20%] mx-auto"
               />
-              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-extralight uppercase">
+              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-medium uppercase">
                 -reunión inicial de diagnóstico y seteo de objetivos-
               </span>
-              <p className="text-center text-[12px] sm:text-[16px] md:text-xl font-extralight max-w-[77%] mx-auto">
+              <p className="text-center text-[12px] sm:text-[16px] md:text-xl font-light max-w-[77%] mx-auto">
                 60 y 90 minutos donde se realiza un relevamiento completo de la
                 marca para construir una hoja de ruta clara y realista que guíe
                 el trabajo posterior.
@@ -62,15 +62,15 @@ const ConsultoriasHook = ({
                 height={205}
                 className="w-[20%] mx-auto"
               />
-              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-extralight uppercase">
+              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-medium uppercase">
                 -documento entregable de análisis y sugerencias-
               </span>
               <div className="flex flex-col">
-              <p className="text-center text-[12px] sm:text-[16px] md:text-xl font-extralight max-w-[77%] mx-auto pt-1">
+              <p className="text-center text-[12px] sm:text-[16px] md:text-xl font-light max-w-[77%] mx-auto pt-1">
                 A partir de la reunión inicial se elabora un informe
                 personalizado con:{" "}
               </p>
-              <span className="text-center text-[10px] sm:text-[1rem] font-extralight max-w-[77%] mx-auto mt-5">
+              <span className="text-center text-[10px] sm:text-[1rem] font-light max-w-[77%] mx-auto mt-5">
                 EVALUACIÓN DEL ECOSISTEMA DIGITAL . ANÁLISIS DEL PÚBLICO,
                 POSICIONAMIENTO Y MENSAJES ACTUALES . RECOMENDACIONES
                 ESTRATÉGICAS CONCRETAS Y ACCIONABLES . PRIORIZACIÓN DE TAREAS Y
@@ -86,10 +86,10 @@ const ConsultoriasHook = ({
                 height={205}
                 className="w-[20%] mx-auto"
               />
-              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-extralight">
+              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-medium">
                 -REUNIÓN DE CONSULTORIO -<br></br> (1 o 2 según necesidad)
               </span>
-              <p className="text-center text-[12px] sm:text-[16px] md:text-xl font-extralight max-w-[77%] mx-auto">
+              <p className="text-center text-[12px] sm:text-[16px] md:text-xl font-light max-w-[77%] mx-auto pt-1">
                 Sesiones de trabajo de 120 minutos cada una (individuales o
                 grupales) donde se acompaña la implementación de las
                 recomendaciones, se ajustan estrategias y se resuelven dudas
@@ -104,10 +104,10 @@ const ConsultoriasHook = ({
                 height={205}
                 className="w-[20%] mx-auto"
               />
-              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-extralight uppercase">
+              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-medium uppercase">
                 -SOPORTE Y SEGUIMIENTO POSTERIOR -
               </span>
-              <p className="text-center text-[12px] sm:text-[16px] md:text-xl font-extralight max-w-[77%] mx-auto">
+              <p className="text-center text-[12px] sm:text-[16px] md:text-xl font-light max-w-[77%] mx-auto pt-1">
                 Durante el mes siguiente a las reuniones, el cliente cuenta con
                 un acompañamiento por correo o mensajes para resolver consultas
                 puntuales, validar decisiones estratégicas o recibir feedback
@@ -115,7 +115,7 @@ const ConsultoriasHook = ({
               </p>
             </li>
           </ul>
-          <p className="uppercase text-[#ee6226] text-center text-[12px] sm:text-[15px] md:text-xl font-extralight max-w-[70%] mx-auto py-6 sm:pb-10">
+          <p className="uppercase text-[#ee6226] text-center text-[12px] sm:text-[15px] md:text-xl font-light max-w-[70%] mx-auto py-6 sm:pb-10">
             modalidad virtual . documento estratégico entregable en formato pdf
             . grabación de las reuniones . acceso a soporte durante 30 días
             posteriores a la última sesión.

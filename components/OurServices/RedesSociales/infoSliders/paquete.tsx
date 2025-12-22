@@ -17,10 +17,10 @@ const Paquete = () => {
           height={274}
           className="w-[100%] sm:w-[95%] mx-auto"
         />
-        <span className="text-[#4d81c0] text-[16px] sm:text-2xl text-center font-extralight">
+        <span className="text-[#4d81c0] text-[16px] sm:text-2xl text-center font-light">
           -POP UP-
         </span>
-        <p className="text-center text-[13px] sm:text-xl font-extralight">
+        <p className="text-center text-[13px] sm:text-xl font-light">
           Los Reels se convirtieron en una de las herramientas más poderosas
           para ganar visibilidad, alcance y conexión con la audiencia en redes
           sociales. Por eso creamos un servicio especialmente diseñado para que
@@ -29,7 +29,7 @@ const Paquete = () => {
       </div>
       <div className="pt-5">
         <h4
-          className={`${vintageRotter.className} text-[#4d81c0] text-3xl sm:text-4xl text-center font-extralight`}
+          className={`${vintageRotter.className} text-[#4d81c0] text-4xl sm:text-5xl text-center font-extralight`}
         >
           ¿Como funciona?
         </h4>
@@ -42,7 +42,7 @@ const Paquete = () => {
               height={201}
               className="w-[30%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
               Recepción de productos en nuestro estudio
             </span>
           </div>
@@ -54,7 +54,7 @@ const Paquete = () => {
               height={201}
               className="w-[30%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
               Producción de Reels en paquetes
             </span>
           </div>
@@ -66,7 +66,7 @@ const Paquete = () => {
               height={201}
               className="w-[30%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
               Selección de temáticas en tendencia
             </span>
           </div>
@@ -78,12 +78,12 @@ const Paquete = () => {
               height={201}
               className="w-[30%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
               Devolución de productos
             </span>
           </div>
         </div>
-        <p className="text-center max-w-[75%] mx-auto py-4 sm:py-10 font-extralight text-[#4d81c0] text-[12px] sm:text-xl">
+        <p className="text-center max-w-[75%] mx-auto py-4 sm:py-10 font-medium text-[#4d81c0] text-[12px] sm:text-xl">
           En resumen, este servicio combina creatividad y producción audiovisual
           profesional en un formato clave para crecer en redes. Con nuestros
           Reels temáticos, tu marca se asegura contenido dinámico, atractivo y

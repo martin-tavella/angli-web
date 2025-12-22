@@ -40,7 +40,7 @@ const PaidMobilePopup = ({ onClose }: { onClose: () => void }) => {
           en Meta y Google Ads, logramos mayor alcance, visibilidad y
           conversiones.
         </p>
-        <p className="text-[13px] sm:text-[14px] md:text-[20px] lg:text-[16px] max-w-[93%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-white uppercase leading-4.5 md:leading-5">
+        <p className="text-[13px] sm:text-[14px] md:text-[20px] lg:text-[16px] max-w-[93%] text-center mx-auto font-bold mb-1 sm:mb-1 lg:mb-3 text-[#f7ecd5] uppercase leading-4.5 md:leading-5">
           En nuestra agencia entendemos la pauta como el complemento ideal del
           contenido: solo la ofrecemos junto a nuestro plan mensual de redes
           para potenciar cada marca.
