@@ -15,7 +15,7 @@ const DisenoFeed = () => {
           height={274}
           className="w-[100%] sm:w-[95%] mx-auto"
         />
-        <p className="text-center text-[13px] sm:text-xl font-extralight">
+        <p className="text-center text-[13px] sm:text-xl font-light">
           En redes sociales, la primera impresión lo es todo. Un feed prolijo,
           atractivo y alineado con la identidad visual de tu marca transmite
           confianza, profesionalismo y hace que tu público quiera quedarse a
@@ -27,7 +27,7 @@ const DisenoFeed = () => {
       </div>
       <div className="pt-8">
         <h4
-          className={`${vintageRotter.className} text-[#4d81c0] text-3xl sm:text-4xl text-center font-extralight`}
+          className={`${vintageRotter.className} text-[#4d81c0] text-4xl sm:text-5xl text-center font-extralight`}
         >
           ¿Como funciona?
         </h4>
@@ -40,7 +40,7 @@ const DisenoFeed = () => {
               height={201}
               className="w-[50%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
               Placas diseñadas para el feed (6)
             </span>
           </div>
@@ -52,12 +52,12 @@ const DisenoFeed = () => {
               height={201}
               className="w-[50%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
               Intervención de fotos (6)
             </span>
           </div>
         </div>
-        <p className="text-center max-w-[75%] mx-auto py-4 sm:py-10 font-extralight text-[#4d81c0] text-[12px] sm:text-xl">
+        <p className="text-center max-w-[75%] mx-auto py-4 sm:py-10 font-medium text-[#4d81c0] text-[12px] sm:text-xl">
           En conjunto, estas piezas hacen que tu feed deje de ser solo una
           grilla de publicaciones y se convierta en un espacio cuidado,
           coherente y atractivo, que refuerza el mensaje de tu marca y genera

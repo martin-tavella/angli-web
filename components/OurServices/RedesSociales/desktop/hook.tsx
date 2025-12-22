@@ -128,7 +128,7 @@ const RedesHook = ({ showHook, handleOnClick, btnContact }: HookProps) => {
 
           <button
             className="cursor-pointer"
-            onClick={() => window.open("https://wa.link/bw0sqj")}
+            onClick={() => window.open("http://wa.link/igfa2m")}
           >
             <Image
               src={btnContact!.src}

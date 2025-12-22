@@ -109,7 +109,7 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <a href="https://wa.link/bw0sqj" target="_blank">
+                  <a href="http://wa.link/igfa2m" target="_blank">
                     <div className="flex gap-3 items-center">
                       <img
                         src={logoWhatsapp.src}

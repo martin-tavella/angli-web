@@ -29,7 +29,7 @@ const DisenoGraficoPopup = () => {
           src={imgPopup}
           width={533}
           height={1363}
-          alt="Imagen Audiovisual"
+          alt="Imagen Diseño Gráfico"
           className="h-[173px] w-auto sm:h-[299px] md:h-[360px] lg:h-[481px] z-200 bg-[#ee6226] "
           priority
         />
@@ -39,17 +39,17 @@ const DisenoGraficoPopup = () => {
               src={titulo.src}
               width={1328}
               height={319}
-              alt="Audiovisual"
+              alt="Diseño Gráfico"
               className="w-[34%] sm:w-[36%] md:w-[40%] lg:w-[42%] mx-auto"
               priority
             />
-            <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
+            <p className="text-[7.6px] sm:text-[13px] md:text-[15px] lg:text-[20px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-medium">
               El diseño gráfico es el lenguaje visual que define cómo tu marca
               se presenta al mundo. Desde tipografías, presentaciones
               corporativas, infografías, logos hasta paletas de colores, cada
               elemento transmite identidad y genera conexión con tu audiencia.
             </p>
-            <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase max-w-[80%]  sm:max-w-[73%] md:max-w-[75%] text-center mx-auto font-extralight sm:mb-1 md:mb-3 lg:mb-2">
+            <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase max-w-[80%] sm:max-w-[73%] md:max-w-[75%] text-center mx-auto font-medium sm:mb-1 md:mb-3 lg:mb-2">
               Entendemos que no se trata solo de estética, sino de comunicar con
               claridad y coherencia. Creamos piezas gráficas que potencian tu
               marca y logran que cada detalle hable por vos.
@@ -65,7 +65,7 @@ const DisenoGraficoPopup = () => {
               className={`absolute -bottom-5 -right-5 sm:-bottom-10 sm:right-29 md:right-42 md:-bottom-11 lg:-bottom-13 lg:right-[35%] cursor-pointer hover:scale-105 transition-transform duration-300
               ${showHook ? "hidden" : ""}
               `}
-              onClick={()=> window.open("https://wa.link/bw0sqj")}
+              onClick={()=> window.open("http://wa.link/igfa2m")}
             >
               <Image
                 src={btnContact.src}

@@ -3,7 +3,7 @@ import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
 import personaje from "@/public/ourServices/DISENO/PERSONAJE.png";
 import { MobileHookProps } from "../../hook.types";
 
-const h5Styles = "text-[#d85254] uppercase text-[140%] pb-2 font-light";
+const h5Styles = "text-[#d85254] uppercase text-[140%] pb-2 font-semibold";
 
 const DisenoMobileHook = ({
   showMobileHook,
@@ -17,7 +17,7 @@ const DisenoMobileHook = ({
       border-x-2 border-[#ee6226] md:max-w-[80%] relative -mt-1
       ${
         showMobileHook
-          ? "max-h-[680px] sm:max-h-[900px] md:max-h-[1000px]"
+          ? "max-h-[700px] sm:max-h-[1000px] md:max-h-[1100px]"
           : "max-h-0 border-b-0 border-x-0"
       }
     `}
@@ -38,7 +38,7 @@ const DisenoMobileHook = ({
           className="w-[18%] sm:w-[15%] md:w-[18%] mx-auto pt-3"
         />
         <ul
-          className="text-center uppercase text-[#4d4d4d] font-light flex flex-col text-[10px] sm:text-[100%] gap-1 max-w-[70%]
+          className="text-center uppercase text-[#4d4d4d] font-medium flex flex-col text-[10px] sm:text-[100%] gap-1 max-w-[70%]
          sm:gap-2 md:gap-5 lg:max-w-[50%] mx-auto pt-4 pb-13 sm:pb-23"
         >
           <li>

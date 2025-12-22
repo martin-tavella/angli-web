@@ -37,17 +37,17 @@ const DireccionPopup = () => {
               src={titulo.src}
               width={1328}
               height={319}
-              alt="Audiovisual"
+              alt="Dirección de Arte"
               className="w-[43%] sm:w-[45%] lg:w-[42%] mx-auto"
               priority
             />
-            <p className="text-[8px] sm:text-[13px] md:text-[16px] lg:text-[20px] max-w-[86%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-extralight">
+            <p className="text-[8px] sm:text-[13px] md:text-[16px] lg:text-[20px] max-w-[86%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] text-white mx-auto text-center font-medium">
               La dirección de arte es la que aporta coherencia estética,
               selecciona materiales, colores y texturas para construir
               escenarios con concepto, y le da a cada producción una atmósfera
               única que potencia la esencia de la marca.
             </p>
-            <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase max-w-[55%] sm:max-w-[53%] md:max-w-[56%] lg:max-w-[60%] text-center mx-auto font-extralight sm:mb-1 md:mb-3">
+            <p className="text-[6px] sm:text-[9px] md:text-[12px] lg:text-[14px] uppercase max-w-[55%] sm:max-w-[53%] md:max-w-[56%] lg:max-w-[60%] text-center mx-auto font-medium sm:mb-1 md:mb-3">
               En nuestra agencia no hacemos solo contenido: creamos impacto
               visual donde los detalles marcan la diferencia.
             </p>
@@ -63,7 +63,7 @@ const DireccionPopup = () => {
               className={`absolute -bottom-5 -right-5 sm:-bottom-10 sm:right-29 md:right-42 md:-bottom-11 lg:-bottom-13 lg:right-[35%] cursor-pointer hover:scale-105 transition-transform duration-300
               ${showHook ? "hidden" : ""}
               `}
-              onClick={()=> window.open("https://wa.link/bw0sqj")}
+              onClick={()=> window.open("http://wa.link/igfa2m")}
             >
               <Image
                 src={btnContact.src}

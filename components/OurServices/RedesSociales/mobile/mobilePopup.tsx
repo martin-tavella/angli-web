@@ -33,7 +33,7 @@ const RedesMobilePopup = ({ onClose }: { onClose: () => void }) => {
           className="w-[85%] sm:w-[63%] md:w-[70%] mx-auto"
           priority
         />{" "}
-        <p className="text-[14px] sm:text-[17px] md:text-[23px] lg:text-[23px] max-w-[90%] mx-auto text-center font-normal text-white py-3 md:py-6 leading-4.5 md:leading-6">
+        <p className="text-[14px] sm:text-[17px] md:text-[23px] lg:text-[23px] max-w-[90%] mx-auto text-center font-medium text-white py-3 md:py-6 leading-4.5 md:leading-6">
             No se trata solo de publicar, sino de construir una presencia
               coherente, atractiva y constante que conecte con tu audiencia.
               Potenciamos tu presencia digital con diferentes servicios para

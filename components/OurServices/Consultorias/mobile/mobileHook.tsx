@@ -38,10 +38,10 @@ const ConsultoriasMobileHook = ({
                 height={205}
                 className="w-[30%] mx-auto"
               />
-              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-light uppercase">
+              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-medium uppercase">
                 -reunión inicial de diagnóstico y seteo de objetivos-
               </span>
-              <p className="text-center text-[14px] sm:text-[18px]  md:text-xl font-extralight max-w-[77%] mx-auto">
+              <p className="text-center text-[14px] sm:text-[18px]  md:text-xl font-light max-w-[77%] mx-auto">
                 60 y 90 minutos donde se realiza un relevamiento completo de la
                 marca para construir una hoja de ruta clara y realista que guíe
                 el trabajo posterior.
@@ -55,15 +55,15 @@ const ConsultoriasMobileHook = ({
                 height={205}
                 className="w-[30%] mx-auto"
               />
-              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-light uppercase">
+              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-medium uppercase">
                 -documento entregable de análisis y sugerencias-
               </span>
               <div className="flex flex-col">
-              <p className="text-center text-[14px] sm:text-[18px]  md:text-xl font-extralight max-w-[77%] mx-auto pt-1">
+              <p className="text-center text-[14px] sm:text-[18px]  md:text-xl font-light max-w-[77%] mx-auto pt-1">
                 A partir de la reunión inicial se elabora un informe
                 personalizado con:{" "}
               </p>
-              <span className="text-center text-[13px] sm:text-[1.1rem] font-extralight max-w-[77%] mx-auto mt-5">
+              <span className="text-center text-[13px] sm:text-[1.1rem] font-light max-w-[77%] mx-auto mt-5">
                 EVALUACIÓN DEL ECOSISTEMA DIGITAL . ANÁLISIS DEL PÚBLICO,
                 POSICIONAMIENTO Y MENSAJES ACTUALES . RECOMENDACIONES
                 ESTRATÉGICAS CONCRETAS Y ACCIONABLES . PRIORIZACIÓN DE TAREAS Y
@@ -79,10 +79,10 @@ const ConsultoriasMobileHook = ({
                 height={205}
                 className="w-[30%] mx-auto"
               />
-              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-light">
+              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-medium">
                 -REUNIÓN DE CONSULTORIO -<br></br> (1 o 2 según necesidad)
               </span>
-              <p className="text-center text-[14px] sm:text-[18px]  md:text-xl font-extralight max-w-[77%] mx-auto">
+              <p className="text-center text-[14px] sm:text-[18px]  md:text-xl font-light max-w-[77%] mx-auto">
                 Sesiones de trabajo de 120 minutos cada una (individuales o
                 grupales) donde se acompaña la implementación de las
                 recomendaciones, se ajustan estrategias y se resuelven dudas
@@ -97,10 +97,10 @@ const ConsultoriasMobileHook = ({
                 height={205}
                 className="w-[30%] mx-auto"
               />
-              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-light uppercase">
+              <span className="text-[#4d81c0] text-[13px] sm:text-[1.2rem] md:text-2xl text-center font-medium uppercase">
                 -SOPORTE Y SEGUIMIENTO POSTERIOR -
               </span>
-              <p className="text-center text-[14px] sm:text-[18px] md:text-xl font-extralight max-w-[77%] mx-auto">
+              <p className="text-center text-[14px] sm:text-[18px] md:text-xl font-light max-w-[77%] mx-auto">
                 Durante el mes siguiente a las reuniones, el cliente cuenta con
                 un acompañamiento por correo o mensajes para resolver consultas
                 puntuales, validar decisiones estratégicas o recibir feedback

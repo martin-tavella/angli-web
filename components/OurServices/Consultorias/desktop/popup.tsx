@@ -43,7 +43,7 @@ const ConsultoriasPopup = () => {
               className="w-[58%] lg:w-[55%] mx-auto"
               priority
             />
-            <p className="text-[8px] sm:text-[14px] md:text-[17px] lg:text-[22px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] mb-5 md:mb-6 lg:mb-8 text-[#f7ecd5] mx-auto text-center font-extralight">
+            <p className="text-[8px] sm:text-[14px] md:text-[17px] lg:text-[22px] max-w-[88%] sm:max-w-[86%] md:max-w-[90%] lg:max-w-[85%] mb-5 md:mb-6 lg:mb-8 text-[#f7ecd5] mx-auto text-center font-medium">
               Servicio integral pensado para empresas, marcas personales y
               emprendimientos que buscan ordenar, profesionalizar o
               reestructurar su estrategia digital, sin necesidad de delegar
@@ -60,7 +60,7 @@ const ConsultoriasPopup = () => {
               className={`absolute -bottom-5 -right-5 sm:-bottom-10 sm:right-29 md:right-42 md:-bottom-11 lg:-bottom-13 lg:right-[35%] cursor-pointer hover:scale-105 transition-transform duration-300
               ${showHook ? "hidden" : ""}
               `}
-              onClick={()=> window.open("https://wa.link/bw0sqj")}
+              onClick={()=> window.open("http://wa.link/igfa2m")}
             >
               <Image
                 src={btnContact.src}

@@ -46,12 +46,12 @@ const AudiovisualPopup = () => {
               className="w-[50%] sm:w-[53%] mx-auto"
               priority
             />
-            <p className="text-[10px] sm:text-[14px] md:text-[18px] lg:text-[23px] max-w-[80%] mx-auto text-center font-extralight">
+            <p className="text-[10px] sm:text-[14px] md:text-[18px] lg:text-[23px] max-w-[80%] mx-auto text-center font-medium">
               Nos especializamos en crear contenido audiovisual de alta calidad
               para potenciar tu marca, fortalecer tu identidad y ayudarte a
               alcanzar tus objetivos.
             </p>
-            <p className="text-[6px] sm:text-[10px] md:text-[13px] lg:text-[16px] uppercase max-w-[60%] text-center mx-auto font-extralight mb-1 sm:mb-1 lg:mb-3">
+            <p className="text-[6px] sm:text-[10px] md:text-[13px] lg:text-[16px] uppercase max-w-[60%] text-center mx-auto font-medium mb-1 sm:mb-1 lg:mb-3">
               Trabajamos juntos * escuchamos tus necesidades y expectativas *
               desarrollamos soluciones a medida que impacten visualmente.
             </p>
@@ -66,7 +66,7 @@ const AudiovisualPopup = () => {
               className={`absolute -bottom-5 -right-5 sm:-bottom-10 sm:right-25 md:right-42 md:-bottom-11 lg:-bottom-13 lg:right-[35%] cursor-pointer hover:scale-105 transition-transform duration-300
                  ${showHook ? "hidden" : ""}
                 `}
-                onClick={()=> window.open("https://wa.link/bw0sqj")}
+                onClick={()=> window.open("http://wa.link/igfa2m")}
             >
               <Image
                 src={btnContact.src}

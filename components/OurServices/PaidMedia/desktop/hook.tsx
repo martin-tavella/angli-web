@@ -35,7 +35,7 @@ const PaidHook = ({ showHook, handleOnClick, btnContact }: PaidHookProps) => {
             height={274}
             className="w-[25%] sm:w-[20%] mx-auto py-2"
           />
-          <p className="text-center text-[12px] sm:text-xl font-extralight">
+          <p className="text-center text-[12px] sm:text-xl font-light">
             Tomamos el contenido estratégico y de calidad que realizamos para
             impulsarlo mediante campañas. Por eso ofrecemos nuestro servicio de
             Paid Media, pensado exclusivamente para quienes contratan nuestras
@@ -57,7 +57,7 @@ const PaidHook = ({ showHook, handleOnClick, btnContact }: PaidHookProps) => {
                 height={201}
                 className="h-[40px] sm:h-[65px] md:h-[70px] lg:h-[85px] w-auto  mx-auto"
               />
-              <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+              <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
                 ES UN Complemento de la planificación mensual
               </span>
             </div>
@@ -69,7 +69,7 @@ const PaidHook = ({ showHook, handleOnClick, btnContact }: PaidHookProps) => {
                 height={201}
                 className="h-[40px] sm:h-[65px] md:h-[70px] lg:h-[85px] w-auto mx-auto"
               />
-              <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+              <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
                 Campañas en Meta y Ads
               </span>
             </div>
@@ -81,12 +81,12 @@ const PaidHook = ({ showHook, handleOnClick, btnContact }: PaidHookProps) => {
                 height={201}
                 className="h-[40px]  sm:h-[65px] md:h-[70px] lg:h-[85px] w-auto mx-auto"
               />
-              <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">
+              <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">
                 Potenciar tu presencia digital
               </span>
             </div>
           </div>
-          <p className="text-center max-w-[75%] mx-auto pt-4 sm:py-10 font-extralight text-[#d85254] text-[12px] sm:text-xl">
+          <p className="text-center max-w-[75%] mx-auto pt-4 sm:py-10 font-light text-[#d85254] text-[12px] sm:text-xl">
             Creemos que la publicidad digital funciona mejor cuando se apoya en
             contenido de calidad, profesional y alineado a la identidad de tu
             marca. De esta manera, cada anuncio que impulsamos tiene detrás una
@@ -97,7 +97,7 @@ const PaidHook = ({ showHook, handleOnClick, btnContact }: PaidHookProps) => {
         <div className="flex relative pt-3 pb-10">
 
           <button className="cursor-pointer"
-          onClick={()=> window.open("https://wa.link/bw0sqj")}
+          onClick={()=> window.open("http://wa.link/igfa2m")}
           >
             <Image
               src={btnContact.src}

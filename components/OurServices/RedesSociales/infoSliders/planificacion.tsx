@@ -19,7 +19,7 @@ const Planificacion = () => {
         <span className="text-[#4d81c0] text-[16px] sm:text-2xl text-center font-extralight">
           -LEVEL UP-
         </span>
-        <p className="text-center text-[13px] sm:text-xl font-extralight">
+        <p className="text-center text-[13px] sm:text-xl font-light">
           Nuestro servicio de planificación mensual es la forma más completa y
           organizada de gestionar tu presencia digital. No se trata solo de
           publicar contenido: es un proceso pensado para que tu marca tenga
@@ -28,7 +28,7 @@ const Planificacion = () => {
       </div>
       <div className="pt-5">
         <h4
-          className={`${vintageRotter.className} text-[#4d81c0] text-3xl sm:text-4xl text-center font-extralight`}
+          className={`${vintageRotter.className} text-[#4d81c0] text-4xl sm:text-5xl text-center font-extralight`}
         >
           ¿Como funciona?
         </h4>
@@ -41,7 +41,7 @@ const Planificacion = () => {
               height={201}
               className="w-[50%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">Planificación estratégica
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">Planificación estratégica
 y calendario de contenido</span>
           </div>
           <div className="w-[40%] flex flex-col gap-3">
@@ -52,7 +52,7 @@ y calendario de contenido</span>
               height={201}
               className="w-[50%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">Producción audiovisual en una jornada</span>
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">Producción audiovisual en una jornada</span>
           </div>
           <div className="w-[40%] flex flex-col gap-3">
             <Image
@@ -62,11 +62,11 @@ y calendario de contenido</span>
               height={201}
               className="w-[50%] mx-auto"
             />
-            <span className="uppercase font-extralight text-center text-[10px] sm:text-[16px]">Diseño gráfico e identidad visual
+            <span className="uppercase font-light text-center text-[10px] sm:text-[16px]">Diseño gráfico e identidad visual
 </span>
           </div>
         </div>
-          <p className="text-center max-w-[75%] mx-auto py-4 sm:py-10 font-extralight text-[#4d81c0] text-[12px] sm:text-xl">En resumen, la planificación mensual es un paquete integral que combina estrategia, producción audiovisual y diseño gráfico en un solo servicio. Con este sistema, tu marca gana en organización, coherencia y presencia digital profesional.</p>
+          <p className="text-center max-w-[75%] mx-auto py-4 sm:py-10 font-medium text-[#4d81c0] text-[12px] sm:text-xl">En resumen, la planificación mensual es un paquete integral que combina estrategia, producción audiovisual y diseño gráfico en un solo servicio. Con este sistema, tu marca gana en organización, coherencia y presencia digital profesional.</p>
       </div>
     </div>
   );

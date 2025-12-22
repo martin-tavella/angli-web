@@ -40,6 +40,7 @@ const Navbar = () => {
         {/* Altura de la Navbar (ej: h-20) */}
         <div className="flex mx-4 lg:mx-0 lg:gap-0 justify-between items-center h-16 sm:h-20">
           {/* Logo */}
+          <a href="#">
           <Image
             src={logo.src}
             alt="Angli logo"
@@ -48,6 +49,7 @@ const Navbar = () => {
             priority
             className="w-17 lg:w-20"
           />
+          </a>
 
           {/* Menú de Navegación (Visible solo en LG y superiores) */}
           <div className="hidden lg:flex items-center">
