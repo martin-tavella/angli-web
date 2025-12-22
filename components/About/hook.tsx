@@ -102,7 +102,7 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
             />
             <button
             onClick={()=>{
-              window.open("https://wa.link/bw0sqj")
+              window.open("http://wa.link/igfa2m")
             }}
             className="cursor-pointer"
             >
