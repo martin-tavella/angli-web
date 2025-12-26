@@ -40,7 +40,7 @@ const Navbar = () => {
         {/* Altura de la Navbar (ej: h-20) */}
         <div className="flex mx-4 lg:mx-0 lg:gap-0 justify-between items-center h-16 sm:h-20">
           {/* Logo */}
-          <a href="#">
+          <a href="/">
           <Image
             src={logo.src}
             alt="Angli logo"

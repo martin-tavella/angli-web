@@ -20,63 +20,47 @@ interface ModalWrapperProps {
 }
 
 const ModalWrapper = ({ popupVisible, onClose }: ModalWrapperProps) => {
+  const width = useWindowWidth();
+
   useEffect(() => {
     if (popupVisible) {
-      // Bloquea el scroll de la página cuando el popup está visible
       document.body.style.overflow = "hidden";
     } else {
-      // Restaura el scroll cuando el popup está cerrado
-      document.body.style.overflow = "unset"; // 'unset' es más seguro que 'auto'
+      document.body.style.overflow = "unset";
     }
-
-    // Cleanup function: Asegura que el scroll se restablezca si el componente se desmonta
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [popupVisible]);
 
-  const width = useWindowWidth()
+  if (!popupVisible) return null;
 
-  if (popupVisible === null) return null;
   const getPopup = () => {
+    const isMobile = width <= 1023;
+    
     switch (popupVisible) {
       case "audiovisual":
-        if (width <= 1023) return <AudiovisualMobilePopup onClose={onClose} />
-        else return <AudiovisualPopup />;
+        return isMobile ? <AudiovisualMobilePopup onClose={onClose} /> : <AudiovisualPopup />;
       case "direccion":
-         if (width <= 1023) return <DireccionMobilePopup onClose={onClose} />
-         else return <DireccionPopup />;
+        return isMobile ? <DireccionMobilePopup onClose={onClose} /> : <DireccionPopup />;
       case "diseno":
-        if (width <= 1023) return <DisenoMobilePopup onClose={onClose} />
-         else return <DisenoGraficoPopup />;
+        return isMobile ? <DisenoMobilePopup onClose={onClose} /> : <DisenoGraficoPopup />;
       case "redes":
-        if (width <= 1023) return <RedesMobilePopup onClose={onClose} />
-        else return <RedesSocialesPopup />;
+        return isMobile ? <RedesMobilePopup onClose={onClose} /> : <RedesSocialesPopup />;
       case "paid":
-        if (width <= 1023) return <PaidMobilePopup onClose={onClose} />
-        else return <PaidPopup />;
+        return isMobile ? <PaidMobilePopup onClose={onClose} /> : <PaidPopup />;
       case "consultorias":
-        if (width <= 1023) return <ConsultoriasMobilePopup onClose={onClose} />
-       else return <ConsultoriasPopup />;
+        return isMobile ? <ConsultoriasMobilePopup onClose={onClose} /> : <ConsultoriasPopup />;
       default:
-        break;
+        return null;
     }
   };
 
   return (
-    // Contenedor principal: Fijo, cubre toda la pantalla (el Overlay)
-    // CLAVE: backdrop-blur-sm para un efecto moderno
-    <div
-      className="fixed inset-0 z-100 flex items-center justify-center overflow-y-auto
-                 bg-black/20 backdrop-blur-xs p-4"
-    >
-      {/* Overlay para cerrar al hacer clic fuera del popup */}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/20 backdrop-blur-xs p-4">
       <div className="absolute inset-0" onClick={onClose} />
 
-      {/* Contenido del Popup (tu componente AudiovisualPopup) 
-          Añadimos z-20 para asegurar que esté encima del overlay
-      */}
-      <div className={`${width <= 1023 ? "": "max-w-[365px] sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] z-20"}`}>
+      <div className={`${width <= 1023 ? "" : "max-w-[365px] sm:max-w-[630px] md:max-w-[760px] lg:max-w-[1010px] z-20"}`}>
         {getPopup()}
       </div>
     </div>

@@ -1,8 +1,10 @@
-const ServiceGridDesktop = ({
-  setPopupVisible,
-}: {
-  setPopupVisible: (popup: string | null) => void;
-}) => {
+"use client"
+
+import { useRouter } from "next/navigation";
+
+const ServiceGridDesktop = () => {
+
+  const router = useRouter();
   // Asumo que tienes un array con las 6 rutas de tus imágenes de servicio COMPLETAS (397x999)
   const servicesImages = [
     "/ourServices/btnDesktop/AUDIOVISUAL.png", // Imagen 1
@@ -35,7 +37,7 @@ const ServiceGridDesktop = ({
             <div
               key={index}
               onClick={() => {
-                setPopupVisible(popups[index]);
+                router.push(`?service=${popups[index]}`, {scroll: false})
               }}
               // CLAVE: Usamos la proporción exacta 397/999 (aprox. 1/2.5)
               className="group overflow-hidden

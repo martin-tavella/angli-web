@@ -1,8 +1,10 @@
-const ServiceGridMobile = ({
-  setPopupVisible,
-}: {
-  setPopupVisible: (popup: string | null) => void;
-}) => {
+"use client"
+
+import { useRouter } from "next/navigation";
+
+const ServiceGridMobile = () => {
+  const router = useRouter();
+  
   // Asumo que tienes un array con las rutas de tus 6 imágenes de servicio COMPLETAS
   const servicesImages = [
     "/ourServices/btnMobile/AUDIOVISUAL.png", // Imagen 1 (Completa)
@@ -36,7 +38,7 @@ const ServiceGridMobile = ({
             <div
               key={index}
               onClick={() => {
-                setPopupVisible(popups[index]);
+                router.push(`?service=${popups[index]}`, {scroll: false})
               }}
               // Las imágenes son 854x1201 (rectangulares verticales)
               className="group overflow-hidden rounded-xl shadow-lg 

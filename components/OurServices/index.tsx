@@ -1,19 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import title from "@/public/ourServices/IMAGEN_TITULO.png";
-import ServiceGridMobile from "./btnDisplay/mobile";
-import ServiceGridDesktop from "./btnDisplay/desktop";
 import { manrope } from "@/utils/fonts/fonts";
-import ModalWrapper from "./modalWrapper";
-import { useState } from "react";
+import { Suspense } from "react";
+import OurServicesLogic from "./OurServicesLogic";
 
 const OurServices = () => {
-  const [popupVisible, setPopupVisible] = useState<string | null>(null);
-  const handleOnClose = () => {
-    setPopupVisible(null);
-  };
-
   return (
     <section id="servicios" className={`${manrope.className}`}>
       <div className="relative bg-[url('/backgrounds/FONDO_BLANCO.png')] h-full flex-col items-center justify-center pb-20">
@@ -27,10 +18,10 @@ const OurServices = () => {
         <p className="absolute top-10 right-4 sm:right-12 font-extralight text-[17px] sm:text-[20px] text-[#4D81C0]">
           _Servicios
         </p>
-        <ServiceGridMobile setPopupVisible={setPopupVisible} />
-        <ServiceGridDesktop setPopupVisible={setPopupVisible} />
+        <Suspense fallback={null}>
+          <OurServicesLogic />
+        </Suspense>
       </div>
-      <ModalWrapper popupVisible={popupVisible} onClose={handleOnClose} />
     </section>
   );
 };
