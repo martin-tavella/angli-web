@@ -7,7 +7,7 @@ import Paquete from "../infoSliders/paquete";
 import DisenoFeed from "../infoSliders/disenoFeed";
 import reducir from "@/public/ourServices/AUDIOVISUAL/BOTON_REDUCIR.png";
 import "../animate-tutorial.css";
-import cursor from "@/public/ourServices/REDES/cursor.png";
+import cursor from "@/public/ourServices/cursor.png"
 import { MobileHookProps } from "../../hook.types";
 
 type ActiveSliderId = "planificacion" | "paquete" | "disenoFeed";

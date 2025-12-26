@@ -123,7 +123,8 @@ const ConsultoriasHook = ({
         </div>
         <div className="flex relative pt-3 pb-10">
           <button className="cursor-pointer"
-          onClick={()=> window.open("http://wa.link/igfa2m")}>
+          onClick={()=> window.open("http://wa.link/igfa2m")}
+          title="Ir a Whatsapp">
             <Image
               src={btnContact.src}
               alt="Contacto"
@@ -132,7 +133,6 @@ const ConsultoriasHook = ({
               className="z-50  w-[24%] md:w-[22%] lg:w-[19%] hover:scale-105 transition-transform duration-300 
 
                 absolute bottom-3 right-[39%] lg:right-[40%]
-
                 "
             />
           </button>
