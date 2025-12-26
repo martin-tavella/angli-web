@@ -98,6 +98,7 @@ const PaidHook = ({ showHook, handleOnClick, btnContact }: PaidHookProps) => {
 
           <button className="cursor-pointer"
           onClick={()=> window.open("http://wa.link/igfa2m")}
+          title="Ir a Whatsapp"
           >
             <Image
               src={btnContact.src}

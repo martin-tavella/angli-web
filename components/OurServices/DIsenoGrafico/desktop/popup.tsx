@@ -66,6 +66,7 @@ const DisenoGraficoPopup = () => {
               ${showHook ? "hidden" : ""}
               `}
               onClick={()=> window.open("http://wa.link/igfa2m")}
+              title="Ir a Whatsapp"
             >
               <Image
                 src={btnContact.src}
@@ -73,6 +74,7 @@ const DisenoGraficoPopup = () => {
                 width={392}
                 height={113}
                 className="w-[30%] max-h-[56px] sm:w-[50%] sm:max-h-[57px] md:w-[64%] md:max-h-[60px] lg:w-[74%] lg:max-h-[60px]"
+                
               />
             </button>
             <button

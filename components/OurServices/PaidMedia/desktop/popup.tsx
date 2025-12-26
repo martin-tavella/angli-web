@@ -66,6 +66,7 @@ const PaidPopup = () => {
               ${showHook ? "hidden" : ""}
               `}
               onClick={()=> window.open("http://wa.link/igfa2m")}
+              title="Ir a Whatsapp"
               >
               <Image
                 src={btnContact.src}

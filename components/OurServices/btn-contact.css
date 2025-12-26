@@ -1,0 +1,37 @@
+@keyframes guia-click {
+  0% {
+    opacity: 0;
+    transform: translate(20px, 20px); /* Empieza un poco abajo a la derecha */
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    /* Llega al centro del botón */
+    transform: translate(-20px, -10px); 
+  }
+  60% {
+    /* Simula el click (se achica) */
+    transform: translate(-20px, -10px) scale(0.8);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-20px, -10px) scale(1);
+  }
+}
+
+.cursor-fantasma {
+  /* Ajusta estas coordenadas según dónde quieras que aparezca inicialmente */
+  right: 38%;
+  bottom: -78px;
+  animation: guia-click 3s infinite;
+  font-size: 2rem;
+}
+
+/* Si el usuario real pone el mouse encima, escondemos la guía */
+.group:hover .cursor-fantasma {
+  display: none;
+}

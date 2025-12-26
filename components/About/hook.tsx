@@ -109,7 +109,7 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
               <Image
                 src={disabledContact}
                 alt="Contactanos"
-                className="absolute z-20 -top-4 left-1/2 -translate-x-1/2 w-30 sm:w-[200px] sm:-top-7 xl:w-[300px] xl:-top-12"
+                className="absolute z-20 -top-4 left-1/2 -translate-x-1/2 w-30 sm:w-[200px] sm:-top-7 xl:w-[300px] xl:-top-12 hover:scale-105 transition-transform duration-300"
               />
             </button>
 

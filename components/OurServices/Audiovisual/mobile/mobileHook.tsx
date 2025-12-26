@@ -29,15 +29,6 @@ const AudiovisualMobileHook = ({
       ${showMobileHook ? "py-8" : "py-0"}
       `}
       >
-        <div className="absolute mx-auto left-1/2 -translate-x-1/2 bottom-[43%]">
-          <p
-            className="text-[#EA6026] text-[1.5rem] sm:text-[2.8rem] 
-            md:text-[2.4rem]
-            font-bold text-center leading-6 sm:leading-12 md:leading-10"
-          >
-            Equipo<br></br> Profesional
-          </p>
-        </div>
         <Image
           src={imgHook.src}
           alt="Placa de equipo"
