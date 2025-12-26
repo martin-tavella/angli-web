@@ -6,12 +6,16 @@ import ServiceGridMobile from "./btnDisplay/mobile";
 import ServiceGridDesktop from "./btnDisplay/desktop";
 import { manrope } from "@/utils/fonts/fonts";
 import ModalWrapper from "./modalWrapper";
-import { useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const OurServices = () => {
-  const [popupVisible, setPopupVisible] = useState<string | null>(null);
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const popupVisible = searchParams.get("service");
+
   const handleOnClose = () => {
-    setPopupVisible(null);
+    router.push(pathname, {scroll: false});
   };
 
   return (
@@ -27,8 +31,8 @@ const OurServices = () => {
         <p className="absolute top-10 right-4 sm:right-12 font-extralight text-[17px] sm:text-[20px] text-[#4D81C0]">
           _Servicios
         </p>
-        <ServiceGridMobile setPopupVisible={setPopupVisible} />
-        <ServiceGridDesktop setPopupVisible={setPopupVisible} />
+        <ServiceGridMobile />
+        <ServiceGridDesktop />
       </div>
       <ModalWrapper popupVisible={popupVisible} onClose={handleOnClose} />
     </section>
