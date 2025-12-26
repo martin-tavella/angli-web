@@ -1,10 +1,11 @@
+"use client";
+
 import { manrope } from "@/utils/fonts/fonts";
 import menu from "@/public/navbar/MENU.png";
 import menuOpen from "@/public/navbar/MENU_DESPLEGADO.png";
 import icon from "@/public/navbar/ICONO.png";
 import Image from "next/image";
-
-
+import { useRouter } from "next/navigation";
 
 const navItems = [
   { label: "NOSOTROS", route: "#nosotros", hasSubmenu: false },
@@ -13,11 +14,12 @@ const navItems = [
     route: "#servicios",
     hasSubmenu: true,
     submenu: [
-      "Producción Audiovisual",
-      "Dirección de Arte",
-      "Diseño Gráfico",
-      "Redes",
-      "Paid Media",
+      { label: "Producción Audiovisual", popupId: "audiovisual" },
+      { label: "Dirección de Arte", popupId: "direccion" },
+      { label: "Diseño Gráfico", popupId: "diseno" },
+      { label: "Redes Sociales", popupId: "redes" },
+      { label: "Paid Media", popupId: "paid" },
+      { label: "Consultorías", popupId: "consultorias" },
     ],
   },
   { label: "NUESTROS TRABAJOS", route: "#trabajos", hasSubmenu: false },
@@ -30,13 +32,20 @@ interface MobileNavProps {
   isOpen: boolean;
 }
 
-
 const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
+  const router = useRouter();
+
   return (
     <>
-    {/* 1. Botón Hamburguesa (Visible solo en pantallas pequeñas) */}
+      {/* 1. Botón Hamburguesa (Visible solo en pantallas pequeñas) */}
       <button onClick={toggleMenu} aria-label="Abrir menú">
-        <Image src={menu} alt="menu" width={32} height={32} className="w-8 h-auto" />
+        <Image
+          src={menu}
+          alt="menu"
+          width={32}
+          height={32}
+          className="w-8 h-auto"
+        />
       </button>
       {isOpen && (
         <div
@@ -72,10 +81,16 @@ const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
             quality={75}
           />
           <button onClick={toggleMenu} aria-label="Cerrar menú">
-            <Image src={menuOpen} alt="menu abierto" width={32} height={32} className="w-8 h-auto" />
+            <Image
+              src={menuOpen}
+              alt="menu abierto"
+              width={32}
+              height={32}
+              className="w-8 h-auto"
+            />
           </button>
         </header>
-        <div className="bg-[url('/backgrounds/FONDO_ROJO.png')] h-1"/>
+        <div className="bg-[url('/backgrounds/FONDO_ROJO.png')] h-1" />
         <div className={`p-8 pt-10 ${manrope.className}`}>
           <ul className="space-y-6">
             {navItems.map((item, index) => (
@@ -85,7 +100,13 @@ const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
                   onClick={toggleMenu}
                   className="flex items-center gap-3"
                 >
-                  <Image src={icon} alt="" width={20} height={20} className="w-5 h-auto" />
+                  <Image
+                    src={icon}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="w-5 h-auto"
+                  />
                   {item.label}
                 </a>
 
@@ -93,12 +114,15 @@ const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
                   <ul className="pl-8 pt-2 space-y-1 text-base font-light opacity-80">
                     {item.submenu!.map((sub, subIndex) => (
                       <li key={subIndex}>
-                        <a
-                          href={`#${sub.toLowerCase().replace(/\s/g, "-")}`}
-                          onClick={toggleMenu}
+                        <button
+                          onClick={() => {
+                            router.push(`/?service=${sub.popupId}#servicios`);
+                            toggleMenu();
+                          }}
+                          className="text-left w-full"
                         >
-                          {sub}
-                        </a>
+                          {sub.label}
+                        </button>
                       </li>
                     ))}
                   </ul>
