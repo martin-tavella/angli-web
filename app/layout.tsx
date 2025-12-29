@@ -5,7 +5,7 @@ import Footer from "@/components/Footer/";
 import WhatsappBubble from "@/components/Whatsapp";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "htpp://localhost:3000";
-const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION;
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE;
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
