@@ -4,9 +4,16 @@ import Navbar from "@/components/Navbar/";
 import Footer from "@/components/Footer/";
 import WhatsappBubble from "@/components/Whatsapp";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "htpp://localhost:3000";
+
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
+  alternates: {
+    canonical: '/',
+  },
   title: "Angli Estudio",
-  description: "",
+  description: "Realizamos contenido audiovisual para tu negocio",
 };
 
 export default function RootLayout({
