@@ -1,3 +1,4 @@
+import AdsOurClients from "@/components/ClientShowcase/ads";
 import AdsHero from "@/components/Hero/ads";
 import AdsOurServices from "@/components/OurServices/ads";
 import AdsOurWork from "@/components/OurWork/ads";
@@ -7,5 +8,6 @@ export default function Ads() {
     <AdsHero />
     <AdsOurWork />
     <AdsOurServices />
+    <AdsOurClients />
     </>
 }

@@ -21,6 +21,7 @@ const services = [
 
 const AdsOurServices = () => {
   return (
+    <>
     <section className={`bg-[#f8f4eb] py-16 lg:py-24 ${manrope.className}`}>
       {/* Encabezado */}
       <div className="flex flex-col items-center mb-16 lg:mb-24">
@@ -90,6 +91,9 @@ const AdsOurServices = () => {
         ))}
       </div>
     </section>
+    <div className="bg-[#d95354] h-2 w-full"></div>
+    <div className="bg-[#4c80bf] h-2 w-full-mb-1"></div>
+    </>
   );
 };
 
