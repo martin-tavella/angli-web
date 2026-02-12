@@ -4,6 +4,7 @@ import btn from "@/public/ads/HABLEMOS_NARANJA.png";
 import introPC from "@/public/ads/INTRO_PC.png";
 import introMobile from "@/public/ads/INTRO_MOBILE.png";
 import fondo from "@/public/backgrounds/FONDO_BLANCO.png";
+import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
 import Image from "next/image";
 
 const AdsHero = () => {
@@ -27,6 +28,7 @@ const AdsHero = () => {
           <h2 className={`${manrope.className} text-[#4c80bf] text-5xl xl:text-6xl font-extrabold leading-tight mb-6`}>
             TU MARCA <br /> MERECE DESTACAR
           </h2>
+          <Image src={star} width={30} height={30} alt="Estrella" className="mb-4 lg:hidden rotate-30 size-14" />
 
           <h3 className={`${manrope.className} text-[#1b1b1a] text-xl leading-8 lg:leading-normal lg:text-xl xl:text-2xl font-medium max-w-[500px] lg:max-w-none`}>
             En <span className={spansStyles}>Angli Estudio</span> somos tu{" "}
