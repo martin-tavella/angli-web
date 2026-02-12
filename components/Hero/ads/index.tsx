@@ -10,6 +10,7 @@ const AdsHero = () => {
   const spansStyles = `${vintageRotter.className} font-normal text-[1.5em] text-[#ee6226] px-1`;
 
   return (
+    <>
     <section className="relative w-full overflow-hidden flex flex-col">
       {/* Background */}
       <Image src={fondo} alt="fondo" fill className="-z-10 object-cover" priority />
@@ -77,6 +78,10 @@ const AdsHero = () => {
         </button>
       </div>
     </section>
+    <div className="bg-[#4c80bf] h-2 w-full"></div>
+    <div className="bg-[#ee6226] h-2 w-full"></div>
+    <div className="bg-[#d95354] h-2 w-full -mb-1"></div>
+    </>
   );
 };
 
