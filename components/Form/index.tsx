@@ -119,7 +119,9 @@ const Form = () => {
   ];
 
   return (
-    <section className="relative py-25 px-6 lg:px-15 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 xl:gap-30 overflow-hidden">
+    <section className="relative py-25 px-6 lg:px-15 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 xl:gap-30 overflow-hidden"
+    id="hablemos"
+    >
       <div className="absolute inset-0 -z-10">
         <Image
           src={fondo}

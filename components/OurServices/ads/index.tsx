@@ -22,7 +22,9 @@ const services = [
 const AdsOurServices = () => {
   return (
     <>
-    <section className={`bg-[#f8f4eb] py-16 lg:py-24 ${manrope.className}`}>
+    <section className={`bg-[#f8f4eb] py-16 lg:py-24 ${manrope.className}`}
+    id="servicios"
+    >
       {/* Encabezado */}
       <div className="flex flex-col items-center mb-16 lg:mb-24">
         <Image src={star} width={40} height={40} alt="Estrella" className="rotate-30 mb-2" />

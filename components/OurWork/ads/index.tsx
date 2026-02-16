@@ -32,6 +32,7 @@ const OurWork = () => {
       ref={containerRef}
       // Quitamos bg-[#ee6226] para que se vea la imagen de fondo
       className={`relative w-full py-24 overflow-hidden ${manrope.className}`}
+      id="trabajos"
     >
       {/* BACKGROUND OPTIMIZADO */}
       <Image

@@ -9,7 +9,8 @@ import { manrope } from "@/utils/fonts/fonts";
 const AdsOurClients = () => {
   return (
     <>
-      <section className={`relative w-full py-20 lg:py-32 overflow-hidden flex flex-col items-center ${manrope.className}`}>
+      <section className={`relative w-full py-20 lg:py-32 overflow-hidden flex flex-col items-center ${manrope.className}`}
+      id="clientes">
         
         {/* FONDO OPTIMIZADO */}
         <Image

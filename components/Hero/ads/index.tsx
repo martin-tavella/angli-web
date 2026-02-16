@@ -12,7 +12,9 @@ const AdsHero = () => {
 
   return (
     <>
-    <section className="relative w-full overflow-hidden flex flex-col">
+    <section className="relative w-full overflow-hidden flex flex-col"
+    id="#"
+    >
       {/* Background */}
       <Image src={fondo} alt="fondo" fill className="-z-10 object-cover" priority />
 
