@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar/";
-import Footer from "@/components/Footer/";
 import WhatsappBubble from "@/components/Whatsapp";
+import FooterWrapper from "@/components/Footer/Wrapper";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "htpp://localhost:3000";
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE;
 const GTM = process.env.NEXT_PUBLIC_GTM;
-
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -34,7 +33,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <WhatsappBubble />
-        <Footer />
+        <FooterWrapper />
       </body>
     </html>
   );
