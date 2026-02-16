@@ -5,9 +5,10 @@ import menu from "@/public/navbar/MENU.png";
 import menuOpen from "@/public/navbar/MENU_DESPLEGADO.png";
 import icon from "@/public/navbar/ICONO.png";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation"; // Importamos usePathname
 
-const navItems = [
+// 1. Definimos los items para la web principal
+const mainNavItems = [
   { label: "NOSOTROS", route: "#nosotros", hasSubmenu: false },
   {
     label: "SERVICIOS",
@@ -27,6 +28,14 @@ const navItems = [
   { label: "HABLEMOS", route: "#hablemos", hasSubmenu: false },
 ];
 
+// 2. Definimos los items para la landing /ads (sin submenús, según el estilo de landing page)
+const adsNavItems = [
+  { label: "TRABAJOS", route: "/ads#trabajos", hasSubmenu: false },
+  { label: "SERVICIOS", route: "/ads#servicios", hasSubmenu: false },
+  { label: "CLIENTES", route: "/ads#clientes", hasSubmenu: false },
+  { label: "HABLEMOS", route: "/ads#hablemos", hasSubmenu: false },
+];
+
 interface MobileNavProps {
   toggleMenu: () => void;
   isOpen: boolean;
@@ -34,10 +43,15 @@ interface MobileNavProps {
 
 const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
   const router = useRouter();
+  const pathname = usePathname(); // Detectamos la ruta actual
+
+  // 3. Lógica de renderizado condicional
+  const isAdsPage = pathname.startsWith("/ads");
+  const navItems = isAdsPage ? adsNavItems : mainNavItems;
 
   return (
     <>
-      {/* 1. Botón Hamburguesa (Visible solo en pantallas pequeñas) */}
+      {/* Botón Hamburguesa */}
       <button onClick={toggleMenu} aria-label="Abrir menú">
         <Image
           src={menu}
@@ -47,21 +61,22 @@ const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
           className="w-8 h-auto"
         />
       </button>
+
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/40 z-40"
-          onClick={toggleMenu} // Cierra al hacer clic en el overlay
+          onClick={toggleMenu}
         ></div>
       )}
 
-      {/* 3. Menú Deslizante (Off-Canvas) */}
+      {/* Menú Deslizante */}
       <div
         className={`
-                    fixed top-0 right-0 h-full text-[#f7ecd5] shadow-lg z-50 
-                    transition-transform duration-500 ease-in-out
-                    w-[350px] sm:w-[400px] 
-                    ${isOpen ? "translate-x-0" : "translate-x-full"}
-                `}
+          fixed top-0 right-0 h-full text-[#f7ecd5] shadow-lg z-50 
+          transition-transform duration-500 ease-in-out
+          w-[350px] sm:w-[400px] 
+          ${isOpen ? "translate-x-0" : "translate-x-full"}
+        `}
       >
         <Image
           src="/backgrounds/FONDO_AZUL.png"
@@ -91,6 +106,7 @@ const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
           </button>
         </header>
         <div className="bg-[url('/backgrounds/FONDO_ROJO.png')] h-1" />
+        
         <div className={`p-8 pt-10 ${manrope.className}`}>
           <ul className="space-y-6">
             {navItems.map((item, index) => (
@@ -107,12 +123,15 @@ const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
                     height={20}
                     className="w-5 h-auto"
                   />
-                  {item.label}
+                  {/* Si es Ads Page, podemos aplicar un font-bold como en el diseño de desktop */}
+                  <span className={isAdsPage ? "font-bold" : ""}>
+                    {item.label}
+                  </span>
                 </a>
 
-                {item.hasSubmenu && (
+                {item.hasSubmenu && item.submenu && (
                   <ul className="pl-8 pt-2 space-y-1 text-base font-light opacity-80">
-                    {item.submenu!.map((sub, subIndex) => (
+                    {item.submenu.map((sub, subIndex) => (
                       <li key={subIndex}>
                         <button
                           onClick={() => {
