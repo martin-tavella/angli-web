@@ -7,8 +7,21 @@ import icon from "@/public/navbar/ICONO.png";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation"; // Importamos usePathname
 
-// 1. Definimos los items para la web principal
-const mainNavItems = [
+// Define la estructura de los submenús (Popups de servicios)
+interface SubmenuItem {
+  label: string;
+  popupId: string;
+}
+
+// Define la estructura principal de un ítem de navegación
+interface NavItem {
+  label: string;
+  route: string;
+  hasSubmenu: boolean;
+  submenu?: SubmenuItem[]; // Opcional, solo presente si hasSubmenu es true
+}
+
+const mainNavItems: NavItem[] = [
   { label: "NOSOTROS", route: "#nosotros", hasSubmenu: false },
   {
     label: "SERVICIOS",
@@ -29,7 +42,7 @@ const mainNavItems = [
 ];
 
 // 2. Definimos los items para la landing /ads (sin submenús, según el estilo de landing page)
-const adsNavItems = [
+const adsNavItems: NavItem[] = [
   { label: "TRABAJOS", route: "/ads#trabajos", hasSubmenu: false },
   { label: "SERVICIOS", route: "/ads#servicios", hasSubmenu: false },
   { label: "CLIENTES", route: "/ads#clientes", hasSubmenu: false },
@@ -47,7 +60,7 @@ const MobileNav = ({ toggleMenu, isOpen }: MobileNavProps) => {
 
   // 3. Lógica de renderizado condicional
   const isAdsPage = pathname.startsWith("/ads");
-  const navItems = isAdsPage ? adsNavItems : mainNavItems;
+  const navItems: NavItem[] = isAdsPage ? adsNavItems : mainNavItems;
 
   return (
     <>

@@ -1,4 +1,6 @@
-const validateForm = (formData) => {
+import { FormData } from ".";
+
+const validateForm = (formData: FormData) => {
   const errors: { [key: string]: string } = {};
 
   if (!formData.nombre.trim()) {
