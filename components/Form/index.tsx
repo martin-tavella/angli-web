@@ -11,6 +11,7 @@ import whatsapp from "@/public/footer/LOGO_WHATSAPP.png";
 import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
 import { vintageRotter, manrope } from "@/utils/fonts/fonts";
 import fondo from "@/public/backgrounds/FONDO_BLANCO.png";
+import enviar from "@/public/ads/ENVIAR.png"
 
 // Definimos la interfaz para los datos del formulario
 export interface FormData {
@@ -297,7 +298,7 @@ const Form = () => {
           </div>
 
           {/* Footer del Formulario */}
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 mt-2 lg:mt-0">
+          <div className="relative flex flex-col lg:flex-row items-center justify-between gap-4 mt-2 lg:mt-0 pb-10">
             <div className="text-xs font-bold uppercase min-h-[1rem]">
               {submitStatus === "success" && (
                 <span className="text-green-600">¡Mensaje enviado correctamente!</span>
@@ -310,11 +311,9 @@ const Form = () => {
             <button
               type="submit"
               disabled={isSubmitting}
-              className={`bg-[#ee6226] text-white px-6 py-1.5 lg:px-10 lg:py-2 rounded-xl lg:rounded-2xl text-sm lg:text-lg font-bold shadow-[0px_3px_0px_0px_#c34a1a] lg:shadow-[0px_4px_0px_0px_#c34a1a] transition-all cursor-pointer
-                ${isSubmitting ? "opacity-50 cursor-not-allowed scale-95" : "hover:translate-y-[2px] active:scale-95"}
-              `}
+              className="absolute transition-all cursor-pointer w-[38%] bottom-9.5 sm:w-[34%] sm:bottom-4 md:w-[33%] md:bottom-5 lg:static xl:w-[30%]"
             >
-              {isSubmitting ? "Enviando..." : "_Enviar"}
+              <img src={enviar.src} alt="Enviar" className="lg:max-h-[180px]"/>
             </button>
           </div>
         </form>

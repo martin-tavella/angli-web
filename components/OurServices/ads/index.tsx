@@ -2,11 +2,11 @@
 import Image from "next/image";
 import { manrope } from "@/utils/fonts/fonts";
 import sticker1 from "@/public/ads/stickers/1.svg";
-import sticker2 from "@/public/ads/stickers/2.svg";
+import sticker2 from "@/public/ads/stickers/2.png";
 import sticker3 from "@/public/ads/stickers/3.svg";
 import sticker4 from "@/public/ads/stickers/4.svg";
 import sticker5 from "@/public/ads/stickers/5.svg";
-import sticker6 from "@/public/ads/stickers/6.svg";
+import sticker6 from "@/public/ads/stickers/6.png";
 import btn from "@/public/ads/HABLEMOS_NARANJA.png";
 import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
 
