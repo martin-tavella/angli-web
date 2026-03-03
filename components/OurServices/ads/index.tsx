@@ -3,7 +3,7 @@ import Image from "next/image";
 import { manrope } from "@/utils/fonts/fonts";
 import sticker1 from "@/public/ads/stickers/1.svg";
 import sticker2 from "@/public/ads/stickers/2.png";
-import sticker3 from "@/public/ads/stickers/3.svg";
+import sticker3 from "@/public/ads/stickers/3.png";
 import sticker4 from "@/public/ads/stickers/4.svg";
 import sticker5 from "@/public/ads/stickers/5.svg";
 import sticker6 from "@/public/ads/stickers/6.png";
@@ -13,7 +13,7 @@ import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
 const services = [
   { title: "AUDIOVISUAL", sticker: sticker1, description: "Nos especializamos en crear contenido audiovisual de alta calidad para potenciar tu marca, fortalecer tu identidad y ayudarte a alcanzar tus objetivos." },
   { title: "GESTIÓN DE REDES", sticker: sticker2, description: "No se trata solo de publicar, sino de construir una presencia coherente, atractiva y constante que conecte con tu audiencia. Te ayudamos a potenciarte." },
-  { title: "DIRECCIÓN DE ARTE", sticker: sticker3, description: "Aportamos coherencia estética y definimos materiales, colores y texturas para crear escenarios con concepto y una atmósfera única que refuerza la esencia de la producción." },
+  { title: "CREACIÓN DE WEBS", sticker: sticker3, description: "Diseñamos tu web para hacer crecer tu marca de manera profesional, integral, coherente y estratégica." },
   { title: "DISEÑO GRÁFICO", sticker: sticker4, description: "Creamos piezas gráficas que potencian tu marca y logran que cada detalle hable por vos. No es estética, es comunicación clara y coherente." },
   { title: "CONSULTORÍAS", sticker: sticker5, description: "Servicio integral para empresas, marcas personales y emprendimientos que buscan ordenar y profesionalizar su estrategia digital sin delegar por completo la ejecución." },
   { title: "PAID MEDIA", sticker: sticker6, description: "Entendemos la pauta como el complemento ideal del contenido: solo la ofrecemos junto a nuestro plan mensual de redes para potenciar cada marca." },
