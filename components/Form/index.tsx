@@ -11,7 +11,7 @@ import whatsapp from "@/public/footer/LOGO_WHATSAPP.png";
 import star from "@/public/ourServices/DIRECCION/ESTRELLA.png";
 import { vintageRotter, manrope } from "@/utils/fonts/fonts";
 import fondo from "@/public/backgrounds/FONDO_BLANCO.png";
-import enviar from "@/public/ads/ENVIAR.png"
+import enviar from "@/public/ads/ENVIAR.png";
 
 // Definimos la interfaz para los datos del formulario
 export interface FormData {
@@ -51,11 +51,13 @@ const Form = () => {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
-  const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(null);
+  const [submitStatus, setSubmitStatus] = useState<null | "success" | "error">(
+    null,
+  );
 
   // Tipado para inputs y textareas combinados
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -114,14 +116,30 @@ const Form = () => {
   };
 
   const socialLinks = [
-    { icon: instagram, text: "@angliestudio", url: "https://www.instagram.com/angliestudio" },
-    { icon: behance, text: "https://www.behance.net/angliestudio", url: "https://www.behance.net/angliestudio" },
-    { icon: mail, text: "infoangliestudio@gmail.com", url: "mailto:infoangliestudio@gmail.com" },
-    { icon: whatsapp, text: "+54 1166636817 • +54 116 36470650", url: "http://wa.link/igfa2m" },
+    {
+      icon: instagram,
+      text: "@angliestudio",
+      url: "https://www.instagram.com/angliestudio",
+    },
+    {
+      icon: behance,
+      text: "https://www.behance.net/angliestudio",
+      url: "https://www.behance.net/angliestudio",
+    },
+    {
+      icon: mail,
+      text: "infoangliestudio@gmail.com",
+      url: "mailto:infoangliestudio@gmail.com",
+    },
+    {
+      icon: whatsapp,
+      text: "+54 1166636817 • +54 116 36470650",
+      url: "http://wa.link/igfa2m",
+    },
   ];
 
   return (
-    <section 
+    <section
       className="relative py-25 px-6 lg:px-15 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20 xl:gap-30 overflow-hidden"
       id="hablemos"
     >
@@ -145,7 +163,9 @@ const Form = () => {
             width={280}
             className="mb-4 w-[70%] sm:w-full"
           />
-          <h4 className={`${vintageRotter.className} text-[#ee6226] text-5xl sm:text-6xl lg:pt-4 italic`}>
+          <h4
+            className={`${vintageRotter.className} text-[#ee6226] text-5xl sm:text-6xl lg:pt-4 italic`}
+          >
             ¡Hablemos!
           </h4>
         </div>
@@ -160,7 +180,13 @@ const Form = () => {
               className="flex items-center gap-2 text-[#4c80bf] font-medium text-sm hover:opacity-70 transition-opacity"
             >
               <div className="w-10 h-10 flex items-center justify-center">
-                <Image src={link.icon} alt="icon" width={30} height={30} className="object-contain" />
+                <Image
+                  src={link.icon}
+                  alt="icon"
+                  width={30}
+                  height={30}
+                  className="object-contain"
+                />
               </div>
               <span className="text-sm xl:text-lg">{link.text}</span>
             </a>
@@ -171,7 +197,13 @@ const Form = () => {
       {/* LADO DERECHO */}
       <div className="relative z-10 w-full max-w-[500px] lg:max-w-[800px] aspect-square lg:aspect-[1.2/1] flex items-center justify-center p-4 -mt-8 sm:mt-0">
         <div className="absolute inset-0 z-0">
-          <Image src={marco} alt="marco" fill className="object-contain" priority />
+          <Image
+            src={marco}
+            alt="marco"
+            fill
+            className="object-contain"
+            priority
+          />
         </div>
 
         <form
@@ -301,19 +333,33 @@ const Form = () => {
           <div className="relative flex flex-col lg:flex-row items-center justify-between gap-4 mt-2 lg:mt-0 pb-10">
             <div className="text-xs font-bold uppercase min-h-[1rem]">
               {submitStatus === "success" && (
-                <span className="text-green-600">¡Mensaje enviado correctamente!</span>
+                <span className="text-green-600">
+                  ¡Mensaje enviado correctamente!
+                </span>
               )}
               {submitStatus === "error" && Object.keys(errors).length === 0 && (
-                <span className="text-red-500">Ocurrió un error. Intenta nuevamente.</span>
+                <span className="text-red-500">
+                  Ocurrió un error. Intenta nuevamente.
+                </span>
               )}
             </div>
-
             <button
               type="submit"
               disabled={isSubmitting}
-              className="absolute transition-all cursor-pointer w-[38%] bottom-9.5 sm:w-[34%] sm:bottom-4 md:w-[33%] md:bottom-5 lg:static xl:w-[30%]"
+              className={`absolute transition-all cursor-pointer w-[38%] bottom-9.5 sm:w-[34%] sm:bottom-4 md:w-[33%] md:bottom-5 lg:static xl:w-[30%]
+    ${isSubmitting ? "opacity-50 cursor-not-allowed" : "hover:brightness-110 active:scale-95"}
+  `}
             >
-              <img src={enviar.src} alt="Enviar" className="lg:max-h-[180px]"/>
+              <img
+                src={enviar.src}
+                alt="Enviar"
+                className={`lg:max-h-[180px] transition-all ${isSubmitting ? "animate-pulse" : ""}`}
+              />
+              {isSubmitting && (
+                <span className="absolute inset-0 flex items-center justify-center text-[#4c80bf] font-bold text-xs md:text-sm">
+                  ...
+                </span>
+              )}
             </button>
           </div>
         </form>
@@ -322,7 +368,12 @@ const Form = () => {
       {/* MOBILE REDES */}
       <div className="relative z-10 flex lg:hidden gap-8 mt-6">
         {socialLinks.map((link, index) => (
-          <a key={index} href={link.url} target="_blank" rel="noopener noreferrer">
+          <a
+            key={index}
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Image
               src={link.icon}
               alt="Social"
