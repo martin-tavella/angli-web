@@ -91,7 +91,7 @@ export async function POST(req: NextRequest) {
 
     const mailOptions = {
       from: `"${nombre} ${apellido}" <${email}>`,
-      to: process.env.EMAIL_USER,
+      to: "angliestudio@gmail.com",
       subject: `Nueva consulta de marca: ${marca}`,
       text: mensaje,
       html: htmlTemplate,
