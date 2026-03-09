@@ -128,8 +128,8 @@ const Form = () => {
     },
     {
       icon: mail,
-      text: "infoangliestudio@gmail.com",
-      url: "mailto:infoangliestudio@gmail.com",
+      text: "angliestudio@gmail.com",
+      url: "mailto:angliestudio@gmail.com",
     },
     {
       icon: whatsapp,

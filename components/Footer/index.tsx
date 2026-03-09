@@ -96,7 +96,7 @@ const Footer = () => {
                 <li>
                   <a
                     className="flex gap-3 items-center"
-                    href="mailto:infoangliestudio@gmail.com"
+                    href="mailto:angliestudio@gmail.com"
                     target="_blank"
                   >
                     <img
@@ -104,7 +104,7 @@ const Footer = () => {
                       alt="Logo Mail"
                       className="w-6 h-6"
                     />{" "}
-                    infoangliestudio@gmail.com
+                    angliestudio@gmail.com
                   </a>
                 </li>
 
