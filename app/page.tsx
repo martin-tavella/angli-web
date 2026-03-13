@@ -7,10 +7,8 @@ import OurWork from "@/components/OurWork";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export default function Home() {
-  const GTM = process.env.NEXT_PUBLIC_GTM;
   return (
     <>
-      <GoogleTagManager gtmId={GTM!} />
       <div>
         <main>
           <Hero />

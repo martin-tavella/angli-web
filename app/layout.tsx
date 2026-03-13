@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/";
 import WhatsappBubble from "@/components/Whatsapp";
 import FooterWrapper from "@/components/Footer/Wrapper";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "htpp://localhost:3000";
 const googleVerification = process.env.NEXT_PUBLIC_GOOGLE;
@@ -24,9 +25,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+   const GTM = process.env.NEXT_PUBLIC_GTM_ADS;
   return (
     <html lang="en">
       <body className={`antialiased selection:bg-[#f38556]`}>
+         <GoogleTagManager gtmId={GTM!} />
         <Navbar />
         {children}
         <WhatsappBubble />
