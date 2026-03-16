@@ -97,7 +97,13 @@ const PaidHook = ({ showHook, handleOnClick, btnContact }: PaidHookProps) => {
         <div className="flex relative pt-3 pb-10">
 
           <button className="cursor-pointer"
-          onClick={()=> window.open("http://wa.link/igfa2m")}
+          onClick={() => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: 'click_whatsapp'
+            });
+            window.open("http://wa.link/igfa2m");
+          }}
           title="Ir a Whatsapp"
           >
             <Image

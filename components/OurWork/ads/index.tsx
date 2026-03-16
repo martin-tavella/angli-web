@@ -53,7 +53,13 @@ const OurWork = () => {
 
         <button 
           className="hover:scale-105 transition-transform mb-5 lg:mb-13 cursor-pointer"
-          onClick={() => { window.open("http://wa.link/igfa2m") }}
+          onClick={() => {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+              event: 'click_whatsapp'
+            });
+            window.open("http://wa.link/igfa2m");
+          }}
         >
           <Image src={btn} width={160} height={45} alt="Hablemos" className="lg:w-45" />
         </button>

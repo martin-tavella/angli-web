@@ -59,7 +59,13 @@ const AdsOurServices = () => {
               {/* 3. Botón siempre al final del bloque de texto */}
               <button 
                 className="w-fit hover:scale-105 transition-transform cursor-pointer mt-auto"
-                onClick={() => window.open("http://wa.link/igfa2m")}
+                onClick={() => {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: 'click_whatsapp'
+                  });
+                  window.open("http://wa.link/igfa2m");
+                }}
               >
                 <Image 
                   src={btn} 
@@ -85,7 +91,13 @@ const AdsOurServices = () => {
               <p className="text-[#707171] text-sm leading-relaxed font-medium">
                 {service.description}
               </p>
-              <button onClick={() => window.open("http://wa.link/igfa2m")}>
+              <button onClick={() => {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: 'click_whatsapp'
+                  });
+                  window.open("http://wa.link/igfa2m");
+                }}>
                 <Image src={btn} width={110} height={35} alt="Hablemos" className="w-28" />
               </button>
             </div>
