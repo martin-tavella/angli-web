@@ -109,7 +109,12 @@ const Footer = () => {
                 </li>
 
                 <li>
-                  <a href="http://wa.link/igfa2m" target="_blank">
+                  <a href="http://wa.link/igfa2m" target="_blank" onClick={() => {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                      event: 'click_whatsapp'
+                    });
+                  }}>
                     <div className="flex gap-3 items-center">
                       <img
                         src={logoWhatsapp.src}

@@ -37,6 +37,10 @@ const AdsOurClients = () => {
           <button
             className="hover:scale-105 transition-transform mb-12 lg:mb-20 cursor-pointer"
             onClick={() => {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'click_whatsapp'
+              });
               window.open("http://wa.link/igfa2m");
             }}
           >

@@ -40,7 +40,11 @@ const AdsHero = () => {
 
           <button className="hidden lg:block mt-10 hover:scale-105 transition-transform cursor-pointer"
            onClick={()=>{
-              window.open("http://wa.link/igfa2m")
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'click_whatsapp'
+              });
+              window.open("http://wa.link/igfa2m");
             }}>
             <Image src={btn} width={200} height={55} alt="Hablemos" className="w-40 xl:w-48" />
           </button>
@@ -75,7 +79,11 @@ const AdsHero = () => {
         {/* Botón Mobile */}
         <button className="lg:hidden mt-10 mb-16 self-center"
          onClick={()=>{
-              window.open("http://wa.link/igfa2m")
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'click_whatsapp'
+              });
+              window.open("http://wa.link/igfa2m");
             }}
         >
           <Image src={btn} width={180} height={50} alt="Hablemos" className="w-40" />

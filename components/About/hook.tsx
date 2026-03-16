@@ -102,7 +102,11 @@ const Hook = ({ toggleHook, showHook }: HookProps) => {
             />
             <button
             onClick={()=>{
-              window.open("http://wa.link/igfa2m")
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({
+                event: 'click_whatsapp'
+              });
+              window.open("http://wa.link/igfa2m");
             }}
             className="cursor-pointer"
             >

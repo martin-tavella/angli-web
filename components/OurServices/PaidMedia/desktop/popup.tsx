@@ -65,7 +65,13 @@ const PaidPopup = () => {
             <button className={`absolute -bottom-5 -right-5 sm:-bottom-10 sm:right-29 md:right-42 md:-bottom-11 lg:-bottom-13 lg:right-[35%] cursor-pointer hover:scale-105 transition-transform duration-300
               ${showHook ? "hidden" : ""}
               `}
-              onClick={()=> window.open("http://wa.link/igfa2m")}
+              onClick={() => {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  event: 'click_whatsapp'
+                });
+                window.open("http://wa.link/igfa2m");
+              }}
               title="Ir a Whatsapp"
               >
               <Image

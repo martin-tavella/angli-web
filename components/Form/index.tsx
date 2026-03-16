@@ -178,6 +178,14 @@ const Form = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-[#4c80bf] font-medium text-sm hover:opacity-70 transition-opacity"
+              onClick={() => {
+                if (link.url.includes("wa.link")) {
+                  window.dataLayer = window.dataLayer || [];
+                  window.dataLayer.push({
+                    event: 'click_whatsapp'
+                  });
+                }
+              }}
             >
               <div className="w-10 h-10 flex items-center justify-center">
                 <Image
@@ -373,6 +381,14 @@ const Form = () => {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => {
+              if (link.url.includes("wa.link")) {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                  event: 'click_whatsapp'
+                });
+              }
+            }}
           >
             <Image
               src={link.icon}
