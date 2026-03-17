@@ -38,7 +38,7 @@ const AdsHero = () => {
             <strong className="font-extrabold text-[#1b1b1a]">comunicación, redes, diseño y contenido audiovisual.</strong>
           </h3>
 
-          <button className="hidden lg:block mt-10 hover:scale-105 transition-transform cursor-pointer"
+          <button className="hidden lg:block mt-10 hover:scale-105 transition-transform cursor-pointer hablemos"
            onClick={()=>{
               window.dataLayer = window.dataLayer || [];
               window.dataLayer.push({
@@ -77,7 +77,7 @@ const AdsHero = () => {
         </div>
 
         {/* Botón Mobile */}
-        <button className="lg:hidden mt-10 mb-16 self-center"
+        <button className="lg:hidden mt-10 mb-16 self-center hablemos"
          onClick={()=>{
               window.dataLayer = window.dataLayer || [];
               window.dataLayer.push({

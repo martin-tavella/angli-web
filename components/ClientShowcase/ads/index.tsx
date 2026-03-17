@@ -35,7 +35,7 @@ const AdsOurClients = () => {
           </h2>
 
           <button
-            className="hover:scale-105 transition-transform mb-12 lg:mb-20 cursor-pointer"
+            className="hover:scale-105 transition-transform mb-12 lg:mb-20 cursor-pointer hablemos"
             onClick={() => {
               window.dataLayer = window.dataLayer || [];
               window.dataLayer.push({

@@ -91,7 +91,7 @@ const AdsOurServices = () => {
               <p className="text-[#707171] text-sm leading-relaxed font-medium">
                 {service.description}
               </p>
-              <button onClick={() => {
+              <button className="hablemos" onClick={() => {
                   window.dataLayer = window.dataLayer || [];
                   window.dataLayer.push({
                     event: 'click_whatsapp'
