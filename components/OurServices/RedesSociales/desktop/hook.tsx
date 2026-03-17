@@ -127,7 +127,7 @@ const RedesHook = ({ showHook, handleOnClick, btnContact }: HookProps) => {
           <div className="w-[60%] sm:w-[40%] md:w-[45%] py-6" />
 
           <button
-            className="cursor-pointer"
+            className="cursor-pointer hablemos"
             onClick={() => {
               window.dataLayer = window.dataLayer || [];
               window.dataLayer.push({
